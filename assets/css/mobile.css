@@ -197,11 +197,7 @@
     }
     
     /* Footer - Mobil */
-    .footer-content {
-        display: grid; /* Flex yerine grid kullan */
-        grid-template-columns: 1fr 1fr; /* 2 eşit kolon */
-        gap: 30px; /* Kolonlar ve satırlar arası boşluk */
-    }
+
     .footer-content h3{
         font-size:1.3rem;
     }

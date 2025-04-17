@@ -405,92 +405,280 @@ body.mobile-menu-open .mobile-menu-toggle span:nth-child(3) {
     }
 }
 /* ----------------- FOOTER STYLES ----------------- */
-footer, .footer, .site-footer {
+.footer-main {
+    background-color: #101414;
+    color: #777;
+    font-family: Arial, sans-serif;
     position: relative;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    box-sizing: border-box !important;
-    overflow: hidden !important;
-    background: linear-gradient(to bottom, #000000 0%, #000000 100%);
-    color: #fff; /* Footer yazı rengi */
 }
-.footer {
-    padding: 60px 0 30px;
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
-.footer::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(to right, transparent, #1d2d50, transparent);
+.footer-contact-button {
+    position: relative;
+    top: -20px;
+}
+.footer-btn {
+    display: inline-block;
+    background-color: #08fcac;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+.footer-btn:hover {
+    background-color: #00a1f2;
 }
 .footer-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 50px;
+    padding: 30px 0;
 }
-.footer-col h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    color: #ccd6f6;
+/* About Us ve Contact Us üstte olacak şekilde düzenleme */
+.footer-about {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+    order: 1;
 }
-.footer-col ul {
+.footer-contact {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+    order: 2;
+}
+.footer-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    max-width: 100%;
+    order: 3;
+    margin-top: 20px;
+    border-top: 1px solid #2a2f33;
+    padding-top: 30px;
+}
+@media (min-width: 768px) {
+    .footer-about {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+    
+    .footer-contact {
+        flex: 0 0 35%;
+        max-width: 35%;
+    }
+}
+.footer-title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.footer-text {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+.footer-view-more {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+.footer-icon-arrow:after {
+    content: "›";
+    margin-left: 5px;
+    font-size: 16px;
+}
+.footer-nav-column {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 30px;
+}
+@media (min-width: 576px) {
+    .footer-nav-column {
+        flex: 0 0 25%;
+        max-width: 25%;
+    }
+}
+.footer-nav-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
-.footer-col ul li {
+.footer-nav-list li {
     margin-bottom: 10px;
 }
-.footer-col ul li a {
-    color: #8892b0;
+.footer-nav-list a {
+    color: #777;
     text-decoration: none;
-    display: block;
-    margin-bottom: 0.5rem;
-    transition: color 0.2s ease;
+    font-size: 0.8rem;
     font-weight: 700;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
 }
-.footer-col ul li a:hover {
-    color: rgba(8, 252, 172, 0.9); /* Sosyal medya hover arka plan */
+.footer-nav-list a:hover {
+    color: #08fcac;
 }
-.social-links a {
-    color: #8892b0;
+.footer-icon {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 10px;
+    border-top: 2px solid #08fcac;
+    border-right: 2px solid #08fcac;
+    transform: rotate(45deg);
+}
+.footer-phone {
+    color: white;
+    font-size: 1.3rem;
+    font-style: bold;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.footer-contact-info {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+.footer-icon-location, .footer-icon-email {
+    color: #08fcac;
+    margin-right: 10px;
+}
+.footer-social {
+    display: flex;
+    margin-top: 20px;
+}
+.footer-social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    color: white;
+    border-radius: 50%;
+    margin-right: 10px;
     text-decoration: none;
-    font-size: 1.5rem;
-    transition: color 0.2s ease;
+    transition: background-color 0.3s;
 }
-.social-links a:hover {
-    color: rgba(8, 252, 172, 0.9); /* Sosyal medya hover arka plan */
+.footer-social-icon:hover {
+    background-color: #08fcac;
 }
+/* Footer bottom bölümü için CSS */
 .footer-bottom {
+    background-color: #171a1d;
+    padding: 20px 0;
+}
+
+.footer-bottom .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Sol bölüm: Copyright ve logo */
+.footer-copyright {
+    display: flex;
+    align-items: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Orta bölüm: İkinci logo */
+.footer-logo2 {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Sağ bölüm: Linkler */
+.footer-bottom-links {
+    flex: 0 0 100%;
+    max-width: 100%;
     text-align: center;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid #1d2d50;
-    font-size: 0.9rem;
-    opacity: 0.7;
+    margin-bottom: 15px;
 }
-.footer-bottom a{
-    text-align: center;
-    margin-top: 2rem;
-    padding-top: 2rem;
-    border-top: 1px solid #1d2d50;
-    font-size: 0.9rem;
-    opacity: 0.7;
-}
-.social-links{
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 eşit kolon */
-    gap: 15px; /* Kolonlar ve satırlar arası boşluk */
-}
-@media (max-width: 1079px) {
-    .footer-content {
-        flex-direction: column;
-        gap: 30px;
+
+/* Masaüstü düzeni için 3 sütunlu görünüm */
+@media (min-width: 768px) {
+    .footer-copyright {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+        margin-bottom: 0;
     }
+    
+    .footer-logo2 {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+        margin-bottom: 0;
+    }
+    
+    .footer-bottom-links {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+        text-align: right;
+        margin-bottom: 0;
+    }
+}
+
+/* Logo stilleri */
+.footer-logo {
+    margin-right: 15px;
+}
+
+.footer-logo img  {
+    max-height: 30px;
+}
+.footer-logo2 img{
+    height: 40px;
+}
+.footer-copyright-text {
+    color: #555;
+    font-size: 12px;
+    margin: 0;
+}
+
+.footer-bottom-links a {
+    color: #555;
+    text-decoration: none;
+    font-size: 12px;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.footer-bottom-links a:hover {
+    color: #08fcac;
+}
+/* İkon Ekleme (Sosyal Medya İkonları için) */
+.footer-icon-facebook:before {
+    content: "f";
+}
+.footer-icon-twitter:before {
+    content: "t";
+}
+.footer-icon-linkedin:before {
+    content: "in";
+}
+.footer-icon-location:before {
+    content: "📍";
+}
+.footer-icon-email:before {
+    content: "✉️";
 }
