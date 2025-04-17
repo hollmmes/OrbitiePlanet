@@ -1,0 +1,798 @@
+/* Genel Stiller */
+:root {
+    --primary-color: #00ff96;
+    --secondary-color: #006644;
+    --dark-color: #040d14;
+    --darker-color: #020a10;
+    --light-color: #f4f4f4;
+    --text-color: #e0e0e0;
+    --card-bg: #071421;
+    --transition: all 0.3s ease;
+}
+
+body {
+    background: linear-gradient(135deg, rgb(0, 0, 0) 0%, rgb(10, 21, 32) 50%, rgb(0, 0, 0) 100%);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Firma Hakkında sayfasına özel container */
+.fh-container {
+    width: 80%; /* İstediğiniz küçük genişlik */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.fh-container-2 {
+    width: 80%; /* İstediğiniz küçük genişlik */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Başlık stilleri */
+.fh-about h1, 
+.fh-solutions h1, 
+.fh-achievements h1, 
+.fh-values h1 {
+    font-weight: bold;
+    line-height: normal;
+    margin-top: 60px;
+    font-size: 64px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 2px 4px;
+}
+
+.fh-about h1::after, 
+.fh-solutions h1::after, 
+.fh-achievements h1::after, 
+.fh-values h1::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #08fcac, transparent);
+    border-radius: 2px;
+    box-shadow: 0 0 20px #08fcac40;
+}
+
+/* Paragraf stilleri */
+.fh-about p, 
+.fh-feature-card p, 
+.fh-solution-card p, 
+.fh-achievement-card p, 
+.fh-value-card p {
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    max-width: 800px;
+    margin: 0px auto 60px;
+    line-height: 1.8;
+    text-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
+}
+
+.fh-lead {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin-bottom: 25px;
+}
+
+/* Firma Hakkında Bölümü */
+.fh-about {
+    padding: 60px 0;
+}
+
+/* Resim konteyner ayarları */
+.fh-about-img {
+    margin: 30px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    max-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Eklenen */
+    transition: transform 0.3s ease; /* Hover için geçiş efekti */
+}
+
+.fh-about-img:hover {
+    transform: scale(1.02); /* Hover olduğunda hafifçe büyütme */
+}
+
+/* Oynat buton konteyner */
+.play-button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.play-button-container:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Oynat buton dairesi */
+.play-button-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 150, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Oynat butonu ikonları */
+.play-icon, .pause-icon {
+    transition: opacity 0.3s ease;
+}
+
+.play-icon {
+    opacity: 1;
+}
+
+.pause-icon {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.play-button-container:hover .play-icon {
+    opacity: 0;
+}
+
+.play-button-container:hover .pause-icon {
+    opacity: 1;
+}
+
+.fh-about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Görüntüyü kırpmadan içeriğe sığdırır */
+    aspect-ratio: 16/9; /* 16:9 oranında bir görüntü oluşturur */
+    display: block;
+}
+/* Misyon, Vizyon, Yaklaşım Bölümü */
+.fh-vision-mission {
+    padding: 60px 0;
+}
+
+.fh-vision-mission .fh-container-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.fh-feature-card {
+    position: relative;
+    min-height: 320px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.fh-feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(17, 34, 64, 0.65) 0%, rgba(8, 15, 29, 0.75) 100%);
+    z-index: 1;
+}
+
+.card-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgb(0, 0, 0) 20%, transparent 100%);
+    z-index: 2;
+}
+
+/* Card content'in z-index'ini artırın */
+.card-content {
+    position: relative;
+    z-index: 3; /* z-index'i 3 yaptık çünkü overlay'in after elementi 2 */
+    padding: 30px;
+}
+
+/* Kart başlık alanını yan yana düzenleme */
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.fh-feature-card i {
+    font-size: 1.5rem;
+    color: white;
+    margin-right: 15px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.fh-feature-card h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--light-color);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0; /* Başlık için varsayılan margin'i sıfırla */
+}
+
+/* Paragraf stilleri */
+.fh-feature-card .card-content p {
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    text-align: left; /* Metni sola hizala */
+}
+
+/* Responsive ayarlar */
+@media (max-width: 576px) {
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .fh-feature-card i {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* İstatistikler */
+.fh-stats {
+    padding: 60px 0;
+}
+
+.fh-stats .fh-container-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    background-color: rgba(7, 20, 33, 0.7);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto; /* Ortaya hizalama için */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2), 
+                inset 0 1px 1px rgba(255, 255, 255, 0.1),
+                inset 0 -1px 1px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(135deg, rgba(17, 34, 64, 0.7) 0%, rgba(8, 15, 29, 0.7) 100%);;
+}
+
+.fh-stat-item {
+    text-align: center;
+    padding: 25px 20px;
+    background-color:   rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.fh-stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 255, 150, 0.1) 0%, rgba(7, 20, 33, 0) 70%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.fh-stat-item:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.fh-stat-item:hover::before {
+    opacity: 1;
+}
+
+.fh-stat-item h2 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+    text-shadow: rgba(8, 252, 172, 0.50) 0px 0px 20px;
+}
+
+.fh-stat-item:hover h2 {
+    color: #00ffaa; /* Hover durumunda biraz daha parlak bir renk */
+}
+
+.fh-stat-item h2 span {
+    font-size: 2rem;
+    vertical-align: super;
+    margin-left: 2px;
+}
+
+.fh-stat-item p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-color);
+    opacity: 0.9;
+    margin-top: 5px;
+}
+/* Teknoloji Çözümlerimiz */
+.fh-solutions {
+    padding: 60px 0;
+}
+
+.fh-container-4 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.fh-solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.fh-solution-card {
+    position: relative;
+    min-height: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-position: center;
+}
+
+.fh-solution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.solution-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(17, 34, 64, 0.8) 0%, rgba(8, 15, 29, 0.9) 100%);
+    z-index: 1;
+}
+
+.solution-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.699) 1%, transparent 100%);
+    z-index: 2;
+}   
+
+.solution-content {
+    position: relative;
+    z-index: 3;
+    padding: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Dikey ortalama */
+    align-items: center; /* Yatay ortalama */
+    text-align: center; /* İçeriği ortala */
+}
+
+/* Çözüm başlık alanı */
+.solution-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.fh-solution-card i {
+    font-size: 2.2rem;
+    color: white;
+    margin-right: 15px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    flex-shrink: 0;
+}
+
+.fh-solution-card h3 {
+    font-weight: 800;
+    font-size: 1.6rem;
+    color: var(--light-color);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+.fh-solution-card p {
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    max-width: 90%; /* Metni sınırla */
+}
+
+/* Kartların hover efekti */
+.fh-solution-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 20px 40px, rgba(8, 252, 172, 0.5) 0px 0px 30px;
+    z-index: 4;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.fh-solution-card:hover {
+    opacity: 1;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+    .fh-solutions-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .fh-solutions-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Başarılarımız */
+.fh-achievements {
+    padding: 0px 40px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 30px;
+    border: 1px solid rgba(8, 252, 172, 0.063);
+}
+
+.fh-container-5 {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.fh-achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fh-achievement-card {
+    position: relative;
+    min-height: 280px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.fh-achievement-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(17, 34, 64, 0.8) 0%, rgba(8, 15, 29, 0.9) 100%);
+    z-index: 1;
+}
+
+.achievement-overlay::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.699) 1%, transparent 100%);
+    z-index: 2;
+}
+
+.achievement-content {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.fh-achievement-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.fh-achievement-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--light-color);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fh-achievement-card p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Kartların hover efekti */
+.fh-achievement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 20px 40px, rgba(8, 252, 172, 0.5) 0px 0px 30px;
+    z-index: 4;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.fh-achievement-card:hover::before {
+    opacity: 1;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+    .fh-achievements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .fh-achievements-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Değerlerimiz */
+.fh-values {
+    padding: 60px 0;
+}
+
+.fh-container-6 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.fh-values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.fh-value-card {
+    background-color: transparent; /* Arkaplan kaldırıldı */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(8, 252, 172, 0.1); /* Yeşil tonlarında border */
+    max-width: 250px;
+    max-height: 350px;
+}
+
+.fh-value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px;
+    border-color: rgba(8, 252, 172, 0.2); /* Hover durumunda border rengi biraz koyulaşıyor */
+}
+
+.fh-value-card i {
+    font-size: 2.3rem;
+    color: var(--primary-color);
+    margin-bottom: 18px;
+}
+
+.fh-value-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: white;
+    font-weight: 800;
+}
+
+.fh-value-card p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+    .fh-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .fh-values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .fh-value-card {
+        padding: 25px;
+    }
+}
+/* Alıntı */
+.fh-quote {
+    padding: 70px 0;
+    max-width: 900px;
+    margin: 0  auto;
+    background: linear-gradient(135deg, rgba(17, 34, 64, 0.6) 0%, rgba(8, 15, 29, 0.6) 100%);
+    border-radius: 25px;
+    border: 1px solid rgba(8, 252, 172, 0.1);
+}
+
+.fh-quote::before{
+    margin-top: -100px;
+    content: '"';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    color: #08fcac20;
+    font-family: serif;
+    line-height: 1;
+    text-shadow: 0 0 30px #08fcac20;
+}
+
+.fh-quote-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.fh-quote-content p {
+    font-weight: 800;
+    font-size: 1.7rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    font-style: italic;
+    position: relative;
+}
+
+.fh-quote-content p::before,
+.fh-quote-content p::after {
+    content: '"';
+    font-size: 3rem;
+    color: var(--primary-color);
+    opacity: 0.4;
+    position: absolute;
+}
+
+.fh-quote-content p::before {
+    top: -20px;
+    left: -20px;
+}
+
+.fh-quote-content p::after {
+    bottom: -40px;
+    right: -20px;
+}
+
+.fh-quote-content cite {
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: rgb(8, 252, 172);;
+    font-style: normal;
+    display: block;
+    margin-top: 20px;
+    text-shadow: rgba(8, 252, 172, 0.25) 0px 0px 10px;
+}
+.by-planet{
+
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgb(29, 45, 80);
+    font-size: 1.2rem;
+    opacity: 0.8;
+
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .fh-about h1, 
+    .fh-solutions h1, 
+    .fh-achievements h1, 
+    .fh-values h1 {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 65px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fh-stats .fh-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .fh-quote-content p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .fh-vision-mission .fh-container,
+    .fh-solutions-grid,
+    .fh-achievements-grid,
+    .fh-values-grid {
+        grid-template-columns: 1fr;
+        padding: 0 50px;
+    }
+    .fh-container{
+        width: 100%;
+    }
+}

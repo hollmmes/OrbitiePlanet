@@ -1,0 +1,365 @@
+/* Arka plan stili */
+body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+  
+  .des-background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    overflow: hidden;
+  }
+  
+  .des-background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+/* Destek CSS */
+.des-main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 15px;
+      color: #e0e0e0;
+      font-family: 'Roboto Mono', monospace;
+      overflow: visible !important;
+  }
+  .des-mission-statement-container{
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+  .code-editor {
+    margin :0 auto;
+    background-color: #121212;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+.editor-header {
+    background-color: #1e1e1e;
+    padding: 10px 15px;
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+}
+
+.file-name {
+    color: #08fcac;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.file-icon {
+    color: #08fcac;
+    font-size: 16px;
+}
+
+.editor-content {
+    position: relative;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    /* Kaydırma çubuğunu gizle */
+    overflow: hidden;
+}
+
+.line-numbers {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 40px;
+    background-color: #1e1e1e;
+    text-align: right;
+    padding: 10px 10px 10px 0;
+    color: #666;
+    border-right: 1px solid #333;
+    user-select: none;
+}
+
+.code-area {
+
+    margin-left: 50px;
+    padding: 10px;
+    min-height: 200px;
+    /* Kaydırma çubuğunu gizle */
+    overflow: hidden;
+    white-space: pre;
+}
+
+/* Syntax highlighting */
+.keyword {
+    color: #569cd6; /* Blue */
+}
+
+.variable {
+    color: #9cdcfe; /* Light blue */
+}
+
+.string {
+    color: #ce9178; /* Orange-red */
+}
+
+.comment {
+    color: #6a9955; /* Green */
+}
+
+.operator, .punctuation {
+    color: #d4d4d4; /* Light gray */
+}
+
+/* Cursor blink effect */
+.cursor {
+    display: inline-block;
+    width: 2px;
+    height: 18px;
+    background-color: #08fcac;
+    animation: blink 1s infinite;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Typing indicator */
+.typing-indicator {
+    display: inline-block;
+    background-color: #08fcac;
+    width: 2px;
+    height: 14px;
+    vertical-align: middle;
+    animation: blink 0.8s infinite;
+    margin-left: 1px;
+}
+
+/* WebKit tabanlı tarayıcılar için kaydırma çubuğunu gizle */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+  
+  .des-mission-statement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 60px auto;
+    font-size: 18px;
+    max-width: 90%;
+    text-align: center;
+  }
+  
+  .des-line-indicator {
+    width: 5px;
+    height: 60px;
+    background-color: #00FF9D;
+    margin-right: 20px;
+    position: relative;
+  }
+  
+  .des-line-indicator::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 255, 157, 0.5);
+    animation: pulse 1.5s infinite;
+  }
+  
+  .des-statement-text {
+    color: #fff;
+    font-weight: 300;
+    border-right: 2px solid #00FF9D;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+    animation: typing 4s steps(44) 1s 1 normal both,
+               blink-caret 0.75s step-end infinite;
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #00FF9D }
+  }
+  
+  @keyframes pulse {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+  
+  /* Servis kartları grid */
+  .des-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 100px;
+  }
+  
+  @keyframes gradient-shift {
+    0% {
+      background-position: 0% 50%, 100% 50%;
+    }
+    100% {
+      background-position: 200% 50%, -100% 50%;
+    }
+  }
+  
+  .des-service-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border: 1px solid #1d2d25;
+    background: 
+      linear-gradient(90deg, transparent 45%, rgba(8, 252, 172, 0.1) 50%, transparent 55%) 0% 0% / 200% 200%, 
+      linear-gradient(-45deg, transparent 45%, rgba(8, 252, 172, 0.1) 50%, transparent 55%) 0% 0% / 200% 200%,
+      rgba(30, 30, 30, 0.7);
+    animation: gradient-shift 3s linear infinite;
+  }
+  
+  .des-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 255, 157, 0.1);
+  }
+  .des-svg-icon {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+  
+  .des-service-icon {
+   
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 0 20px;
+    border: 1px solid #00FF9D;
+  }
+  
+  /* Font Awesome yerine özel ikon fontu kullanmak için gerekirse eklenecek içerikler */
+  .des-icon-code:before { content: '</>'; }
+  .des-icon-mobile:before { content: '📱'; }
+  .des-icon-cloud:before { content: '☁️'; }
+  .des-icon-database:before { content: '🗄️'; }
+  .des-icon-brain:before { content: '🧠'; }
+  .des-icon-shield:before { content: '🔒'; }
+  
+  .des-service-content {
+    padding: 20px;
+  }
+  
+  .des-service-title {
+    color: #fff;
+    font-size: 32px;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+  }
+  
+  .des-arrow {
+    color: #00FF9D;
+    margin-right: 8px;
+  }
+  
+  .des-service-description {
+    color: #8a8a8a;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  
+  .des-tech-stack {
+    margin-top: 15px;
+  }
+  
+  .des-tech-label {
+    color: #00FF9D;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .des-tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  
+  .des-tech-tag {
+    background-color:  rgba(8, 252, 172, 0.1);
+    border: 2px solid #3e8160;
+    color: #b8b8b8;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    transition: all 0.2s ease;
+  }
+  
+  .des-tech-tag:hover {
+    background-color: rgba(0, 255, 157, 0.1);
+    border-color: #00FF9D;
+    color: #00FF9D;
+  }
+  
+  /* Duyarlı tasarım için medya sorguları */
+  @media (max-width: 1024px) {
+    .des-services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .des-services-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .des-mission-statement {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .des-service-icon {
+      width: 50px;
+      height: 50px;
+    }
+    
+    .des-service-title {
+      font-size: 16px;
+    }
+    .des-code-image{
+      max-width: 300%;
+      height: auto;
+      border-radius: 4px;
+      position: relative;
+      left: 0; /* Resmin sol kenarını konteynerın sol kenarında tut */
+      /* veya */
+      margin-right: -200%; /* Sağ taraftan taşan kısmı gizle */
+    }
+    .des-code-container{
+      margin-top: 100px;
+    }
+  }
+

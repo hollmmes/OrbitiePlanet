@@ -1,0 +1,97 @@
+/* ----------------- VARIABLES AND FONTS ----------------- */
+/* Temel değişkenleri tanımlama */
+:root {
+    --primary-color:  rgba(8, 252, 172, 0.9);
+    --text-color: #ffffff;
+    --bg-color: #000000;
+    --secondary-bg: #1A1D20;
+    --gray-text: #a0a0a0;
+}
+
+/* CRC Fontları tanımlama */
+@font-face {
+    font-family: 'CRC';
+    src: url('../fonts/CRC25.otf') format('opentype');
+    font-weight: 400; /* Normal kalınlık için CRC25 */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CRC';
+    src: url('../fonts/CRC35.otf') format('opentype');
+    font-weight: 500; /* Medium kalınlık için CRC35 */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CRC';
+    src: url('../fonts/CRC55.otf') format('opentype');
+    font-weight: 700; /* Semi-bold/Bold kalınlık için CRC55 */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CRC';
+    src: url('../fonts/CRC65.otf') format('opentype');
+    font-weight: 800; /* Extra-bold kalınlık için CRC65 */
+    font-style: normal;
+}
+
+/* Temel stil sıfırlama ve genel stiller */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'CRC', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 400; /* Normal yazılar için CRC25 */
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%; /* Container'a tam genişlik verin */
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: 'CRC', sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Başlık Stilleri */
+h1, h2 {
+    font-family: 'CRC', sans-serif;
+    font-weight: 800; /* Ana başlıklar için CRC65 */
+}
+
+h3, h4 {
+    font-family: 'CRC', sans-serif;
+    font-weight: 700; /* Orta başlıklar için CRC55 */
+}
+
+/* Decorative Line Animasyonu */
+@keyframes glow {
+    from {
+        box-shadow: 
+            0 0 10px rgba(8, 252, 172, 0.7),
+            0 0 20px rgba(8, 252, 172, 0.5),
+            0 0 30px rgba(8, 252, 172, 0.3);
+    }
+    to {
+        box-shadow: 
+            0 0 15px rgba(8, 252, 172, 0.8),
+            0 0 25px rgba(8, 252, 172, 0.6),
+            0 0 35px rgba(8, 252, 172, 0.4);
+    }
+}

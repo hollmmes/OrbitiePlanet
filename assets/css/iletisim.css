@@ -1,0 +1,420 @@
+:root {
+    --iletisim-primary: rgb(8, 252, 172);
+    --iletisim-primary-dark: rgb(6, 194, 133);
+    --iletisim-dark-bg: #000000;
+    --iletisim-card-bg: rgba(15, 25, 35, 0.7);
+    --iletisim-card-border: rgba(8, 252, 172, 0.2);
+    --iletisim-text: #ffffff;
+    --iletisim-text-light: rgba(255, 255, 255, 0.7);
+    --iletisim-input-bg: rgba(15, 25, 35, 0.8);
+    --iletisim-border-radius: 8px;
+    --iletisim-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Ana Container */
+.iletisim-main {
+    background-color: var(--iletisim-dark-bg);
+    background-image: radial-gradient(circle at 20% 30%, rgba(8, 252, 172, 0.03) 0%, transparent 70%), 
+                      radial-gradient(circle at 80% 70%, rgba(8, 252, 172, 0.02) 0%, transparent 70%),
+                      radial-gradient(circle, rgba(8, 252, 172, 0.063) 0%, transparent 50%);
+    animation: 30s linear 0s infinite normal none running rotate;
+    color: var(--iletisim-text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 50px 0 80px;
+    width: 100%;
+    position: relative; /* Animasyon için gerekli */
+    overflow: hidden; /* Animasyon sırasında taşmaları önlemek için */
+}
+
+/* Rotate animasyonu için keyframes */
+@keyframes rotate {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+.iletisim-container {
+    margin: 0 auto;
+    padding: 100px 40px 0px 40px;
+    width: 100%; /* Tam genişlik */
+}
+
+/* Hero Bölümü */
+.iletisim-hero {
+    text-align: center;
+    margin-bottom: 60px; /* Altındaki boşluğu arttırdım */
+}
+
+.iletisim-title {
+    font-size: 3.5rem; /* Başlık boyutunu arttırdım */
+    font-weight: 800;
+    margin-bottom: 20px; /* Altındaki boşluğu arttırdım */
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(8, 252, 172));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(8, 252, 172, 0.5);
+}
+
+.iletisim-subtitle {
+    font-size: 1.2rem; /* Font boyutunu arttırdım */
+    color: var(--iletisim-text-light);
+    max-width: 700px; /* Genişliği arttırdım */
+    margin: 0 auto;
+}
+
+/* Grid Layout - Daha Büyük Kutular */
+.iletisim-grid {
+    display: grid;
+    min-height: 900px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px; /* Kutu aralarındaki boşluğu arttırdım */
+    margin-bottom: 60px; /* Alt boşluğu arttırdım */
+}
+
+/* Form ortada 2 sütun kaplar */
+.iletisim-form-container {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* Info kartları 1er sütun kaplar */
+.iletisim-info-card {
+    grid-column: span 1;
+}
+
+/* Konum kartı da 1 sütun kaplar */
+.iletisim-map-container {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+/* Info Kartları - Daha Büyük */
+.iletisim-info-card {
+    background:rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--iletisim-card-border);
+    border-radius: var(--iletisim-border-radius);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    flex: none;
+    align-items: center; /* X ekseni (yatay) ortalama */
+    justify-content: center; /* Y ekseni (dikey) ortalama */
+    text-align: center;
+    box-shadow: var(--iletisim-shadow);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.iletisim-info-card:hover {
+    transform: translateY(-5px);
+}
+
+.iletisim-icon-container {
+    width: 80px; /* Boyutu arttırdım */
+    height: 80px; /* Boyutu arttırdım */
+    border-radius: 50%;
+    background-color: rgba(8, 252, 172, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px; /* Alt boşluğu arttırdım */
+    font-size: 2rem; /* İkon boyutunu arttırdım */
+    color: var(--iletisim-primary);
+    box-shadow: 0 0 20px rgba(8, 252, 172, 0.2);
+}
+
+.iletisim-info-title {
+    font-size: 1.4rem; /* Boyutu arttırdım */
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--iletisim-text);
+}
+
+.iletisim-info-text {
+    font-size: 1.1rem; /* Boyutu arttırdım */
+    color: var(--iletisim-text-light);
+    line-height: 1.6;
+}
+
+/* Form Container */
+.iletisim-form-container {
+background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--iletisim-card-border);
+    border-radius: var(--iletisim-border-radius);
+    padding: 40px;
+    box-shadow: var(--iletisim-shadow);
+    backdrop-filter: blur(10px);
+    display: flex; /* Flexbox ekledim */
+    flex-direction: column; /* Sütun yönlü düzen */
+    align-items: center; /* X ekseninde (yatay) ortalama */
+    justify-content: center; /* Y ekseninde (dikey) ortalama */
+}
+
+.iletisim-form-title {
+    font-size: 3rem; /* Boyutu arttırdım */
+    font-weight: 800;
+    color: var(--iletisim-primary);
+    margin-bottom: 30px; /* Alt boşluğu arttırdım */
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.iletisim-form-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px; /* Genişliği arttırdım */
+    height: 3px;
+    background-color: var(--iletisim-primary);
+    border-radius: 3px;
+}
+
+/* Form Elemanları */
+.iletisim-form-row {
+    display: flex;
+    gap: 25px; /* Boşlukları arttırdım */
+    margin-bottom: 25px; /* Alt boşluğu arttırdım */
+}
+
+.iletisim-form-group {
+    position: relative;
+    flex: 1;
+}
+
+.iletisim-form-group label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--iletisim-primary);
+    font-size: 1rem; /* Boyutu arttırdım */
+}
+
+.iletisim-form-group.textarea label {
+    top: 20px;
+    transform: none;
+}
+
+.iletisim-form-group input,
+.iletisim-form-group textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--iletisim-card-border);
+    border-radius: var(--iletisim-border-radius);
+    padding: 15px 20px 15px 50px; /* Padding'i arttırdım */
+    color: var(--iletisim-text);
+    font-size: 1.1rem; /* Boyutu arttırdım */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iletisim-form-group textarea {
+    min-height: 180px; /* Yüksekliği arttırdım */
+    resize: vertical;
+    padding: 15px 20px;
+}
+
+.iletisim-form-group input:focus,
+.iletisim-form-group textarea:focus {
+    outline: none;
+    border-color: var(--iletisim-primary);
+    box-shadow: 0 0 0 3px rgba(8, 252, 172, 0.2);
+}
+
+.iletisim-form-group input::placeholder,
+.iletisim-form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Submit Button */
+.iletisim-submit-btn {
+    background-color: var(--iletisim-primary);
+    color: var(--iletisim-dark-bg);
+    border: none;
+    border-radius: var(--iletisim-border-radius);
+    padding: 18px 30px; /* Padding'i arttırdım */
+    font-size: 1.2rem; /* Boyutu arttırdım */
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
+    width: 100%;
+    margin-top: 25px; /* Üst boşluğu arttırdım */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iletisim-submit-btn i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.iletisim-submit-btn:hover {
+    background-color: var(--iletisim-primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Harita Container - Büyütülmüş */
+.iletisim-map-container {
+    background:rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--iletisim-card-border);
+    border-radius: var(--iletisim-border-radius);
+    padding: 40px; /* Padding'i arttırdım */
+    box-shadow: var(--iletisim-shadow);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.iletisim-map-title {
+    font-size: 1.4rem; /* Boyutu arttırdım */
+    font-weight: 600;
+    margin-bottom: 20px; /* Alt boşluğu arttırdım */
+    color: var(--iletisim-text);
+    text-align: center;
+}
+
+.iletisim-map {
+    width: 100%;
+    flex-grow: 1;
+    border-radius: var(--iletisim-border-radius);
+    overflow: hidden;
+}
+
+.iletisim-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Sosyal Medya Butonları */
+.iletisim-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Boşluğu arttırdım */
+    margin-top: 60px; /* Üst boşluğu arttırdım */
+}
+
+.iletisim-social-icon {
+    width: 55px; /* Boyutu arttırdım */
+    height: 55px; /* Boyutu arttırdım */
+    border-radius: 50%;
+    background-color: rgba(8, 252, 172, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--iletisim-primary);
+    font-size: 1.4rem; /* Boyutu arttırdım */
+    transition: all 0.3s ease;
+    border: 1px solid rgba(8, 252, 172, 0.2);
+}
+
+.iletisim-social-icon:hover {
+    background-color: var(--iletisim-primary);
+    color: var(--iletisim-dark-bg);
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .iletisim-container {
+        padding: 0 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .iletisim-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    
+    .iletisim-form-container {
+        grid-column: span 2;
+        grid-row: 1;
+    }
+    
+    .iletisim-info-card {
+        grid-column: 1;
+    }
+    
+    .iletisim-info-card:nth-of-type(2) {
+        grid-column: 2;
+    }
+    
+    .iletisim-info-card:nth-of-type(3) {
+        grid-column: 1;
+    }
+    
+    .iletisim-map-container {
+        grid-column: 2;
+    }
+    
+    .iletisim-info-card,
+    .iletisim-form-container,
+    .iletisim-map-container {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .iletisim-title {
+        font-size: 2.8rem;
+    }
+    
+    .iletisim-container {
+        padding: 0 20px;
+    }
+    
+    .iletisim-form-row {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .iletisim-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .iletisim-form-container, 
+    .iletisim-info-card, 
+    .iletisim-map-container,
+    .iletisim-info-card:nth-of-type(2),
+    .iletisim-info-card:nth-of-type(3) {
+        grid-column: 1;
+    }
+    
+    .iletisim-title {
+        font-size: 4rem;
+        padding-top: 80px;
+        line-height: 60px;
+        padding-bottom: 10px;
+    }
+    
+    .iletisim-subtitle {
+        font-size: 1rem;
+    }
+    
+    .iletisim-info-card,
+    .iletisim-form-container,
+    .iletisim-map-container {
+        padding: 25px;
+    }
+    
+    .iletisim-icon-container {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+}

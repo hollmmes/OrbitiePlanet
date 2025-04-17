@@ -1,0 +1,300 @@
+/* entegrasyon.css */
+/* Ana Konteyner Stilleri */
+.enteg-main {
+    background: linear-gradient(135deg, rgb(0, 0, 0) 0%, rgb(10, 25, 48) 100%);
+    padding: 80px 0;
+    min-height: 100vh;
+  }
+  
+  .enteg-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Başlık Stilleri */
+  .enteg-title {
+    font-size: 82px;
+    color: rgb(8, 252, 172);
+    background: linear-gradient(135deg, rgb(8, 252, 172), rgb(0, 255, 157)) text;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 800;
+  }
+  
+  .enteg-subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 23px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin: 0 auto 60px;
+  }
+  
+  .enteg-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 30px;
+    border: 1px solid rgba(8, 252, 172, 0.1);
+    padding: 60px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .enteg-card:hover {
+    border: 1px solid rgba(8, 252, 172, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(8, 252, 172, 0.15);
+  }
+  
+  .enteg-card:hover::before {
+    opacity: 1;
+  }
+  
+  .enteg-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(8, 252, 172, 0.05) 0%, transparent 70%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .enteg-card-header {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  
+ /* entegrasyon.css - ikon boyutları güncellendi */
+
+.enteg-icon-wrapper {
+    background-color: rgba(0, 255, 157, 0.1);
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+  
+  /* Tüm ana ikonlar için boyut ve stil güncellemeleri */
+  .enteg-api-icon,
+  .enteg-sistem-icon,
+  .enteg-mikroservis-icon,
+  .enteg-devops-icon,
+  .enteg-veri-icon,
+  .enteg-guvenlik-icon {
+    font-size: 3.5rem;
+    color: rgb(8, 252, 172);
+    transition: all 0.4s ease;
+  }
+  
+  /* Özel ikon hover efektleri */
+  .enteg-icon-wrapper:hover .enteg-api-icon,
+  .enteg-icon-wrapper:hover .enteg-sistem-icon,
+  .enteg-icon-wrapper:hover .enteg-mikroservis-icon,
+  .enteg-icon-wrapper:hover .enteg-devops-icon,
+  .enteg-icon-wrapper:hover .enteg-veri-icon,
+  .enteg-icon-wrapper:hover .enteg-guvenlik-icon {
+    transform: scale(1.1);
+  }
+  .fa-plug {
+    font-size: 3.5rem;
+    color: rgb(8, 252, 172);
+    transition: 0.4s;
+}
+  
+  .enteg-icon {
+    color: #00ff9d;
+    font-size: 32px;
+  }
+  
+  .enteg-card-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .enteg-card-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #00ff9d;
+  }
+  
+  .enteg-card-description {
+    font-weight: 700;
+    font-size: 20px;
+    color:  rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+  
+  /* Entegrasyon Özellikleri Listesi */
+  .enteg-features-list {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    align-content: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .enteg-feature-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .enteg-feature-icon {
+    color: rgb(8, 252, 172);
+    font-size: 16px;
+    margin-right: 8px;
+  }
+  
+  .enteg-feature-text {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  /* API Entegrasyonları Özel Stilleri */
+  .enteg-api-section {
+    margin-top: 80px;
+  }
+  
+  .enteg-api-icon {
+    color: #00ff9d;
+  }
+  
+  /* Sistem Entegrasyonları Özel Stilleri */
+  .enteg-sistem-icon {
+    color: #00ff9d;
+  }
+  
+  /* Mikroservis Mimarisi Özel Stilleri */
+  .enteg-mikroservis-icon {
+    color: #00ff9d;
+  }
+  
+  /* DevOps Entegrasyonu Özel Stilleri */
+  .enteg-devops-icon {
+    color: #00ff9d;
+  }
+  
+  /* Veri Entegrasyonu Özel Stilleri */
+  .enteg-veri-icon {
+    color: #00ff9d;
+  }
+  
+  /* Güvenlik Entegrasyonları Özel Stilleri */
+  .enteg-guvenlik-icon {
+    color: #00ff9d;
+  }
+  
+  /* Animasyon Stilleri */
+  .enteg-fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Stilller */
+  @media (max-width: 992px) {
+    .enteg-title {
+      font-size: 36px;
+    }
+    
+    .enteg-card-header {
+      flex-direction: column;
+    }
+    
+    .enteg-icon-wrapper {
+      margin-bottom: 15px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .enteg-title {
+      font-size: 30px;
+    }
+    
+    .enteg-subtitle {
+      font-size: 15px;
+    }
+    
+    .enteg-features-list {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .enteg-feature-item {
+      width: 100%;
+    }
+    
+    .enteg-card {
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .enteg-title {
+      margin-top: 30px;
+      font-size: 68px;
+    }
+    
+    .enteg-card-title {
+      font-size: 20px;
+    }
+    
+    .enteg-card-description {
+      font-size: 14px;
+    }
+    
+    .enteg-feature-text {
+      font-size: 13px;
+    }
+  }
+  
+  /* Hover Efektleri */
+  .enteg-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .enteg-feature-item:hover {
+    background-color: rgba(0, 255, 157, 0.1);
+    transition: background-color 0.3s ease;
+  }

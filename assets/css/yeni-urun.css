@@ -1,0 +1,539 @@
+/* Temel Stillemeler */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --primary-color: rgb(8, 252, 172);
+    --secondary-color: rgb(6, 194, 133);
+    --text-color: #ffffff;
+    --card-bg: #1a2730;
+    --btn-hover: rgb(7, 224, 152);
+    --max-width: 1200px;
+}
+
+body {
+    background-color: #000000;
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(8, 252, 172, 0.03) 0%, transparent 50%), 
+        radial-gradient(circle at 80% 50%, rgba(6, 194, 133, 0.03) 0%, transparent 50%);
+    color: var(--text-color);
+    line-height: 1.6;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Bölümü */
+header {
+    background-color: rgba(15, 25, 35, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.yurun-header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+.yurun-logo img {
+    height: 30px;
+}
+
+.yurun-nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.yurun-nav ul li a {
+    color: var(--text-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: color 0.3s;
+}
+
+.yurun-nav ul li a i {
+    margin-right: 5px;
+    color: var(--primary-color);
+}
+
+.yurun-nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.yurun-btn-demo {
+    background-color: var(--primary-color);
+    color: #0f1923;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.yurun-btn-demo:hover {
+    background-color: var(--btn-hover);
+}
+
+/* Hero Bölümü */
+.yurun-hero {
+    text-align: center;
+    padding: 120px 15px 30px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.yurun-hero h1 {
+    font-weight: 800;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(135deg, 
+        rgb(8, 252, 172) 0%, 
+        rgb(79, 209, 197) 25%, 
+        rgb(8, 252, 172) 50%, 
+        rgb(79, 209, 197) 75%, 
+        rgb(8, 252, 172) 100%);
+    background-size: 200% auto;
+    animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
+}
+
+.yurun-hero p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0px auto;
+    line-height: 1.6;
+}
+
+/* Arama Bölümü */
+.yurun-search-container {
+    max-width: var(--max-width);
+    margin: 0 auto 40px;
+    padding: 0 15px;
+}
+
+.yurun-search-box {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.yurun-search-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+}
+
+.yurun-search-box input {
+    width: 100%;
+    padding: 15px 20px 15px 45px;
+    border-radius: 30px;
+    border: 1px solid rgba(8, 252, 172, 0.3);
+    background-color: rgba(26, 39, 48, 0.4);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.yurun-search-box input:focus {
+    outline: none;
+    border-color: rgb(8, 252, 172);
+    box-shadow: rgba(8, 252, 172, 0.19) 0px 0px 0px 3px;
+}
+
+.yurun-search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Ürün Kartları */
+.yurun-products {
+    max-width: var(--max-width);
+    margin: 0 auto 60px;
+    padding: 0 15px;
+}
+
+.yurun-product-card {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid rgba(8, 252, 172, 0.125);
+}
+
+.yurun-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(8, 252, 172, 0.1);
+}
+
+.yurun-product-image {
+    flex: 0 0 40%;
+    position: relative;
+    overflow: hidden;
+}
+
+.yurun-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.yurun-product-card:hover .yurun-product-image img {
+    transform: scale(1.05);
+}
+
+.yurun-product-content {
+    flex: 1;
+    padding: 30px;
+    position: relative;
+}
+
+/* Badge içindeki ikon için stiller */
+.yurun-product-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    padding: 5px 12px;
+}
+
+.yurun-product-badge i {
+    color: #0f1923;
+    margin-right: 5px;
+    font-size: 0.9rem;
+}
+
+.yurun-product-badge span {
+    color: #0f1923;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* badge span için padding'i kaldırdım çünkü artık parent element padding alıyor */
+    background-color: transparent;
+    padding: 0;
+    border-radius: 0;
+}
+
+/* Ürün Başlık ve İkon için yeni stiller */
+.yurun-product-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.yurun-product-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;  /* Sağ tarafa boşluk ekledim */
+    margin-bottom: 0;    /* Alt kısımdaki margin'i kaldırdım */
+}
+
+.yurun-product-icon i {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.yurun-product-content h2 {
+    color: white;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-bottom: 0;    /* Alt kısımdaki margin'i kaldırdım */
+}
+
+.yurun-product-date {
+    display: flex; /* inline-flex yerine */
+    align-items: center;
+    justify-content: left; /* içeriği ortala */
+    width: 100%; /* tam genişlik */
+    box-sizing: border-box; /* padding'lerin genişliğe dahil edilmesi için */
+    background-color: rgba(6, 194, 133, 0.1);
+    padding: 5px 12px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    border: 1px solid #08fcac40;
+}
+
+.yurun-product-date i {
+    margin-right: 5px;
+}
+
+.yurun-product-content p {
+    color: #cccccc;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.yurun-product-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.yurun-feature {
+    display: flex;
+    align-items: center;
+    background-color: rgba(15, 25, 35, 0.6);
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    position: relative;
+}
+
+.yurun-feature:hover {
+    background-color: rgba(8, 252, 172, 0.1);
+}
+
+.yurun-feature i {
+    color: var(--primary-color);
+    margin-right: 10px;
+    font-size: 1rem;
+}
+
+.yurun-feature span {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+}
+
+/* Tooltip Stili */
+.yurun-feature::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translate(-50%, -10px);
+    background: rgb(8, 252, 172);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    color: rgb(0, 0, 0);
+    width: 110%;
+    min-width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 20px;
+    z-index: 1000;
+}
+
+.yurun-feature:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -100%);
+}
+
+.yurun-product-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.yurun-btn-primary, .yurun-btn-secondary {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yurun-btn-primary {
+    background-color: var(--primary-color);
+    color: #0f1923;
+    flex: 1;
+}
+
+.yurun-btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    flex: 1;
+}
+
+.yurun-btn-primary i, .yurun-btn-secondary i {
+    margin-left: 8px;
+}
+
+.yurun-btn-primary:hover {
+    background-color: var(--btn-hover);
+}
+
+.yurun-btn-secondary:hover {
+    background-color: rgba(8, 252, 172, 0.1);
+}
+
+/* Şirket Bilgileri */
+.yurun-company-info {
+    background-color: rgba(15, 25, 35, 0.9);
+    padding: 50px 15px;
+}
+
+.yurun-company-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.yurun-info-column h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.yurun-info-column p {
+    color: #bbbbbb;
+    font-size: 0.9rem;
+}
+
+.yurun-quick-links, .yurun-product-links {
+    margin-top: 10px;
+}
+
+.yurun-quick-links li, .yurun-product-links li {
+    margin-bottom: 8px;
+}
+
+.yurun-quick-links li a, .yurun-product-links li a {
+    color: #bbbbbb;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.yurun-quick-links li a:hover, .yurun-product-links li a:hover {
+    color: var(--primary-color);
+}
+
+.yurun-social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.yurun-social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s;
+}
+
+.yurun-social-links a:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Footer */
+.yurun-footer {
+    background-color: rgba(10, 16, 23, 0.95);
+    padding: 20px 15px;
+    text-align: center;
+}
+
+.yurun-footer p {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    color: #888888;
+    font-size: 0.8rem;
+}
+
+/* Responsive Düzenlemeler */
+@media (max-width: 992px) {
+    .yurun-product-card {
+        flex-direction: column;
+    }
+    
+    .yurun-product-image {
+        height: 250px;
+    }
+    
+    .yurun-product-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .yurun-header-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .yurun-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .yurun-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .yurun-product-actions {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .yurun-hero h1 {
+        font-size: 4rem;
+        line-height: 60px;
+    }
+    
+    .yurun-product-content {
+        padding: 20px;
+    }
+    
+    .yurun-product-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+}

@@ -1,0 +1,382 @@
+/* Temel Stiller */
+:root {
+    --primary-color: rgb(8, 252, 172);
+    --secondary-color: rgb(6, 194, 133);
+    --dark-bg: #000000;
+    --card-bg: rgba(15, 25, 35, 0.7);
+    --text-color: #ffffff;
+    --text-light: rgba(255, 255, 255, 0.7);
+    --accent-color: rgb(7, 224, 152);
+    --border-color: rgba(8, 252, 172, 0.2);
+    --max-width: 1200px;
+}
+
+body {
+    background-color: var(--dark-bg);
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(8, 252, 172, 0.03) 0%, transparent 50%), 
+        radial-gradient(circle at 80% 50%, rgba(6, 194, 133, 0.03) 0%, transparent 50%);
+    color: var(--text-color);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+/* Ana Konteyner */
+.tumu-main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 60px 15px;
+}
+
+/* Hero Bölümü */
+.tumu-hero {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 50px 0;
+}
+
+.tumu-hero h1 {
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    font-size: 3.8rem;
+    margin-bottom: 1.5rem;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(135deg, rgb(8, 252, 172) 0%, rgb(79, 209, 197) 25%, rgb(8, 252, 172) 50%, rgb(79, 209, 197) 75%, rgb(8, 252, 172) 100%) 0% 0% / 200% text;
+    animation: 3s linear 0s infinite normal none running shine;
+}
+
+.tumu-hero p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+/* Arama Kutusu */
+.tumu-search-container {
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.tumu-search-box {
+    position: relative;
+}
+
+.tumu-search-box input {
+    width: 100%;
+    padding: 14px 20px 14px 45px;
+    border-radius: 30px;
+    border: 1px solid var(--border-color);
+    background-color: rgba(15, 25, 35, 0.6);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.tumu-search-box input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(8, 252, 172, 0.2);
+}
+
+.tumu-search-box i {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.tumu-filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.tumu-filter-btn {
+    background-color: rgba(15, 25, 35, 0.1);
+    color: white;
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tumu-filter-btn i {
+    font-size: 0.9rem;
+}
+
+.tumu-filter-btn:hover {
+    background-color: rgba(8, 252, 172, 0.1);
+    color: var(--primary-color);
+}
+
+.tumu-filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    border-color: var(--primary-color);
+}
+
+/* Kategori Bölümleri */
+.tumu-category-section {
+    margin-bottom: 60px;
+    padding-top: 40px;
+}
+
+.tumu-category-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.tumu-category-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-right: 15px;
+    
+    /* Sürekli dönme animasyonu ekliyoruz */
+    animation: rotate180 8s linear infinite;
+}
+
+/* Dönme animasyonunu tanımlıyoruz */
+@keyframes rotate180 {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.tumu-category-icon i {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+.tumu-category-header h2 {
+    color: rgb(255, 255, 255);
+    font-weight: 800;
+    font-size: 2rem;
+    gap: 1rem;
+    margin-right: auto;
+}
+
+.tumu-stats {
+    display: flex;
+    gap: 20px;
+}
+
+.tumu-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.tumu-stat-value {
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.tumu-stat-label {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+}
+
+/* Ürün Kartları Grid */
+.tumu-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.tumu-product-card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease-in-out; /* Yumuşak geçiş için */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Hafif gölge */
+}
+
+.tumu-product-card:hover {
+    opacity: 1;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(8, 252, 172, 0.2); /* Parlak yeşil gölge */
+    border-color: #08fcac; /* Parlak bir kenar */
+}
+
+/* Opsiyonel - Daha parlak bir efekt için içeriğe geçiş ekleyebilirsiniz */
+.tumu-product-card .tumu-product-content {
+    transition: all 0.3s ease;
+}
+
+.tumu-product-card:hover .tumu-product-content {
+    background-color: rgba(255, 255, 255, 0.05); /* Hover durumunda içerik arka planı */
+}
+
+.tumu-product-image {
+    height: 180px;
+    overflow: hidden;
+}
+
+.tumu-product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tumu-product-card:hover .tumu-product-image img {
+    transform: scale(1.05);
+}
+
+.tumu-product-content {
+    padding: 20px;
+}
+.tumu-category-section.hidden {
+    display: none;
+}
+
+.tumu-product-content h3 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.tumu-product-content p {
+    color: var(--text-light);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    min-height: 45px;
+}
+
+.tumu-product-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.tumu-tag {
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    background: #08fcac20;
+    color: #08fcac;
+    font-size: 0.8rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #08fcac40;
+}
+
+.tumu-tag::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #08fcac30, transparent, #08fcac30);
+    border-radius: inherit;
+    z-index: -1;
+    animation: rotate 3s linear infinite;
+}
+
+/* Burada rotate animasyonu tanımlanıyor */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.tumu-btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.tumu-btn-primary:hover {
+    background-color: var(--accent-color);
+}
+
+/* Responsive Ayarlar */
+@media (max-width: 992px) {
+    .tumu-stats {
+        width: 100%;
+        margin-top: 15px;
+        justify-content: center;
+    }
+    
+    .tumu-category-header h2 {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .tumu-hero h1 {
+        font-size: 5rem;
+    }
+    
+    .tumu-products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .tumu-products-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tumu-filter-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 eşit kolon */
+        gap: 15px; /* Kolonlar ve satırlar arası boşluk */
+    }
+    .tumu-hero{
+        padding: 0;
+    }
+    
+    .tumu-filter-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    .tumu-category-section{
+        padding-top: 0;
+    }
+}
+
+/* Ürün Filtreleme için CSS - Gizlenmesi gereken ürünler */
+.tumu-product-card.hidden {
+    display: none;
+}

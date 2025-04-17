@@ -1,0 +1,646 @@
+/* Ana Stil ve Layoutlar */
+.uyarlama-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+
+  
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Hero Section Stilleri */
+  .uyarlama-hero {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 80px 0;
+    overflow: hidden;
+  }
+  
+  /* Hero arka plan overlay stil - siyah efekt (rgba(0, 0, 0, 0.8)) */
+  .uyarlama-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+  }
+  
+  /* Hero arka plan resmi için stil */
+  .uyarlama-hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  
+  /* Hero content içindeki öğeler */
+  .uyarlama-hero-content {
+    display: flex;
+    justify-content: space-between; /* Aradaki boşluk korundu */
+    align-items: center;
+    gap: 80px;
+    position: relative;
+    z-index: 1;
+    padding: 20px 0;
+    width: 100%;
+  }
+  
+  .uyarlama-hero-text {
+    flex: 1;
+    text-align: left; /* Yazıları sola hizala */
+    padding-right: 30px;
+  }
+  
+  .uyarlama-hero-image {
+    width: 50%; /* Yatayda %50 genişlik */
+    height: 120%; /* Dikeyde %120 yükseklik */
+    align-items: center;
+  }
+  
+  /* Hero resmi için otomatik büyüyüp küçülme animasyonu */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  .uyarlama-hero-image img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0, 255, 157, 0.25);
+    max-height: 600px;
+    animation: pulse 6s ease-in-out infinite;
+    max-width: 100%; /* Mobil uyumluluk için */
+  }
+  
+  .uyarlama-heading {
+    font-size: 7rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+    color: #fff;
+    text-align: left; /* Başlık sola hizalandı */
+  }
+  
+  .uyarlama-heading-accent {
+    font-size: 7rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0;
+    display: block;
+    color: rgb(8, 252, 172);
+    text-shadow: rgba(8, 252, 172, 0.3) 4px 4px 0px;
+    text-align: left; /* Başlık sola hizalandı */
+  }
+  
+  .uyarlama-description {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: left; /* Açıklama sola hizalandı */
+  }
+  
+  .uyarlama-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start; /* Butonlar sola hizalandı */
+  }
+  
+  .uyarlama-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    gap: 10px;
+    white-space: nowrap; /* Buton içeriği alt satıra inmesin */
+  }
+  
+  .uyarlama-btn-primary {
+    background: linear-gradient(90deg, #00ff9d, rgb(8, 252, 172));
+    color: #000;
+    font-weight: 800;
+  }
+  
+  .uyarlama-btn-primary:hover {
+    background: linear-gradient(90deg, rgb(8, 252, 172), #00ff9d);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
+  }
+  
+  .uyarlama-btn-secondary {
+    background: transparent;
+    color: rgb(8, 252, 172);
+    border: 2px solid rgb(8, 252, 172);
+  }
+  
+  .uyarlama-btn-secondary:hover {
+    background: linear-gradient(90deg, rgba(8, 252, 171, 0.123));
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 255, 157, 0.3);
+  }
+    
+  /* ERP Modülleri Section */
+  .uyarlama-modules {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #000 0%, rgba(10,25,48,0.9) 100%);
+  }
+  
+  .uyarlama-section-title {
+    text-align: center;
+    font-size: 72px;
+    font-weight: 800;
+    margin-bottom: 60px;
+    position: relative;
+  }
+  
+  .uyarlama-section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #00ff9d, rgb(8, 252, 172));
+    margin: 15px auto 0;
+  }
+  
+  .uyarlama-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    height: 1100px;
+  }
+  
+  /* Kart stillerini güncelleme */
+  .uyarlama-card {
+
+    position: relative;
+    border-radius: 20px;
+    padding: 50px;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(8, 252, 172, 0.2);
+    overflow: hidden; /* Arka plan resmi taşmasın */
+    z-index: 1;
+  }
+  
+  /* Kart arka plan resmi */
+  .uyarlama-card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.15; /* Arka plan resmi opaklığı */
+    transition: all 0.3s ease;
+  }
+  
+  /* İçerik öğelerini arka plan resmin üzerine çıkarma */
+  .uyarlama-card-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Hover durumunda arka plan resminin opaklığını artırma */
+  .uyarlama-card:hover .uyarlama-card-bg {
+    opacity: 0.25;
+    transform: scale(1.1);
+  }
+  
+  .uyarlama-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(8, 252, 172, 0.3);
+  }
+  
+  /* Kart içeriği için koyu gradient overlay */
+  .uyarlama-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 100%);
+    z-index: -1;
+  }
+  
+  .uyarlama-card-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(8, 252, 172, 0.1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .uyarlama-card-icon i {
+    font-size: 40px;
+    color: #00ff9d;
+  }
+  
+  .uyarlama-card-title {
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 15px;
+    word-wrap: break-word; /* Uzun başlıklar taşmaz */
+  }
+  
+  .uyarlama-card-description {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  
+  .uyarlama-card-features {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .uyarlama-card-features li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .uyarlama-card-features li i {
+    color: #00ff9d;
+    margin-right: 10px;
+    font-size: 24px;
+    flex-shrink: 0; /* İkon küçülmesin */
+  }
+  
+  /* ERP Faydaları Section */
+  .uyarlama-benefits {
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Arka plan resmi için stil */
+  .uyarlama-benefits-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  
+  /* Overlay için stil */
+  .uyarlama-benefits-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: -1;
+  }
+  
+  .uyarlama-stats-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap; /* Mobil görünümde alt satıra geçebilir */
+    gap: 30px; /* Öğeler arasında boşluk */
+  }
+  
+  .uyarlama-stat-item {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 30px;
+    border: 1px solid rgba(8, 252, 172, 0.1);
+    backdrop-filter: blur(10px);
+    flex: 1;
+    min-width: 250px; /* Minimum genişlik */
+  }
+  
+  .uyarlama-stat-number {
+    font-size: 72px;
+    font-weight: 800;
+    color: #00ff9d;
+    background: linear-gradient(90deg, #00ff9d, rgb(8, 252, 172));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+  }
+  
+  .uyarlama-stat-label {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 15px;
+  }
+  
+  /* Section başlığının z-indeks değerini ayarlama */
+  .uyarlama-section-title {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* CTA Section */
+  .uyarlama-cta {
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Arka plan resmi için stil */
+  .uyarlama-cta-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  
+  /* Overlay için stil */
+  .uyarlama-cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(10,25,48,0.85) 100%);
+    z-index: -1;
+  }
+  
+  .uyarlama-cta-title {
+    font-size: 72px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    line-height: 1.2;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+  }
+  
+  .uyarlama-cta .uyarlama-btn {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .uyarlama-cta .uyarlama-container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Responsive Tasarım - İyileştirilmiş Mobil Görünüm */
+  @media (max-width: 1400px) {
+    .uyarlama-card-title {
+      font-size: 32px;
+    }
+    
+    .uyarlama-card-description {
+      font-size: 18px;
+    }
+    
+    .uyarlama-section-title {
+      font-size: 62px;
+    }
+    
+    .uyarlama-cta-title {
+      font-size: 62px;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .uyarlama-card-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .uyarlama-heading, .uyarlama-heading-accent {
+      font-size: 6rem;
+    }
+    
+    .uyarlama-hero-content {
+      gap: 60px;
+    }
+    
+    .uyarlama-stat-number {
+      font-size: 64px;
+    }
+    
+    .uyarlama-stat-item {
+      padding: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .uyarlama-heading, .uyarlama-heading-accent {
+      font-size: 5rem;
+    }
+    
+    .uyarlama-hero-content {
+      gap: 40px;
+    }
+    
+    .uyarlama-section-title {
+      font-size: 52px;
+    }
+    
+    .uyarlama-cta-title {
+      font-size: 52px;
+    }
+    
+    .uyarlama-stat-number {
+      font-size: 56px;
+    }
+    
+    .uyarlama-hero-image {
+      width: 45%;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .uyarlama-stats-grid {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .uyarlama-stat-item {
+      flex: 0 0 calc(50% - 15px);
+      margin-bottom: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .uyarlama-hero-content {
+        flex-direction: column;
+        gap: 40px;
+      }
+      
+      .uyarlama-hero-image {
+        order: 2; /* Değiştirildi: -1'den 2'ye - resim altta olacak */
+        width: 90%;
+        margin: 0 auto;
+      }
+      
+      .uyarlama-hero-text {
+        order: 1; /* Eklendi: yazılar üstte olacak */
+        padding-right: 0;
+        width: 100%;
+      }
+    
+    .uyarlama-card-grid {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: 1700px;
+    }
+    
+    .uyarlama-heading, .uyarlama-heading-accent {
+      font-size: 3.5rem;
+      text-align: center;
+    }
+    
+    .uyarlama-description {
+      text-align: center;
+      font-size: 1.2rem;
+    }
+    
+    .uyarlama-buttons {
+      justify-content: center;
+    }
+    
+    .uyarlama-section-title {
+      font-size: 42px;
+    }
+    
+    .uyarlama-cta-title {
+      font-size: 42px;
+    }
+    
+    .uyarlama-stat-item {
+      flex: 0 0 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .uyarlama-heading, .uyarlama-heading-accent {
+      font-size: 2.5rem;
+    }
+    
+    .uyarlama-description {
+      font-size: 1.1rem;
+    }
+    
+    .uyarlama-section-title {
+      font-size: 36px;
+    }
+    
+    .uyarlama-cta-title {
+      font-size: 36px;
+    }
+    
+    .uyarlama-stat-number {
+      font-size: 48px;
+    }
+    
+    .uyarlama-stat-label {
+      font-size: 16px;
+    }
+    
+    .uyarlama-card-title {
+      font-size: 28px;
+    }
+    
+    .uyarlama-card-description {
+      font-size: 16px;
+    }
+    
+    .uyarlama-card {
+      padding: 20px;
+      height: 450px;
+    }
+    
+    .uyarlama-buttons {
+      flex-direction: column;
+      width: 100%;
+      gap: 15px;
+    }
+    
+    .uyarlama-btn {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+  
+
+    .uyarlama-container {
+      padding-top: 30px;
+    }
+
+    .uyarlama-heading, .uyarlama-heading-accent {
+      font-size: 4rem;
+    }
+    
+    .uyarlama-hero {
+      padding: 60px 0;
+    }
+    
+    .uyarlama-modules, 
+    .uyarlama-benefits, 
+    .uyarlama-cta {
+      padding: 60px 0;
+    }
+    
+    .uyarlama-section-title {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+    
+    .uyarlama-cta-title {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+    
+    .uyarlama-stat-item {
+      padding: 2rem;
+    }
+    
+    .uyarlama-btn {
+      padding: 12px 25px;
+      font-size: 14px;
+    }
+  }

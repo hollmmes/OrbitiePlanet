@@ -1,0 +1,362 @@
+/* Mobil Stil - mobile.css */
+
+/* ------------------- TABLET (992px altı) ------------------- */
+@media (max-width: 992px) {
+    /* Hero Bölümü - Tablet */
+    .hero h1 {
+        font-size: 50px;
+        line-height: 1;
+    }
+    
+    .hero h2 {
+        font-size: 40px;
+        line-height: 0;
+    }
+    
+    /* Layout Düzenlemeleri - Tablet */
+    .sectors-content, 
+    .cp-content {
+        flex-direction: column;
+    }
+    
+    /* Sektörler Grid - Tablet */
+    .sectors-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+    
+    .sector-item {
+        padding: 15px 10px;
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .icon-circle {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    
+    .sector-item i {
+        font-size: 20px;
+    }
+    
+    .sector-item span {
+        font-size: 13px;
+        text-align: center;
+    }
+    
+    /* Header ve Menü - Tablet */
+    .main-nav ul {
+        gap: 10px;
+    }
+    
+    .header-item {
+        font-size: 13px;
+    }
+    
+    .icon-container {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .icon-container svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+}
+
+/* ------------------- MOBİL (768px altı) ------------------- */
+@media (max-width: 768px) {
+    /* Header ve Navigasyon - Mobil */
+    .mobile-menu-toggle {
+        display: flex;
+    }
+    
+    .lang-switch {
+        display: none;
+    }
+    
+    .mobile-lang-switch {
+        display: block;
+    }
+    
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 280px;
+        height: 100vh;
+        background-color: var(--secondary-bg);
+        z-index: 1050;
+        padding: 80px 20px 30px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        overflow-y: auto;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+    }
+    
+    .main-nav ul li {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .header-item {
+        padding: 10px;
+        border-radius: 6px;
+        background-color: rgba(255, 255, 255, 0.05);
+        width: 100%;
+    }
+    
+    .header .container {
+        justify-content: space-between;
+    }
+    
+    /* Hero Bölümü - Mobil */
+    .hero h1 {
+        font-size: 50px;
+        line-height: 1;
+    }
+    
+    .hero h2 {
+        font-size: 40px;
+        line-height: 0;
+    }
+    
+    .hero p {
+        font-size: 16px;
+    }
+    
+    /* Başlıklar - Mobil */
+    .references h2 {
+        font-size: 52px;
+    }
+    
+    .sectors .section-heading {
+        font-size: 40px;
+    }
+    
+    .tech-solutions h2 {
+        font-size: 52px;
+    }
+    
+    /* Çözümler Grid - Mobil */
+    .solutions-grid {
+        grid-template-columns: 1fr; /* Mobil ekranlarda tek sütun */
+    }
+    
+    .solution-card .icon {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    
+    /* Sektörler - Mobil */
+    .sectors-image {
+        width: 75%;
+    }
+    
+    .sectors-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 15px;
+    }
+    
+    .sector-item {
+        padding: 15px 10px;
+        height: 110px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .icon-circle {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 8px;
+    }
+    
+    .sector-item i {
+        font-size: 18px;
+    }
+    
+    .sector-item span {
+        font-size: 12px;
+        text-align: center;
+        line-height: 1.2;
+    }
+    
+    /* Footer - Mobil */
+    .footer-content {
+        display: grid; /* Flex yerine grid kullan */
+        grid-template-columns: 1fr 1fr; /* 2 eşit kolon */
+        gap: 30px; /* Kolonlar ve satırlar arası boşluk */
+    }
+    .footer-content h3{
+        font-size:1.3rem;
+    }
+    .footer-content li{
+        font-size: 1rem;
+    }
+.social-links a{
+    font-size: 4rem;
+    }
+    /* Logo Slider - Mobil */
+    .logos-slider {
+        animation: scroll 20s linear infinite; /* Mobilde daha hızlı */
+    }
+    
+    .logo-item {
+        flex: 0 0 200px; /* Mobilde biraz daha küçük ama yine de büyük */
+        height: 120px;
+    }
+    
+    .logo-item img {
+        max-height: 70px;
+    }
+    
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-150px * 6)); /* Mobilde düzeltilmiş genişlik */
+        }
+    }
+    
+    /* Success Stories - Mobil */
+    .success-stories {
+        padding: 80px 0px 500px 0;
+    }
+    
+    /* Dropdown Menü - Mobil */
+    .dropdown-toggle {
+        display: flex;
+    }
+    
+    .main-nav .dropdown-menu {
+        position: static;
+        width: 100%;
+        min-width: auto;
+        left: 0;
+        transform: none; /* Transform iptal */
+        box-shadow: none;
+        background-color: rgba(43, 86, 76, 0.1);
+        opacity: 0;
+        visibility: hidden;
+        height: 0;
+        padding: 0 !important;
+        overflow: hidden;
+        margin-top: 0;
+        transition: all 0.3s ease;
+        display: block !important; /* grid yerine block gösterimi */
+        grid-template-columns: 1fr; /* Mobilde tek sütun */
+    }
+    
+    .main-nav .dropdown-active .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        height: auto;
+        padding: 5px 0 !important;
+        margin-top: 5px;
+        transform: none; /* Transform iptal */
+    }
+    
+    .main-nav .dropdown-menu li a {
+        padding: 10px 15px 10px 45px;
+    }
+    
+    /* Dropdown icons - Mobil */
+    .dropdown-icon {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .dropdown-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+    
+    /* Sağ kenar menüleri için mobil görünümde özel ayarlar */
+    .main-nav ul li:last-child .dropdown-menu,
+    .main-nav ul li:nth-last-child(2) .dropdown-menu,
+    .main-nav ul li:nth-last-child(3) .dropdown-menu {
+        left: 0;
+        right: auto;
+        transform: none;
+    }
+    
+    .main-nav ul li:last-child:hover .dropdown-menu,
+    .main-nav ul li:nth-last-child(2):hover .dropdown-menu,
+    .main-nav ul li:nth-last-child(3):hover .dropdown-menu {
+        transform: none;
+    }
+}
+
+/* ------------------- KÜÇÜK MOBİL (576px altı) ------------------- */
+@media (max-width: 576px) {
+    /* Sektörler Grid - Küçük Mobil */
+    .sectors-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+    
+    .sector-item {
+        padding: 10px 5px;
+        height: 100px;
+    }
+    
+    .icon-circle {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .sector-item i {
+        font-size: 16px;
+    }
+    
+    .sector-item span {
+        font-size: 11px;
+        text-align: center;
+        line-height: 1.2;
+        margin-top: 5px;
+    }
+    
+    /* Özellikler Grid - Küçük Mobil */
+    .cp-features {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .feature {
+        padding: 12px;
+    }
+    
+    .feature i {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+    
+    .feature span {
+        font-size: 14px;
+    }
+    
+    /* Success Stories - Küçük Mobil */
+    .success-stories {
+        padding: 80px 0px 500px 0;
+    }
+}
