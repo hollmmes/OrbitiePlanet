@@ -1,0 +1,269 @@
+/* CPQ Detayları CSS */
+:root {
+    --cpqd-primary: #08fcac;
+    --cpqd-primary-dark: #06c285;
+    --cpqd-dark-bg: #000000;
+    --cpqd-card-bg: rgba(15, 25, 35, 0.7);
+    --cpqd-text-color: #ffffff;
+    --cpqd-text-light: rgba(255, 255, 255, 0.8);
+    --cpqd-border-color: rgba(8, 252, 172, 0.2);
+}
+
+.cpqd-body {
+    background-color: var(--cpqd-dark-bg);
+    background-image: 
+        linear-gradient(125deg, rgba(0, 0, 0, 0.95) 0%, rgba(15, 25, 35, 0.95) 100%),
+        url('path-to-background-image.jpg'); /* Eğer arkaplan resmi kullanmak isterseniz */
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--cpqd-text-color);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.cpqd-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Hero Bölümü */
+.cpqd-hero {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(46, 204, 113, 0.8);
+    border-radius: 20px;
+    padding: 90px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cpqd-logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cpqd-logo img {
+    max-width: 35%;
+    height: auto;
+}
+
+.cpqd-logo-subtitle {
+    font-size: 2.5rem;
+    color: var(--cpqd-primary);
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 10px;
+}
+
+.cpqd-intro {
+    color: var(--cpqd-text-light);
+}
+
+.cpqd-title {
+    color: var(--cpqd-primary);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.cpqd-description {
+    margin-bottom: 25px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.cpqd-description strong {
+    color: var(--cpqd-text-color);
+}
+
+.cpqd-advantages {
+    margin: 30px 0;
+}
+
+.cpqd-advantages h3 {
+    color: var(--cpqd-primary);
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.cpqd-advantage-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cpqd-advantage-list li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.cpqd-advantage-list li:before {
+    content: "•";
+    color: var(--cpqd-primary);
+    position: absolute;
+    left: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.cpqd-advantage-list li strong {
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.cpqd-highlight {
+    font-style: italic;
+    margin-top: 25px;
+    font-size: 1.05rem;
+    border-left: 3px solid var(--cpqd-primary);
+    padding-left: 15px;
+}
+
+/* Özellikler Grid Bölümü */
+.cpqd-features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.cpqd-feature-card {
+    background: radial-gradient(circle at top right, rgba(46, 204, 113, 0.1), transparent 100%);
+    border: 1px solid var(--cpqd-border-color);
+    border-radius: 8px;
+    padding: 25px;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+}
+
+.cpqd-feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(8, 252, 172, 0.1);
+    border-color: var(--cpqd-primary);
+}
+
+.cpqd-feature-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(46, 204, 113, 0.1);
+    border-radius: 50%;
+    display: flex
+;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 25px;
+    transition: all 0.3s ease;
+font-size: 24px;
+
+
+}
+.cpqd-feature-icon::before{
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+.cpqd-feature-title {
+    color: var(--cpqd-primary);
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: 700;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cpqd-feature-description {
+    color: rgba(255, 255, 255, 0.801);
+    font-size: 1rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+/* CTA Bölümü */
+.cpqd-cta {
+    text-align: center;
+    margin: 50px 0 20px;
+}
+
+.cpqd-cta-button {
+    background-color: var(--cpqd-primary);
+    color: var(--cpqd-dark-bg);
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.cpqd-cta-button:hover {
+    background-color: var(--cpqd-primary-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(8, 252, 172, 0.3);
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1200px) {
+    .cpqd-features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .cpqd-features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .cpqd-hero {
+        padding: 30px;
+    }
+    
+    .cpqd-logo h1 {
+        font-size: 2.5rem;
+    }
+    
+    .cpqd-logo-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .cpqd-title {
+        font-size: 1.5rem;
+    }
+    
+    .cpqd-cta-button {
+        width: 100%;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cpqd-features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cpqd-hero {
+        padding: 20px;
+    }
+}
