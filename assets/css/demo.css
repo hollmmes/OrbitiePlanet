@@ -1,0 +1,230 @@
+/* demo.css */
+:root {
+    --primary-color: #27c269;
+    --dark-bg: #171717;
+    --header-bg: #121812;
+    --form-bg: #1b2b22;
+    --text-color: #ffffff;
+    --input-bg: #2c2c2c;
+    --border-color: #3a3a3a;
+    --input-text: #ebebeb;
+    --label-color: #ebebeb;
+    --text-secondary: rgba(235, 235, 235, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #1a1a1a;
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.demo-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.demo-header-section {
+    margin-top: 100px;
+    text-align: center;
+    padding: 45px 20px;
+    background: rgba(46, 204, 113, 0.05);
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.demo-title {
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(135deg, rgb(8, 252, 172) 0%, rgb(79, 209, 197) 25%, rgb(8, 252, 172) 50%, rgb(79, 209, 197) 75%, rgb(8, 252, 172) 100%) 0% 0% / 200% text;
+    animation: 3s linear 0s infinite normal none running shine;
+}
+
+.demo-description {
+    color: var(--text-secondary);
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.demo-form-section {
+    margin: 0 175px 0 175px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.demo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.demo-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.demo-label {
+    color: var(--label-color);
+    font-size: 1rem;
+    font-weight: 800;
+text-align: center;
+
+}
+
+.demo-input, .demo-textarea {
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: 4px;
+    padding: 12px 15px;
+    color: var(--input-text);
+    font-size: 14px;
+}
+
+.demo-input:focus, .demo-textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(39, 194, 105, 0.3);
+}
+
+.demo-checkbox-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.demo-checkbox-row {
+    display: flex;
+    gap: 30px;
+}
+
+.demo-checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+}
+
+.demo-checkbox {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: var(--input-bg);
+    border-radius: 3px;
+    position: relative;
+    cursor: pointer;
+}
+
+.demo-checkbox:checked {
+    background-color: var(--primary-color);
+}
+
+.demo-checkbox:checked::after {
+    content: '✓';
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.demo-checkbox-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.demo-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.demo-submit-btn {
+    display: inline-flex
+;
+    border-radius: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 800;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: #08fcac;
+    color: #000000;
+    padding: 1rem 2rem;
+    font-size: 1.125rem;
+}
+
+.demo-submit-btn:hover {
+    background-color: #08fcac;
+    transform: translateY(-5px);
+    
+}
+
+/* Responsive ayarlamalar */
+@media (max-width: 700px) {
+    .demo-container {
+        gap: 20px;
+    }
+    
+    .demo-header-section {
+        padding: 30px 20px;
+    }
+    
+    .demo-form-section {
+        padding: 30px 20px;
+    }
+    
+    .demo-checkbox-row {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .demo-title {
+        font-size: 24px;
+    }
+    
+    .demo-description {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 10px;
+    }
+    
+    .demo-container {
+        gap: 15px;
+    }
+    
+    .demo-header-section {
+        padding: 25px 15px;
+    }
+    
+    .demo-form-section {
+        padding: 20px 15px;
+    }
+}

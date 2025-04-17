@@ -11,7 +11,8 @@
     
   <!-- Sonra header ve footer stilleri -->
   <link rel="stylesheet" href="assets/css/header-footer.css">
-  
+
+    <link rel="stylesheet" href="assets/css/demo.css">
   
   <!-- Diğer CSS dosyaları -->
   <link rel="stylesheet" href="assets/css/animations.css">
@@ -351,58 +352,112 @@
         </div>
     </header>
 
-<main>
-
-    
-</main>
-
-
-       <!-- Footer -->
-       <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-col">
-                    <h3>Hızlıca Ulaşın</h3>
-                    <ul>
-                        <li><a href="#">Anasayfa</a></li>
-                        <li><a href="#">Çözümlerimiz</a></li>
-                        <li><a href="#">Ürünlerimiz</a></li>
-                        <li><a href="#">Hakkımızda</a></li>
-                        <li><a href="#">İletişim</a></li>
-                    </ul>
+    <main class="demo-container">
+        <section class="demo-header-section">
+            <h1 class="demo-title">Demo ve Fiyatlandırma Talebi</h1>
+            <p class="demo-description">Orbite'nin sunduğu çözümleri daha yakından tanımak ve işletmenize özel fiyatlandırma almak için formu doldurun, size en kısa sürede dönüş yapalım.</p>
+        </section>
+        
+        <section class="demo-form-section">
+            <form class="demo-form">
+                <div class="demo-form-group">
+                    <label for="company-name" class="demo-label">Firma Adı</label>
+                    <input type="text" id="company-name" class="demo-input">
                 </div>
-    
-                <div class="footer-col">
-                    <h3>Yasal Bilgiler</h3>
-                    <ul>
-                        <li><a href="#">Gizlilik Politikası</a></li>
-                        <li><a href="#">Kullanım Şartları</a></li>
-                        <li><a href="#">Çerez Politikası</a></li>
-                    </ul>
+                
+                <div class="demo-form-group">
+                    <label for="full-name" class="demo-label">Ad Soyad</label>
+                    <input type="text" id="full-name" class="demo-input">
                 </div>
-                <div class="footer-col">
-                    <h3>İletişim Bilgileri</h3>
-                    <ul>
-                   <li> <a href="#">E-posta: info@orbita.com</a></li>
-                   <li>  <a href="#">Telefon: +90 212 555 55 55</a></li>
-                   <li> <a href="#">Adres: Teknopark İstanbul, Pendik/İstanbul</a></li>
-                    </ul>
+                
+                <div class="demo-form-group">
+                    <label for="position" class="demo-label">Ünvan</label>
+                    <input type="text" id="position" class="demo-input">
                 </div>
-                <div class="footer-col">
-                    <h3>Bizi Takip Edin</h3>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                
+                <div class="demo-form-group">
+                    <label for="email" class="demo-label">E-posta</label>
+                    <input type="email" id="email" class="demo-input">
+                </div>
+                
+                <div class="demo-form-group">
+                    <label for="phone" class="demo-label">Telefon</label>
+                    <input type="tel" id="phone" class="demo-input">
+                </div>
+                
+                <div class="demo-form-group">
+                    <label class="demo-label">İlgilendiğiniz Modüller (Birden fazla seçebilirsiniz)</label>
+                    
+                    <div class="demo-checkbox-grid">
+                        <div class="demo-checkbox-row">
+                            <div class="demo-checkbox-item">
+                                <input type="checkbox" id="module1" class="demo-checkbox">
+                                <label for="module1" class="demo-checkbox-label">Kurumsal Proje Ekosistemi</label>
+                            </div>
+                            
+                            <div class="demo-checkbox-item">
+                                <input type="checkbox" id="module2" class="demo-checkbox">
+                                <label for="module2" class="demo-checkbox-label">ÇPO</label>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-checkbox-row">
+                            <div class="demo-checkbox-item">
+                                <input type="checkbox" id="module3" class="demo-checkbox">
+                                <label for="module3" class="demo-checkbox-label">CRM</label>
+                            </div>
+                            
+                            <div class="demo-checkbox-item">
+                                <input type="checkbox" id="module4" class="demo-checkbox">
+                                <label for="module4" class="demo-checkbox-label">Satın Alma</label>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-checkbox-row">
+                            <div class="demo-checkbox-item">
+                                <input type="checkbox" id="module5" class="demo-checkbox">
+                                <label for="module5" class="demo-checkbox-label">Servis (SSH)</label>
+                            </div>
+                            
+                            <div class="demo-checkbox-item">
+                                <input type="checkbox" id="module6" class="demo-checkbox">
+                                <label for="module6" class="demo-checkbox-label">Proje Yönetimi</label>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-checkbox-row">
+                            <div class="demo-checkbox-item">
+                                <input type="checkbox" id="module7" class="demo-checkbox">
+                                <label for="module7" class="demo-checkbox-label">ePazar</label>
+                            </div>
+                            
+                            <div class="demo-checkbox-item">
+                                <input type="checkbox" id="module8" class="demo-checkbox">
+                                <label for="module8" class="demo-checkbox-label">Nexus PDKS</label>
+                            </div>
+                        </div>
+                        
+                        <div class="demo-checkbox-row">
+                            <div class="demo-checkbox-item">
+                                <input type="checkbox" id="module9" class="demo-checkbox">
+                                <label for="module9" class="demo-checkbox-label">Döküman Arşivi</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <a href="#">© 2025 Planet Yazılım. Tüm hakları saklıdır.</a>
-            </div>
-        </div>
-    </footer>
+                
+                <div class="demo-form-group">
+                    <label for="message" class="demo-label">Mesajınız</label>
+                    <textarea id="message" class="demo-textarea" rows="5"></textarea>
+                </div>
+                
+                <button type="submit" class="demo-submit-btn">Gönder</button>
+            </form>
+        </section>
+    </main>
+
+
+
 
 
     <script src="assets/js/script.js"></script>
