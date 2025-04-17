@@ -11,7 +11,6 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
 }
-
 .header .container {
     margin-left: 250px;
     display: flex;
@@ -79,7 +78,6 @@ margin-right: 100px;
 .main-nav ul li a:hover {
     color: var(--primary-color);
 }
-
 /* Dropdown item content styles */
 .dropdown-content {
     display: flex;
@@ -89,7 +87,6 @@ margin-right: 100px;
     font-size: 1rem;
     line-height: 1;
 }
-
 /* Dropdown menu description styles */
 .menu-description {
     display: block;
@@ -98,7 +95,6 @@ margin-right: 100px;
     font-weight: 400;
     margin-top: 3px;
 }
-
 /* Dropdown Menu - Tüm menüler için ortalanmış hali */
 .dropdown-menu {
     position: absolute;
@@ -129,7 +125,7 @@ margin-right: 100px;
     transform: translateX(-50%) translateY(0);
 }
 /* Ekran kenarında taşmayı önlemek için gerektiğinde kaydırma */
-@media (min-width: 769px) {
+@media (min-width: 1080px) {
     .dropdown-menu {
         max-width: calc(100vw - 40px); /* Ekranın kenarlarından 20px boşluk bırak */
     }
@@ -297,7 +293,7 @@ body.mobile-menu-open .mobile-menu-toggle span:nth-child(3) {
     transform: translateY(-9px) rotate(-45deg);
 }
 /* Mobil Görünüm - Header */
-@media (max-width: 768px) {
+@media (max-width: 1079px) {
     .demo-button-container {
         display: none;
     }
@@ -492,7 +488,7 @@ footer, .footer, .site-footer {
     grid-template-columns: 1fr 1fr; /* 2 eşit kolon */
     gap: 15px; /* Kolonlar ve satırlar arası boşluk */
 }
-@media (max-width: 768px) {
+@media (max-width: 1079px) {
     .footer-content {
         flex-direction: column;
         gap: 30px;

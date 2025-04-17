@@ -11,14 +11,12 @@
     --label-color: #ebebeb;
     --text-secondary: rgba(235, 235, 235, 0.7);
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
 body {
     background: #1a1a1a;
     color: var(--text-color);
@@ -28,7 +26,6 @@ body {
     align-items: center;
     padding: 40px 20px;
 }
-
 .demo-container {
     width: 100%;
     max-width: 800px;
@@ -36,7 +33,6 @@ body {
     flex-direction: column;
     gap: 30px;
 }
-
 .demo-header-section {
     margin-top: 100px;
     text-align: center;
@@ -45,7 +41,6 @@ body {
     border-radius: 8px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
-
 .demo-title {
     font-weight: 800;
     color: rgb(255, 255, 255);
@@ -55,7 +50,6 @@ body {
     background: linear-gradient(135deg, rgb(8, 252, 172) 0%, rgb(79, 209, 197) 25%, rgb(8, 252, 172) 50%, rgb(79, 209, 197) 75%, rgb(8, 252, 172) 100%) 0% 0% / 200% text;
     animation: 3s linear 0s infinite normal none running shine;
 }
-
 .demo-description {
     color: var(--text-secondary);
     font-size: 15px;
@@ -63,7 +57,6 @@ body {
     max-width: 600px;
     margin: 0 auto;
 }
-
 .demo-form-section {
     margin: 0 175px 0 175px;
     padding: 40px;
@@ -71,27 +64,22 @@ body {
     border-radius: 8px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
-
 .demo-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
 .demo-form-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-
 .demo-label {
     color: var(--label-color);
     font-size: 1rem;
     font-weight: 800;
-text-align: center;
-
+    text-align: center;
 }
-
 .demo-input, .demo-textarea {
     background-color: var(--input-bg);
     border: none;
@@ -100,30 +88,25 @@ text-align: center;
     color: var(--input-text);
     font-size: 14px;
 }
-
 .demo-input:focus, .demo-textarea:focus {
     outline: none;
     box-shadow: 0 0 0 2px rgba(39, 194, 105, 0.3);
 }
-
 .demo-checkbox-grid {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
-
 .demo-checkbox-row {
     display: flex;
     gap: 30px;
 }
-
 .demo-checkbox-item {
     display: flex;
     align-items: center;
     gap: 8px;
     flex: 1;
 }
-
 .demo-checkbox {
     appearance: none;
     -webkit-appearance: none;
@@ -134,11 +117,9 @@ text-align: center;
     position: relative;
     cursor: pointer;
 }
-
 .demo-checkbox:checked {
     background-color: var(--primary-color);
 }
-
 .demo-checkbox:checked::after {
     content: '✓';
     position: absolute;
@@ -148,22 +129,18 @@ text-align: center;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 .demo-checkbox-label {
     font-size: 0.8rem;
     color: var(--text-secondary);
     cursor: pointer;
     font-weight: 800;
 }
-
 .demo-textarea {
     resize: vertical;
     min-height: 100px;
 }
-
 .demo-submit-btn {
-    display: inline-flex
-;
+    display: inline-flex;
     border-radius: 20px;
     align-items: center;
     justify-content: center;
@@ -175,39 +152,70 @@ text-align: center;
     color: #000000;
     padding: 1rem 2rem;
     font-size: 1.125rem;
+    border: none;
+    width: 100%;
 }
-
 .demo-submit-btn:hover {
     background-color: #08fcac;
     transform: translateY(-5px);
-    
+}
+
+/* Animasyon */
+@keyframes shine {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 200% 0%;
+    }
 }
 
 /* Responsive ayarlamalar */
-@media (max-width: 700px) {
+@media (max-width: 1079px) {
     .demo-container {
         gap: 20px;
     }
     
     .demo-header-section {
         padding: 30px 20px;
+        margin-top: 80px;
     }
     
     .demo-form-section {
+        margin: 0;
         padding: 30px 20px;
+    }
+    
+    .demo-title {
+        font-size: 2.5rem;
+    }
+    
+    .demo-description {
+        font-size: 14px;
     }
     
     .demo-checkbox-row {
         flex-direction: column;
         gap: 12px;
     }
-    
+}
+
+@media (max-width: 768px) {
     .demo-title {
-        font-size: 24px;
+        font-size: 2rem;
     }
     
-    .demo-description {
-        font-size: 14px;
+    .demo-header-section {
+        margin-top: 60px;
+    }
+    
+    .demo-form-section {
+        padding: 25px 15px;
+    }
+    
+    .demo-submit-btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
     }
 }
 
@@ -222,9 +230,41 @@ text-align: center;
     
     .demo-header-section {
         padding: 25px 15px;
+        margin-top: 40px;
     }
     
     .demo-form-section {
         padding: 20px 15px;
+    }
+    
+    .demo-title {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+    }
+    
+    .demo-description {
+        font-size: 13px;
+    }
+    
+    .demo-label {
+        font-size: 0.9rem;
+    }
+    
+    .demo-input, .demo-textarea {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+    
+    .demo-textarea {
+        min-height: 80px;
+    }
+    
+    .demo-checkbox-label {
+        font-size: 0.75rem;
+    }
+    
+    .demo-submit-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
     }
 }
