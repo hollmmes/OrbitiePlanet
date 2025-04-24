@@ -22,8 +22,7 @@ body {
     color: var(--text-color);
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     padding: 40px 20px;
 }
 .demo-container {
@@ -32,6 +31,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin: 0 auto;
+    flex: 1;
 }
 .demo-header-section {
     margin-top: 100px;
@@ -58,7 +59,7 @@ body {
     margin: 0 auto;
 }
 .demo-form-section {
-    margin: 0 175px 0 175px;
+    margin: 0 175px 60px 175px;
     padding: 40px;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 8px;

@@ -5,7 +5,7 @@
     --dark-bg: #000000;
     --card-bg: rgba(15, 25, 35, 0.7);
     --text-color: #ffffff;
-    --text-light: rgba(255, 255, 255, 0.7);
+    --text-light: rgba(255, 255, 255, 0.9);
     --accent-color: rgb(7, 224, 152);
     --border-color: rgba(8, 252, 172, 0.2);
     --max-width: 1200px;
@@ -20,6 +20,24 @@ body {
     font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
 }
+.cpqd-logo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cpqd-logo img {
+    max-width: 35%;
+    height: auto;
+}
+
+.cpqd-logo-subtitle {
+    text-shadow: rgba(8, 252, 172, 0.3) 5px 5px 0px;
+    font-size: 4rem;
+    color: #08fcac;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 10px;
+}
 
 /* Ana Konteyner */
 .tumu-main {
@@ -32,7 +50,7 @@ body {
 .tumu-hero {
     text-align: center;
     margin-bottom: 50px;
-    padding: 50px 0;
+    padding: 50px 0px 0px 0px;
 }
 
 .tumu-hero h1 {
@@ -93,7 +111,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
 }
 
 .tumu-filter-btn {
@@ -102,7 +120,7 @@ body {
     border: 1px solid var(--border-color);
     padding: 8px 16px;
     border-radius: 20px;
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -129,7 +147,6 @@ body {
 /* Kategori Bölümleri */
 .tumu-category-section {
     margin-bottom: 60px;
-    padding-top: 40px;
 }
 
 .tumu-category-header {
@@ -192,7 +209,7 @@ body {
 
 .tumu-stat-value {
     color: var(--primary-color);
-    font-size: 1.4rem;
+    font-size: 1.4rem;      
     font-weight: 800;
 }
 
@@ -206,7 +223,6 @@ body {
 /* Ürün Kartları Grid */
 .tumu-products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 25px;
 }
 
@@ -230,7 +246,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.tumu-product-card:hover .tumu-product-content {
+.tumu-product-card:hover  {
     background-color: rgba(255, 255, 255, 0.05); /* Hover durumunda içerik arka planı */
 }
 
@@ -258,20 +274,26 @@ body {
 }
 
 .tumu-product-content h3 {
-    color: white;
-    font-size: 1.5rem;
+    color: rgb(8, 252, 172);
+    font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 10px;
 }
 
 .tumu-product-content p {
     color: var(--text-light);
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     margin-bottom: 15px;
     min-height: 45px;
 }
-
+/* Dönen ikon animasyonu */
+.rotate-icon {
+    display: inline-block;
+    margin-right: 10px;
+    animation: rotate180 8s linear infinite;
+    font-size: 2rem;
+}
 .tumu-product-tags {
     display: flex;
     flex-wrap: wrap;
@@ -284,10 +306,11 @@ body {
     border-radius: 50px;
     background: #08fcac20;
     color: #08fcac;
-    font-size: 0.8rem;
+    font-size: 1rem;
     position: relative;
     overflow: hidden;
     border: 1px solid #08fcac40;
+    margin-bottom: 20px;
 }
 
 .tumu-tag::before {
@@ -389,17 +412,17 @@ body {
 .info-button {
     display: flex;
     align-items: center;
+    margin: 0 auto;
     gap: 8px;
     background-color: rgba(8, 252, 172, 0.1);
     color: var(--primary-color);
     border: 1px solid var(--border-color);
     padding: 8px 16px;
     border-radius: 20px;
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-right: 600px;
 }
 
 .info-button:hover {

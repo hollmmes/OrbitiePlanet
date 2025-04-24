@@ -17,7 +17,39 @@
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/mobile.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Decorative Line Stili */
+    .decorative-line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right, transparent, rgba(8, 252, 172, 0.5), rgba(8, 252, 172, 1), rgba(8, 252, 172, 0.5), transparent);
+        box-shadow: 
+            0 0 10px rgba(8, 252, 172, 0.7),
+            0 0 20px rgba(8, 252, 172, 0.5),
+            0 0 30px rgba(8, 252, 172, 0.3);
+        z-index: 5;
+        opacity: 0.9;
+        animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+        from {
+            box-shadow: 
+                0 0 10px rgba(8, 252, 172, 0.7),
+                0 0 20px rgba(8, 252, 172, 0.5),
+                0 0 30px rgba(8, 252, 172, 0.3);
+        }
+        to {
+            box-shadow: 
+                0 0 15px rgba(8, 252, 172, 0.8),
+                0 0 25px rgba(8, 252, 172, 0.6),
+                0 0 35px rgba(8, 252, 172, 0.4);
+        }
+    }
+</style>
 </head>
+
 <body>  
     <!-- Header -->
     <header class="header">
@@ -285,23 +317,7 @@
                                     </div>
                                 </a>
                             </li>
-                            <li>
-                                <a href="vaka-calismalari.html">
-                                    <div class="dropdown-icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                            <polyline points="14 2 14 8 20 8"></polyline>
-                                            <line x1="16" y1="13" x2="8" y2="13"></line>
-                                            <line x1="16" y1="17" x2="8" y2="17"></line>
-                                            <polyline points="10 9 9 9 8 9"></polyline>
-                                        </svg>
-                                    </div>
-                                    <div class="dropdown-content">
-                                        <span><p>Vaka Çalışmaları</p></span>
-                                        <span class="menu-description">Başarılı proje örneklerimiz</span>
-                                    </div>
-                                </a>
-                            </li>
+                        
                             <li>
                                 <a href="basari-hikayeleri.html">
                                     <div class="dropdown-icon">
@@ -351,7 +367,6 @@
         </div>
     </header>
 
-
     <main class="tumu-main">
         <section class="tumu-hero">
             <h1>Kurumsal Çözümler</h1>
@@ -363,9 +378,11 @@
                     <input type="text" id="tumuSearchInput" placeholder="Ürün veya çözüm arayın...">
                 </div>
             </div>
-            
             <div class="tumu-filter-buttons">
-                <button class="tumu-filter-btn active" data-filter="all"><i class="fas fa-th"></i> Tüm Kategoriler</button>
+            <button class="tumu-filter-btn active" data-filter="all"><i class="fas fa-th"></i> Tüm Kategoriler</button>
+        </div>  
+            <div class="tumu-filter-buttons">
+
                 <button class="tumu-filter-btn" data-filter="cpq"><i class="fas fa-calculator"></i> CPQ</button>
                 <button class="tumu-filter-btn" data-filter="crm"><i class="fas fa-users"></i> CRM</button>
                 <button class="tumu-filter-btn" data-filter="epazar"><i class="fas fa-shopping-cart"></i> E-PAZAR</button>
@@ -374,469 +391,251 @@
                 <button class="tumu-filter-btn" data-filter="nexus"><i class="fas fa-link"></i> NEXUS</button>
                 <button class="tumu-filter-btn" data-filter="servis"><i class="fas fa-cogs"></i> SERVİS(SSH)</button>
             </div>
-        </section>
-        <!-- CPQ Kategorisi -->
-    <section class="tumu-category-section" id="cpq">
-        <div class="tumu-category-header">
-            <div class="tumu-category-icon">
-                <i class="fas fa-calculator"></i>
-            </div>
-            <h2>CPQ</h2>            <button class="info-button" data-category="cpq" data-url="cpq-details.html">
-                <i class="fas fa-info-circle"></i> Detaylı Bilgi
-            </button>
 
-            <div class="tumu-stats">
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">500+</span>
-                    <span class="tumu-stat-label">Müşteri</span>
-                </div>
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">98%</span>
-                    <span class="tumu-stat-label">Memnuniyet</span>
-                </div>
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">12</span>
-                    <span class="tumu-stat-label">Yıl</span>
-                </div>
+        </section>
+
+   <!-- CPQ Kategorisi -->
+<section class="tumu-category-section" id="cpq">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="cpq">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="CPQ Logo">
+        <div class="cpqd-logo-subtitle">CPQ</div>
+    </div>
+        <div class="tumu-product-content">
+            <h3><i class="fas fa-calculator rotate-icon"></i> CPQ Nedir?</h3>
+            <p>
+                CPQ (Configure, Price, Quote), yani <strong>Yapılandırma, Fiyatlandırma ve Tekliflendirme</strong>, 
+                şirketlerin satış süreçlerini hızlandıran ve otomatikleştiren bir yazılım çözümüdür. 
+                CPQ modülleri, müşteriye özel ürün ve hizmetlerin yapılandırılmasını, doğru fiyatlandırılmasını 
+                ve profesyonel tekliflerin oluşturulmasını sağlar.
+            </p>
+            <p>
+                CPQ, özellikle karmaşık ürün veya hizmet sunan firmalar için vazgeçilmez bir araçtır ve satış süreçlerini modernleştirerek rekabet avantajı sağlar.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">Hızlı ve Doğru Teklifler</span>
+                <span class="tumu-tag">Hata Azaltma</span>
+                <span class="tumu-tag">Zamandan Tasarruf</span>
+                <span class="tumu-tag">Müşteri Memnnuniyeti</span>
+                <span class="tumu-tag">Satış Süreçlerinde Otomatizasyon</span>
+                <span class="tumu-tag">Satış Verimliliği</span>
             </div>
+            <button class="info-button" data-category="cpq" data-url="cpq-details.html">
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi  Görüntüle
+            </button>
         </div>
-        <div class="tumu-products-grid">
-            <div class="tumu-product-card" data-category="cpq">
-                <div class="tumu-product-image">
-                    <img src="img/nexus-3-enterprise.jpeg" alt="Nexus 3 Enterprise">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>Nexus 3 Enterprise</h3>
-                    <p>Büyük ölçekli şirketler için kapsamlı ERP çözümü</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Çok Şirketli Yapı</span>
-                        <span class="tumu-tag">Gelişmiş Raporlama</span>
-                        <span class="tumu-tag">API Desteği</span>
-                    </div>
-                </div>
+        
+    </div>
+
+</div>
+</section>
+
+<!-- CRM Kategorisi -->
+<section class="tumu-category-section" id="crm">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="crm">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="CRM Logo">
+        <div class="cpqd-logo-subtitle">CRM</div>
+    </div>
+        <div class="tumu-product-content">
+            <h3><i class="fas fa-users rotate-icon"></i> CRM Nedir?</h3>
+            <p>
+                CRM (Customer Relationship Management), yani <strong>Müşteri İlişkileri Yönetimi</strong>, 
+                şirketlerin müşterileriyle olan tüm etkileşimlerini yönetmelerini sağlayan bir yazılım çözümüdür.
+                CRM sistemleri, müşteri verilerinin toplanması, analiz edilmesi ve bu verilere dayanarak stratejiler 
+                geliştirilmesine olanak tanır.
+            </p>
+            <p>
+                CRM, işletmelerin müşteri memnuniyetini artırmasına, satış performansını iyileştirmesine ve uzun vadeli müşteri ilişkileri kurmasına yardımcı olur.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">Personel Yönetimi</span>
+                <span class="tumu-tag">Bordro</span>
+                <span class="tumu-tag">Performans Takibi</span>
             </div>
-            <div class="tumu-product-card" data-category="cpq">
-                <div class="tumu-product-image">
-                    <img src="img/nexus-3-standard.jpeg" alt="Nexus 3 Standard">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>Nexus 3 Standard</h3>
-                    <p>Orta ölçekli işletmeler için optimize edilmiş ERP sistemi</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Tek Şirket</span>
-                        <span class="tumu-tag">Standard Raporlama</span>
-                        <span class="tumu-tag">Kolay Kullanım</span>
-                    </div>
-                </div>
-            </div>
-            <div class="tumu-product-card" data-category="cpq">
-                <div class="tumu-product-image">
-                    <img src="img/nexus-3-entegre.jpeg" alt="Nexus 3 Entegre">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>Nexus 3 Entegre</h3>
-                    <p>Küçük ve orta ölçekli işletmeler için entegre çözüm</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Temel Modüller</span>
-                        <span class="tumu-tag">Entegre Çözüm</span>
-                        <span class="tumu-tag">Uygun Maliyet</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- CRM Kategorisi -->
-    <section class="tumu-category-section" id="crm">
-        <div class="tumu-category-header">
-            <div class="tumu-category-icon">
-                <i class="fas fa-handshake"></i>
-            </div>
-            <h2>CRM</h2>
             <button class="info-button" data-category="crm" data-url="crm-details.html">
-                <i class="fas fa-info-circle"></i> Detaylı Bilgi
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi Görüntüle
             </button>
-            <div class="tumu-stats">
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">300+</span>
-                    <span class="tumu-stat-label">Müşteri</span>
-                </div>
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">96%</span>
-                    <span class="tumu-stat-label">Memnuniyet</span>
-                </div>
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">8</span>
-                    <span class="tumu-stat-label">Yıl</span>
-                </div>
-            </div>
         </div>
-        <div class="tumu-products-grid">
-            <div class="tumu-product-card" data-category="crm">
-                <div class="tumu-product-image">
-                    <img src="img/logo-insan-kaynaklari.jpeg" alt="Logo İnsan Kaynakları">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>Logo İnsan Kaynakları</h3>
-                    <p>Kapsamlı insan kaynakları yönetim sistemi</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Personel Yönetimi</span>
-                        <span class="tumu-tag">Bordro</span>
-                        <span class="tumu-tag">Performans Takibi</span>
-                    </div>
-                </div>
+        
+    </div>
+
+</div>
+</section>
+
+<!-- E-PAZAR Kategorisi -->
+<section class="tumu-category-section" id="epazar">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="epazar">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="E-PAZAR Logo">
+        <div class="cpqd-logo-subtitle">E-PAZAR</div>
+    </div>
+        <div class="tumu-product-content">
+            <h3><i class="fas fa-shopping-cart rotate-icon"></i> E-PAZAR Nedir?</h3>
+            <p>
+                E-PAZAR, işletmelerin elektronik ticaret platformlarında satış yapmalarını sağlayan 
+                <strong>dijital pazaryeri çözümleridir</strong>. Bu çözümler, işletmelere çeşitli online 
+                satış kanallarında varlık gösterme ve ürünlerini geniş kitlelere ulaştırma imkanı sunar.
+            </p>
+            <p>
+                E-PAZAR çözümleri, entegre e-dönüşüm platformları ile işletmelerin dijital dönüşümlerini tamamlamalarına yardımcı olur ve rekabet güçlerini artırır.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">Tüm E-Belgeler</span>
+                <span class="tumu-tag">Kolay Entegrasyon</span>
+                <span class="tumu-tag">GİB Uyumlu</span>
             </div>
-            <div class="tumu-product-card" data-category="crm">
-                <div class="tumu-product-image">
-                    <img src="img/logo-crm.jpeg" alt="Logo CRM">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>Logo CRM</h3>
-                    <p>Müşteri ilişkileri yönetimi çözümü</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Müşteri Takibi</span>
-                        <span class="tumu-tag">Satış Otomasyonu</span>
-                        <span class="tumu-tag">Raporlama</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- E-PAZAR Kategorisi -->
-    <section class="tumu-category-section" id="epazar">
-        <div class="tumu-category-header">
-            <div class="tumu-category-icon">
-                <i class="fas fa-store"></i>
-            </div>
-            <h2>E-PAZAR</h2>
             <button class="info-button" data-category="epazar" data-url="epazar-details.html">
-                <i class="fas fa-info-circle"></i> Detaylı Bilgi
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi Görüntüle
             </button>
-            <div class="tumu-stats">
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">1000+</span>
-                    <span class="tumu-stat-label">Müşteri</span>
-                </div>
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">99%</span>
-                    <span class="tumu-stat-label">Memnuniyet</span>
-                </div>
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">24</span>
-                    <span class="tumu-stat-label">Yıl</span>
-                </div>
-            </div>
         </div>
-        <div class="tumu-products-grid">
-            <div class="tumu-product-card" data-category="epazar">
-                <div class="tumu-product-image">
-                    <img src="img/e-logo.jpeg" alt="E-Logo">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>E-Logo</h3>
-                    <p>,Entegre e-dönüşüm platformu</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Tüm E-Belgeler</span>
-                        <span class="tumu-tag">Kolay Entegrasyon</span>
-                        <span class="tumu-tag">GİB Uyumlu</span>
-                    </div>
-                </div>
+        
+    </div>
+
+</div>
+</section>
+
+<!-- PROJE YÖNETİMİ Kategorisi -->
+<section class="tumu-category-section" id="proje">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="proje">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="PROJE YÖNETİMİ Logo">
+        <div class="cpqd-logo-subtitle">PROJE YÖNETİMİ</div>
+    </div>
+        <div class="tumu-product-content">
+            <h3><i class="fas fa-tasks rotate-icon"></i> Proje Yönetimi Nedir?</h3>
+            <p>
+                Proje Yönetimi, organizasyonlarda <strong>iş süreçlerinin ve projelerin etkin yönetimini</strong>
+                sağlayan yazılım çözümleridir. Bu sistemler, proje planlamasından kaynak yönetimine, 
+                iş akışı otomasyonundan performans analizine kadar tüm süreçleri kapsar.
+            </p>
+            <p>
+                İş Süreçleri Yönetimi (BPM) çözümleri ile işletmeler, projelerini daha verimli yönetebilir, süreçlerini optimize edebilir ve iş sonuçlarını iyileştirebilir.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">Süreç Tasarımı</span>
+                <span class="tumu-tag">İş Akışı</span>
+                <span class="tumu-tag">Performans Analizi</span>
             </div>
-            <div class="tumu-product-card" data-category="epazar">
-                <div class="tumu-product-image">
-                    <img src="img/e-fatura.jpeg" alt="E-Fatura">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>E-Fatura</h3>
-                    <p>Elektronik fatura oluşturma ve yönetim sistemi</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Hızlı Oluşturma</span>
-                        <span class="tumu-tag">Otomatik Gönderim</span>
-                        <span class="tumu-tag">Arşivleme</span>
-                    </div>
-                </div>
-            </div>
-            <div class="tumu-product-card" data-category="epazar">
-                <div class="tumu-product-image">
-                    <img src="img/e-defter.jpeg" alt="E-Defter">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>E-Defter</h3>
-                    <p>Elektronik defter oluşturma ve saklama çözümü</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Yasal Uyumluluk</span>
-                        <span class="tumu-tag">Otomatik Oluşturma</span>
-                        <span class="tumu-tag">Güvenli Saklama</span>
-                    </div>
-                </div>
-            </div>
-            <div class="tumu-product-card" data-category="epazar">
-                <div class="tumu-product-image">
-                    <img src="img/e-arşiv.jpeg" alt="E-Arşiv">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>E-Arşiv</h3>
-                    <p>Elektronik belge arşivleme sistemi</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Kolay Erişim</span>
-                        <span class="tumu-tag">Güvenli Depolama</span>
-                        <span class="tumu-tag">Hızlı Arama</span>
-                    </div>
-                </div>
-            </div>
-            <div class="tumu-product-card" data-category="epazar">
-                <div class="tumu-product-image">
-                    <img src="img/e-irsaliye.jpeg" alt="E-İrsaliye">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>E-İrsaliye</h3>
-                    <p>Elektronik irsaliye yönetim sistemi</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Anlık Oluşturma</span>
-                        <span class="tumu-tag">Mobil Erişim</span>
-                        <span class="tumu-tag">Takip Sistemi</span>
-                    </div>
-                </div>
-            </div>
-            <div class="tumu-product-card" data-category="epazar">
-                <div class="tumu-product-image">
-                    <img src="img/e-smm.jpeg" alt="E-SMM">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>E-Mutabakat</h3>
-                    <p>Elektronik mutabakat yönetimi</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Otomatik Mutabakat</span>
-                        <span class="tumu-tag">E-Posta Bildirimi</span>
-                        <span class="tumu-tag">Raporlama</span>
-                    </div>
-                </div>
-            </div>
-            <div class="tumu-product-card" data-category="epazar">
-                <div class="tumu-product-image">
-                    <img src="img/e-smm.jpeg" alt="E-SMM">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>E-Ekstre</h3>
-                    <p>Elektronik ekstre yönetim sistemi</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Anlık Görüntülenme</span>
-                        <span class="tumu-tag">Otomatik Eşleştirme</span>
-                        <span class="tumu-tag">Detaylı Analiz</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- PROJE YÖNETİMİ Kategorisi -->
-    <section class="tumu-category-section" id="proje">
-        <div class="tumu-category-header">
-            <div class="tumu-category-icon">
-                <i class="fas fa-project-diagram"></i>
-            </div>
-            <h2>PROJE YÖNETİMİ</h2>
             <button class="info-button" data-category="proje" data-url="proje-details.html">
-                <i class="fas fa-info-circle"></i> Detaylı Bilgi
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi Görüntüle
             </button>
-            <div class="tumu-stats">
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">200+</span>
-                    <span class="tumu-stat-label">Müşteri</span>
-                </div>
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">96%</span>
-                    <span class="tumu-stat-label">Memnuniyet</span>
-                </div>
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">4</span>
-                    <span class="tumu-stat-label">Yıl</span>
-                </div>
-            </div>
         </div>
-        <div class="tumu-products-grid">
-            <div class="tumu-product-card" data-category="proje">
-                <div class="tumu-product-image">
-                    <img src="img/metasql-flow.jpeg" alt="MetaSQL Flow">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>Netoloji E-Flow</h3>
-                    <p>İş Süreçleri yönetimi (BPM) çözümü</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Süreç Tasarımı</span>
-                        <span class="tumu-tag">İş Akışı</span>
-                        <span class="tumu-tag">Performans Analizi</span>
-                    </div>
-                </div>
+        
+    </div>
+
+</div>
+</section>
+
+<!-- DOKÜMAN ARŞİVİ Kategorisi -->
+<section class="tumu-category-section" id="dokuman">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="dokuman">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="DOKÜMAN ARŞİVİ Logo">
+        <div class="cpqd-logo-subtitle">DOKÜMAN ARŞİVİ</div>
+    </div>
+        <div class="tumu-product-content">
+            <h3><i class="fas fa-file-alt rotate-icon"></i> Doküman Arşivi Nedir?</h3>
+            <p>
+                Doküman Arşivi, işletmelerin <strong>belge ve dokümanlarını dijital ortamda saklama ve yönetmelerini</strong> 
+                sağlayan yazılım çözümleridir. Bu sistemler, fiziksel belgelerin dijitalleştirilmesinden güvenli depolamaya, 
+                hızlı erişimden etkin belge yönetimine kadar birçok fonksiyon sunar.
+            </p>
+            <p>
+                Depo Yönetim Sistemleri (WMS) ile işletmeler, belgelerini ve stoklarını daha etkili şekilde yönetebilir, operasyonel verimliliklerini artırabilir.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">Stok Takibi</span>
+                <span class="tumu-tag">Barkod Sistemi</span>
+                <span class="tumu-tag">Mobil Kullanım</span>
             </div>
-            <div class="tumu-product-card" data-category="proje">
-                <div class="tumu-product-image">
-                    <img src="img/contact-software.jpeg" alt="Contact Software">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>Contact Software</h3>
-                    <p>Ürün yaşam döngüsü yönetimi (PLM) yazılımı</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Ürün Tasarımı</span>
-                        <span class="tumu-tag">Versiyon Kontrolü</span>
-                        <span class="tumu-tag">Ekip İşbirliği</span>
-                    </div>
-                </div>
-            </div>
-            <div class="tumu-product-card" data-category="proje">
-                <div class="tumu-product-image">
-                    <img src="img/logo-mind-insight.jpeg" alt="Logo Mind Insight">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>Logo Mind Insight</h3>
-                    <p>İş zekası ve analitik çözümü</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Veri Analizi</span>
-                        <span class="tumu-tag">Dashboard</span>
-                        <span class="tumu-tag">Özel Yaporlar</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- DOKÜMAN ARŞİVİ Kategorisi -->
-    <section class="tumu-category-section" id="dokuman">
-        <div class="tumu-category-header">
-            <div class="tumu-category-icon">
-                <i class="fas fa-file-archive"></i>
-            </div>
-            <h2>DOKÜMAN ARŞİVİ</h2>
             <button class="info-button" data-category="dokuman" data-url="dokuman-details.html">
-                <i class="fas fa-info-circle"></i> Detaylı Bilgi
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi Görüntüle
             </button>
-            <div class="tumu-stats">
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">150+</span>
-                    <span class="tumu-stat-label">Müşteri</span>
-                </div>
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">97%</span>
-                    <span class="tumu-stat-label">Memnuniyet</span>
-                </div>
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">8</span>
-                    <span class="tumu-stat-label">Yıl</span>
-                </div>
-            </div>
         </div>
-        <div class="tumu-products-grid">
-            <div class="tumu-product-card" data-category="dokuman">
-                <div class="tumu-product-image">
-                    <img src="img/e3-depo.jpeg" alt="E3 Depo">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>FS Depo</h3>
-                    <p>Depo yönetim sistemi(WMS)</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Stok Takibi</span>
-                        <span class="tumu-tag">Barkod Sistemi</span>
-                        <span class="tumu-tag">Mobil Kullanım</span>
-                    </div>
-                </div>
+        
+    </div>
+
+</div>
+</section>
+
+<!-- NEXUS Kategorisi -->
+<section class="tumu-category-section" id="nexus">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="nexus">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="NEXUS Logo">
+        <div class="cpqd-logo-subtitle">NEXUS</div>
+    </div>
+        <div class="tumu-product-content">
+            <h3><i class="fas fa-link rotate-icon"></i> NEXUS Nedir?</h3>
+            <p>
+                NEXUS, işletmelerin <strong>özelleştirilmiş mobil iş uygulamaları geliştirmelerini</strong> 
+                sağlayan bir platform çözümüdür. Bu platform, işletmelerin dijital dönüşüm süreçlerinde 
+                ihtiyaç duydukları mobil uygulamaları hızlı ve esnek bir şekilde oluşturmalarına olanak tanır.
+            </p>
+            <p>
+                Özelleştirilebilir mobil iş uygulamaları platformu, işletmelere rekabet avantajı sağlar ve dijital çağa ayak uydurmalarına yardımcı olur.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">Hızlı Geliştirme</span>
+                <span class="tumu-tag">Cross-Platform</span>
+                <span class="tumu-tag">Özel Tasarım</span>
             </div>
-            <div class="tumu-product-card" data-category="dokuman">
-                <div class="tumu-product-image">
-                    <img src="img/logo-ocean.jpeg" alt="Logo Ocean">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>Logo Ocean</h3>
-                    <p>Entegre lojistik yönetim platformu</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Rota optimizasyonu</span>
-                        <span class="tumu-tag">Filo Yönetimi</span>
-                        <span class="tumu-tag">Teslimat Takibi</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- NEXUS Kategorisi -->
-    <section class="tumu-category-section" id="nexus">
-        <div class="tumu-category-header">
-            <div class="tumu-category-icon">
-                <i class="fas fa-code-branch"></i>
-            </div>
-            <h2>NEXUS</h2>
             <button class="info-button" data-category="nexus" data-url="nexus-details.html">
-                <i class="fas fa-info-circle"></i> Detaylı Bilgi
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi Görüntüle
             </button>
-            <div class="tumu-stats">
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">400+</span>
-                    <span class="tumu-stat-label">Müşteri</span>
-                </div>
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">94%</span>
-                    <span class="tumu-stat-label">Memnuniyet</span>
-                </div>
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">12</span>
-                    <span class="tumu-stat-label">Yıl</span>
-                </div>
-            </div>
         </div>
-        <div class="tumu-products-grid">
-            <div class="tumu-product-card" data-category="nexus">
-                <div class="tumu-product-image">
-                    <img src="img/katka.jpeg" alt="Katka">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>Kuika</h3>
-                    <p>Özelleştirilebilir mobil iş uygulamaları platformu</p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Hızlı Geliştirme</span>
-                        <span class="tumu-tag">Cross-Platform</span>
-                        <span class="tumu-tag">Özel Tasarım</span>
-                    </div>
-                </div>
+        
+    </div>
+
+</div>
+</section>
+
+<!-- SERVİS(SSH) Kategorisi -->
+<section class="tumu-category-section" id="servis">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="servis">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="SERVİS Logo">
+        <div class="cpqd-logo-subtitle">SERVİS(SSH)</div>
+    </div>
+        <div class="tumu-product-content">
+            <h3><i class="fas fa-cogs rotate-icon"></i> SERVİS(SSH) Nedir?</h3>
+            <p>
+                SERVİS(SSH), şirketlere <strong>bulut tabanlı veri yönetimi çözümleri</strong> sunan 
+                bir hizmet paketidir. Bu çözümler, işletmelerin verilerini güvenli bir şekilde saklamalarını,
+                yönetmelerini ve bu verilere her yerden erişebilmelerini sağlar.
+            </p>
+            <p>
+                Bulut tabanlı veri yönetimi çözümleri, işletmelerin IT altyapı maliyetlerini azaltmalarına ve operasyonel esnekliklerini artırmalarına yardımcı olur.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">Hızlı Geliştirme</span>
+                <span class="tumu-tag">Cross-Platform</span>
+                <span class="tumu-tag">Özel Tasarım</span>
             </div>
-        </div>
-    </section>
-    <!-- SERVİS(SSH) Kategorisi -->
-    <section class="tumu-category-section" id="servis">
-        <div class="tumu-category-header">
-            <div class="tumu-category-icon">
-                <i class="fas fa-cogs"></i>
-            </div>
-            <h2>SERVİS(SSH)</h2>
             <button class="info-button" data-category="servis" data-url="servis-details.html">
-                <i class="fas fa-info-circle"></i> Detaylı Bilgi
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi Görüntüle
             </button>
-            <div class="tumu-stats">
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">100+</span>
-                    <span class="tumu-stat-label">Müşteri</span>
-                </div>
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">93%</span>
-                    <span class="tumu-stat-label">Memnuniyet</span>
-                </div>
-                <div class="tumu-stat">
-                    <span class="tumu-stat-value">6</span>
-                    <span class="tumu-stat-label">Yıl</span>
-                </div>
-            </div>
         </div>
-        <div class="tumu-products-grid">
-            <div class="tumu-product-card" data-category="servis">
-                <div class="tumu-product-image">
-                    <img src="img/logo-cloud.jpeg" alt="Logo Cloud">
-                </div>
-                <div class="tumu-product-content">
-                    <h3>Logo Cloud</h3>
-                    <p>Bulut tabanlı veri yönetimi çözümü </p>
-                    <div class="tumu-product-tags">
-                        <span class="tumu-tag">Hızlı Geliştirme</span>
-                        <span class="tumu-tag">Cross-Platform</span>
-                        <span class="tumu-tag">Özel Tasarım</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        
+    </div>
+
+</div>
+</section>
     </main>
 
 
