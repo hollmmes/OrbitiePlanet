@@ -719,14 +719,12 @@ a.sector-item:hover span {
 .sector-item:hover span {
     color: var(--text-color);
 }
-
 /* Corporate Performance Section */
 .corporate-performance {
     padding: 80px 0;
     background: radial-gradient(circle at 50% 50%, rgba(8, 252, 172, 0.1) 0%, transparent 70%);
     position: relative; /* Önemli: pseudo-elementin doğru konumlandırılması için */
 }
-
 .corporate-performance::after {
     content: ''; /* Zorunlu: Tüm pseudo-elementler content özelliğine sahip olmalıdır */
     position: absolute; /* Zorunlu: Konumlandırma için */
@@ -742,11 +740,9 @@ a.sector-item:hover span {
     align-items: center;
     gap: 40px;
 }
-
 .cp-info {
     flex: 1.2; /* Bilgi bölümüne biraz daha fazla yer ver */
 }
-
 .cp-info h2 {
     font-style: normal;
     line-height: 54px;
@@ -761,7 +757,6 @@ a.sector-item:hover span {
     -webkit-text-fill-color: transparent;
 }
 
-
 .cp-info p {
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 25px;
@@ -769,7 +764,6 @@ a.sector-item:hover span {
     font-weight: 500;
     line-height: 1.6;
 }
-
 .cp-features {
     margin-top: 30px;
     display: grid;
@@ -777,7 +771,6 @@ a.sector-item:hover span {
     gap: 20px;
     max-width: 90%; /* Sağdan daraltma */
 }
-
 .feature {
     display: flex;
     align-items: center;
@@ -790,7 +783,6 @@ a.sector-item:hover span {
     cursor: pointer;
     height: 85px; /* Yüksekliği artırdık */
 }
-
 .feature::before {
     content: '';
     position: absolute;
@@ -803,7 +795,6 @@ a.sector-item:hover span {
     transition: all 0.3s ease;
     z-index: -1;
 }
-
 .feature i {
     color: var(--primary-color);
     font-size: 24px; /* İkon boyutunu artırdık */
@@ -811,12 +802,10 @@ a.sector-item:hover span {
     transition: all 0.3s ease;
     min-width: 24px; /* İkonlara minimum genişlik */
 }
-
 .feature-text {
     display: flex;
     flex-direction: column;
 }
-
 .feature-text h3 {
     color: var(--text-color);
     font-size: 15px;
@@ -825,7 +814,6 @@ a.sector-item:hover span {
     margin: 0 0 5px 0;
     transition: all 0.3s ease;
 }
-
 .feature-text p {
     color: rgba(255, 255, 255, 0.8);
     font-size: 14px;
@@ -834,41 +822,33 @@ a.sector-item:hover span {
     line-height: 1.4;
     transition: all 0.3s ease;
 }
-
 .feature:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     border-color: rgba(0, 209, 163, 0.2);
 }
-
 .feature:hover::before {
     background-color: rgba(0, 209, 163, 0.05);
 }
-
 .feature:hover i {
     transform: scale(1.2);
     color: #08fcac; /* Hover durumunda ikonu daha parlak yap */
 }
-
 .feature:hover .feature-text h3 {
     color: var(--primary-color); /* Hover durumunda başlık rengini değiştir */
 }
-
 .feature:hover .feature-text p {
     color: rgba(255, 255, 255, 0.8); /* Hover durumunda paragraf rengini değiştir */
 }
-
 .cp-image {
     flex: 0.8; /* Görsel bölümünü daraltarak feature'lara daha fazla yer açtık */
 }
-
 .cp-image img {
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
-
 /* Button'u daha belirgin hale getirme */
 .cp-info .btn {
     margin-top: 10px;
@@ -877,17 +857,110 @@ a.sector-item:hover span {
     font-weight: 600;
     letter-spacing: 0.5px;
 }
-
 .cp-info .btn-primary {
     background-color: var(--primary-color);
     border: none;
     box-shadow: 0 5px 15px rgba(8, 252, 172, 0.3);
 }
-
 .cp-info .btn-primary:hover {
     background-color: #00e8b3; /* Biraz daha parlak */
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(8, 252, 172, 0.4);
+}
+
+/* Yeni eklenen stiller - Büyüteç ve Modal için */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Büyüteç ikonu ile ilgili stil güncellemesi */
+.magnifier-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(8, 252, 172, 0.7);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+    z-index: 10;
+    animation: pulse 2s infinite;
+}
+
+.magnifier-icon i {
+    color: #ffffff;
+    font-size: 22px;
+}
+
+.magnifier-icon:hover {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+    animation: none;
+}
+
+@keyframes pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.05);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(0.95);
+    }
+}
+
+/* Modal/Popup Stili */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    position: relative;
+    margin: 2% auto;
+    width: 90%;
+    max-width: 1200px;
+    height: 90%;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #f1f1f1;
+    font-size: 35px;
+    font-weight: bold;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #08fcac;
+}
+
+.modal-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* Success Stories Section */

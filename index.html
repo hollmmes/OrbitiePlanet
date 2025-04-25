@@ -392,7 +392,7 @@
     <!-- References Section -->
     <section class="references">
         <div class="container">
-            <h2>Müşteri Referanslarımız</h2>
+            <h2>Güvenlir Markalar Bizi Tercih Ediyor</h2>
             <p>Çözümlerimiz farklı sektörlerde bir çok kurumda tercih edilmektedir.</p>
             <div class="logos-slider-container">
                 <div class="logos-slider">
@@ -579,52 +579,67 @@
 </section>
     <!-- Corporate Performance Section -->
     <div class="decorative-line"></div>
-<section class="corporate-performance">
-    <div class="container">
-        <div class="cp-content">
-            <div class="cp-info">
-                <h2>Kurumsal Performans Entegrasyonu</h2>
-                <p>KPI ile şirketinizin performansını iyi görebilir olmak, hızlılık ve optimum değerler ile başarıya koşmak mümkündür.</p>
-                <a href="#" class="btn btn-primary">Daha Fazla Bilgi</a>
-                
-                <div class="cp-features">
-                    <div class="feature">
-                        <i class="fas fa-database"></i>
-                        <div class="feature-text">
-                            <h3>Veri Entegrasyonu</h3>
-                            <p>Tüm veriler tek platformda</p>
+    <section class="corporate-performance">
+        <div class="container">
+            <div class="cp-content">
+                <div class="cp-info">
+                    <h2>Kurumsal
+                        Proje
+                        Ekosistemi</h2>
+                    <p>Organizasyonun stratejik hedefleriyle uyumlu projelerin başarılı bir şekilde yürütülmesini sağlar. Ayrıca, projeler arasında sinerji yaratmayı, öğrenmeyi ve sürekli iyileştirmeyi teşvik eder. Bu yapı, organizasyonun değişen pazar koşullarına ve müşteri ihtiyaçlarına hızlı bir şekilde adapte olmasına yardımcı olur.</p>
+                    <a href="kpe.html" class="btn btn-primary">Daha Fazla Bilgi</a>
+                    
+                    <div class="cp-features">
+                        <div class="feature">
+                            <i class="fas fa-database"></i>
+                            <div class="feature-text">
+                                <h3>Veri Entegrasyonu</h3>
+                                <p>Tüm veriler tek platformda</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <div class="feature-text">
+                                <h3>Süreç Optimizasyonu</h3>
+                                <p>Otomatik iş akışları</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-cogs"></i>
+                            <div class="feature-text">
+                                <h3>Özelleştirilebilir</h3>
+                                <p>İhtiyaca özel çözümler</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-file-alt"></i>
+                            <div class="feature-text">
+                                <h3>Gerçek Zamanlı</h3>
+                                <p>Anlık veri analizi</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="feature">
-                        <i class="fas fa-chart-line"></i>
-                        <div class="feature-text">
-                            <h3>Süreç Optimizasyonu</h3>
-                            <p>Otomatik iş akışları</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-cogs"></i>
-                        <div class="feature-text">
-                            <h3>Özelleştirilebilir</h3>
-                            <p>İhtiyaca özel çözümler</p>
-                        </div>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-file-alt"></i>
-                        <div class="feature-text">
-                            <h3>Gerçek Zamanlı</h3>
-                            <p>Anlık veri analizi</p>
+                </div>
+                <div class="cp-image">
+                    <div class="image-container">
+                        <img src="img/kpi-dashboard.png" alt="Kurumsal Performans">
+                        <div class="magnifier-icon">
+                            <i class="fas fa-search"></i>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div class="cp-image">
-                <img src="img/kpi-dashboard.png" alt="Kurumsal Performans">
-            </div>
         </div>
+    </section>
+
+    <!-- Modal/Popup HTML -->
+<div id="imageModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <iframe src="brosur.html" frameborder="0"></iframe>
     </div>
-</section>
+</div>
+
    <!-- Success Stories Section -->
 <section class="success-stories">
     <div class="container">
@@ -773,6 +788,8 @@
         </div>
     </div>
 </section>
+
+
 <!-- Footer -->
 <footer class="footer-main">
     <div class="footer-container">
@@ -870,6 +887,34 @@
         </div>
     </div>
 </footer>
+
+
+<!-- JavaScript eklentisi -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Modal ve büyüteç ikonunu seç
+        const modal = document.getElementById('imageModal');
+        const magnifier = document.querySelector('.magnifier-icon');
+        const closeBtn = document.querySelector('.close');
+        
+        // Büyüteç ikonuna tıklandığında modalı aç
+        magnifier.addEventListener('click', function() {
+            modal.style.display = 'block';
+        });
+        
+        // Kapat butonuna tıklandığında modalı kapat
+        closeBtn.addEventListener('click', function() {
+            modal.style.display = 'none';
+        });
+        
+        // Modal dışına tıklandığında modalı kapat
+        window.addEventListener('click', function(event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+    </script>
     <script src="assets/js/back-to-top.js"></script>
     <script src="assets/js/script.js"></script>
 

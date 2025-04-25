@@ -39,7 +39,7 @@ body {
 .tumu-main {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 60px 15px;
+    padding: 80px 15px;
 }
 /* Hero Bölümü */
 .tumu-hero {
