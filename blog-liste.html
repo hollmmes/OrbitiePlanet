@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Başarı Hikayeleri | Orbitie</title>
+
+
+      <!-- Önce değişkenler ve fontlar yüklenir -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+    
+  <!-- Sonra header ve footer stilleri -->
+  <link rel="stylesheet" href="assets/css/header-footer.css">
+  
+  <link rel="stylesheet" href="assets/css/blog-liste.css">
+
+
+  <!-- Diğer CSS dosyaları -->
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>  
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Orbita Logo"></a>
+            </div>
+            <!-- Mobil için hamburger menü düğmesi -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <div class="header-item">
+                            <div class="icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                            </div>
+                            <a href="index.html">ANASAYFA</a>
+                        </div>
+                    </li>
+                    <li class="has-dropdown">
+                        <div class="header-item">
+                            <div class="icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                            </div>
+                            <a href="#">HAKKIMIZDA</a>
+                            <div class="dropdown-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="firma-hakkinda.html">
+                                    <div class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                            <polyline points="14 2 14 8 20 8"></polyline>
+                                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                                            <polyline points="10 9 9 9 8 9"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <span><p>Firma Hakkında</p></span>
+                                        <span class="menu-description">Misyon, vizyon ve değerlerimiz</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="ekibimiz.html">
+                                    <div class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <span><p>Ekibimiz</p></span>
+                                        <span class="menu-description">Profesyonel kadromuz</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tarihce.html">
+                                    <div class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="12 6 12 12 16 14"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <span><p>Tarihçe</p></span>
+                                        <span class="menu-description">Firmamızın gelişim<br> süreci</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <div class="header-item">
+                            <div class="icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                    <path d="M2 17l10 5 10-5"></path>
+                                    <path d="M2 12l10 5 10-5"></path>
+                                </svg>
+                            </div>
+                            <a href="#">HİZMETLERİMİZ</a>
+                            <div class="dropdown-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="projelendirme.html">
+                                    <div class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                            <polyline points="2 17 12 22 22 17"></polyline>
+                                            <polyline points="2 12 12 17 22 12"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <span><p>Projelendirme</p></span>
+                                        <span class="menu-description">Yazılım geliştirme çözümlerimiz</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="uyarlama-sureci.html">
+                                    <div class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <span><p>Uyarlama Süreci</p></span>
+                                        <span class="menu-description">İhtiyaca özel sistem entegrasyonu</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="entegrasyon-hizmetleri.html">
+                                    <div class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                                            <line x1="8" y1="2" x2="8" y2="18"></line>
+                                            <line x1="16" y1="6" x2="16" y2="22"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <span><p>Entegrasyon Hizmetleri</p></span>
+                                        <span class="menu-description">Sorunsuz sistem entegrasyonları</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="destek-hizmetleri.html">
+                                    <div class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <span><p>Destek Hizmetleri</p></span>
+                                        <span class="menu-description">7/24 teknik destek ve bakım</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="header-item">
+                            <div class="icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                </svg>
+                            </div>
+                            <a href="kpe.html">KPE</a>
+                        </div>
+                    </li>
+                    <li class="has-dropdown">
+                        <div class="header-item">
+                            <div class="icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="9" cy="21" r="1"></circle>
+                                    <circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                </svg>
+                            </div>
+                            <a href="#">ÜRÜNLER</a>
+                            <div class="dropdown-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="tum-urunler.html">
+                                    <div class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <span><p>Tüm Ürünler</p></span>
+                                        <span class="menu-description">Yazılım çözümlerimizin tamamı</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="demolar.html">
+                                    <div class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
+                                            <polygon points="12 15 17 21 7 21 12 15"></polygon>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <span><p>Demolar</p></span>
+                                        <span class="menu-description">Ürünlerimizin demo sürümleri</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="yeni-cikan-urunler.html">
+                                    <div class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="12" y1="2" x2="12" y2="6"></line>
+                                            <line x1="12" y1="18" x2="12" y2="22"></line>
+                                            <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+                                            <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+                                            <line x1="2" y1="12" x2="6" y2="12"></line>
+                                            <line x1="18" y1="12" x2="22" y2="12"></line>
+                                            <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+                                            <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <span><p>Yeni Çıkan Ürünler</p></span>
+                                        <span class="menu-description">En yeni teknoloji çözümlerimiz</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <div class="header-item">
+                            <div class="icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                                </svg>
+                            </div>
+                            <a href="#">REFERANSLAR</a>
+                            <div class="dropdown-toggle">
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="musteri-yorumlari.html">
+                                    <div class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <span><p>Müşteri Yorumları</p></span>
+                                        <span class="menu-description">Müşterilerimizin değerlendirmeleri</span>
+                                    </div>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="basari-hikayeleri.html">
+                                    <div class="dropdown-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <span><p>Başarı Hikayeleri</p></span>
+                                        <span class="menu-description">Müşterilerimizle elde ettiğimiz sonuçlar</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="header-item">
+                            <div class="icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                            </div>
+                            <a href="iletisim.html">İLETİŞİM</a>
+                        </div>
+                    </li>
+                </ul>
+                <!-- Mobil menünün alt kısmında dil seçeneği -->
+                <div class="mobile-lang-switch">
+                    <a href="demo.html" class="demo-button">
+                        <span>DEMO</span>
+                    </a>
+                </div>
+            </nav>
+            <!-- Desktop için demo butonu -->
+            <div class="demo-button-container">
+                <a href="demo.html" class="demo-button">
+                    <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
+                            <polygon points="12 15 17 21 7 21 12 15"></polygon>
+                        </svg>
+                    </div>
+                    <span>DEMO</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="tumu-hero" style="margin-top: 100px;">
+        <h1>Blog Listesi</h1>
+        <p>Haberlerimiz </p>
+        
+    </div>  
+    </section>
+    <main class="blogliste-container">
+        <!-- Arama Çubuğu -->
+        <div class="blogliste-search-wrapper">
+            <form class="blogliste-search-form" id="bloglisteSearchForm">
+                <input type="text" id="bloglisteSearchInput" class="blogliste-search-input" placeholder="Blog içeriklerinde ara..." required>
+                <button type="submit" class="blogliste-search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    
+        <div class="blogliste-wrapper">
+            <!-- Sol taraf - Kategoriler ve Arşiv -->
+            <aside class="blogliste-sidebar">
+                <!-- Kategoriler -->
+                <div class="blogliste-kategoriler">
+                    <h3 class="blogliste-sidebar-title">Kategoriler</h3>
+                    <ul class="blogliste-kategori-liste">
+                        <li class="blogliste-kategori-item"><a href="#" data-kategori="all">Tüm Kategoriler</a> <span class="blogliste-sayac">9</span></li>
+                        <li class="blogliste-kategori-item"><a href="#" data-kategori="teknoloji">Teknoloji</a> <span class="blogliste-sayac">3</span></li>
+                        <li class="blogliste-kategori-item"><a href="#" data-kategori="yazilim">Yazılım</a> <span class="blogliste-sayac">2</span></li>
+                        <li class="blogliste-kategori-item"><a href="#" data-kategori="tasarim">Tasarım</a> <span class="blogliste-sayac">2</span></li>
+                        <li class="blogliste-kategori-item"><a href="#" data-kategori="kariyer">Kariyer</a> <span class="blogliste-sayac">1</span></li>
+                        <li class="blogliste-kategori-item"><a href="#" data-kategori="yapay-zeka">Yapay Zeka</a> <span class="blogliste-sayac">1</span></li>
+
+                    </ul>
+                </div>
+    
+                <!-- Arşiv -->
+                <div class="blogliste-arsiv">
+                    <h3 class="blogliste-sidebar-title">Arşiv</h3>
+                    <ul class="blogliste-arsiv-liste">
+                        <li class="blogliste-arsiv-item"><a href="#" data-tarih="all">Tüm Tarihler</a> <span class="blogliste-sayac">9</span></li>
+                        <li class="blogliste-arsiv-item"><a href="#" data-tarih="2023-04">Nisan 2023</a> <span class="blogliste-sayac">3</span></li>
+                        <li class="blogliste-arsiv-item"><a href="#" data-tarih="2023-03">Mart 2023</a> <span class="blogliste-sayac">3</span></li>
+                        <li class="blogliste-arsiv-item"><a href="#" data-tarih="2023-02">Şubat 2023</a> <span class="blogliste-sayac">2</span></li>
+                        <li class="blogliste-arsiv-item"><a href="#" data-tarih="2023-01">Ocak 2023</a> <span class="blogliste-sayac">1</span></li>
+
+                    </ul>
+                </div>
+            </aside>
+    
+            <!-- Sağ taraf - Blog postları grid yapıda -->
+            <div class="blogliste-posts">
+                <div class="blogliste-grid" id="bloglisteGrid">
+                    <!-- Blog post 1 -->
+                    <article class="blogliste-post-card" data-kategori="teknoloji" data-tarih="2023-04">
+                        <div class="blogliste-kategori-badge">Teknoloji</div>
+                        <div class="blogliste-post-image">
+                            <img src="https://picsum.photos/600/400?random=1" alt="Blog Post">
+                        </div>
+                        <div class="blogliste-post-content">
+                            <div class="blogliste-post-meta">
+                                <span class="blogliste-post-kategori">Teknoloji</span>
+                                <span class="blogliste-post-tarih">14 Nisan 2023</span>
+                            </div>
+                            <h2 class="blogliste-post-title">Yapay Zeka Teknolojisindeki Son Gelişmeler</h2>
+                            <p class="blogliste-post-excerpt">Yapay zeka teknolojileri günümüzde hızla gelişiyor ve hayatımızın her alanına entegre oluyor. Bu yazıda son gelişmeleri inceliyoruz.</p>
+                            <a href="blog-detay.html" class="blogliste-post-link">Devamını Oku</a>
+                        </div>
+                    </article>
+    
+                    <!-- Blog post 2 -->
+                    <article class="blogliste-post-card" data-kategori="yazilim" data-tarih="2023-04">
+                        <div class="blogliste-kategori-badge">Yazılım</div>
+                        <div class="blogliste-post-image">
+                            <img src="https://picsum.photos/600/400?random=2" alt="Blog Post">
+                        </div>
+                        <div class="blogliste-post-content">
+                            <div class="blogliste-post-meta">
+                                <span class="blogliste-post-kategori">Yazılım</span>
+                                <span class="blogliste-post-tarih">10 Nisan 2023</span>
+                            </div>
+                            <h2 class="blogliste-post-title">Modern Web Geliştirme Teknikleri</h2>
+                            <p class="blogliste-post-excerpt">Web geliştirme dünyası sürekli değişiyor. Bu makalede, modern web geliştirme tekniklerini ve en iyi uygulamaları ele alıyoruz.</p>
+                            <a href="blog-detay.html" class="blogliste-post-link">Devamını Oku</a>
+                        </div>
+                    </article>
+    
+                    <!-- Blog post 3 -->
+                    <article class="blogliste-post-card" data-kategori="tasarim" data-tarih="2023-04">
+                        <div class="blogliste-kategori-badge">Tasarım</div>
+                        <div class="blogliste-post-image">
+                            <img src="https://picsum.photos/600/400?random=3" alt="Blog Post">
+                        </div>
+                        <div class="blogliste-post-content">
+                            <div class="blogliste-post-meta">
+                                <span class="blogliste-post-kategori">Tasarım</span>
+                                <span class="blogliste-post-tarih">5 Nisan 2023</span>
+                            </div>
+                            <h2 class="blogliste-post-title">UI/UX Tasarımında Minimalist Yaklaşımlar</h2>
+                            <p class="blogliste-post-excerpt">Minimalizm, modern tasarımda giderek daha popüler hale geliyor. Bu yazıda, UI/UX tasarımında minimalist yaklaşımları inceliyoruz.</p>
+                            <a href="blog-detay.html" class="blogliste-post-link">Devamını Oku</a>
+                        </div>
+                    </article>
+    
+                    <!-- Blog post 4 -->
+                    <article class="blogliste-post-card" data-kategori="kariyer" data-tarih="2023-03">
+                        <div class="blogliste-kategori-badge">Kariyer</div>
+                        <div class="blogliste-post-image">
+                            <img src="https://picsum.photos/600/400?random=4" alt="Blog Post">
+                        </div>
+                        <div class="blogliste-post-content">
+                            <div class="blogliste-post-meta">
+                                <span class="blogliste-post-kategori">Kariyer</span>
+                                <span class="blogliste-post-tarih">28 Mart 2023</span>
+                            </div>
+                            <h2 class="blogliste-post-title">Yazılım Geliştirici Olarak Kariyerinizi Nasıl İlerletirsiniz?</h2>
+                            <p class="blogliste-post-excerpt">Teknoloji sektöründe kariyer yapmak isteyenler için ipuçları ve stratejiler paylaşıyoruz. Yazılım dünyasında nasıl başarılı olabilirsiniz?</p>
+                            <a href="blog-detay.html" class="blogliste-post-link">Devamını Oku</a>
+                        </div>
+                    </article>
+    
+                    <!-- Blog post 5 -->
+                    <article class="blogliste-post-card" data-kategori="yazilim" data-tarih="2023-03">
+                        <div class="blogliste-kategori-badge">Yazılım</div>
+                        <div class="blogliste-post-image">
+                            <img src="https://picsum.photos/600/400?random=5" alt="Blog Post">
+                        </div>
+                        <div class="blogliste-post-content">
+                            <div class="blogliste-post-meta">
+                                <span class="blogliste-post-kategori">Yazılım</span>
+                                <span class="blogliste-post-tarih">15 Mart 2023</span>
+                            </div>
+                            <h2 class="blogliste-post-title">JavaScript Frameworkleri: React, Vue ve Angular Karşılaştırması</h2>
+                            <p class="blogliste-post-excerpt">Frontend geliştirmede en popüler JavaScript frameworklerini detaylı olarak karşılaştırıyoruz. Hangi framework projeleriniz için en uygun?</p>
+                            <a href="blog-detay.html" class="blogliste-post-link">Devamını Oku</a>
+                        </div>
+                    </article>
+    
+                    <!-- Blog post 6 -->
+                    <article class="blogliste-post-card" data-kategori="yapay-zeka" data-tarih="2023-03">
+                        <div class="blogliste-kategori-badge">Yapay Zeka</div>
+                        <div class="blogliste-post-image">
+                            <img src="https://picsum.photos/600/400?random=6" alt="Blog Post">
+                        </div>
+                        <div class="blogliste-post-content">
+                            <div class="blogliste-post-meta">
+                                <span class="blogliste-post-kategori">Yapay Zeka</span>
+                                <span class="blogliste-post-tarih">10 Mart 2023</span>
+                            </div>
+                            <h2 class="blogliste-post-title">Derin Öğrenme Algoritmalarının İş Dünyasındaki Uygulamaları</h2>
+                            <p class="blogliste-post-excerpt">Derin öğrenme teknolojileri, iş süreçlerini nasıl dönüştürüyor? Şirketler yapay zeka çözümlerini nasıl kullanıyor?</p>
+                            <a href="blog-detay.html" class="blogliste-post-link">Devamını Oku</a>
+                        </div>
+                    </article>
+    
+                    <!-- Blog post 7 (ikinci sayfa) -->
+                    <article class="blogliste-post-card blogliste-page-2" data-kategori="teknoloji" data-tarih="2023-02" style="display: none;">
+                        <div class="blogliste-kategori-badge">Teknoloji</div>
+                        <div class="blogliste-post-image">
+                            <img src="https://picsum.photos/600/400?random=7" alt="Blog Post">
+                        </div>
+                        <div class="blogliste-post-content">
+                            <div class="blogliste-post-meta">
+                                <span class="blogliste-post-kategori">Teknoloji</span>
+                                <span class="blogliste-post-tarih">25 Şubat 2023</span>
+                            </div>
+                            <h2 class="blogliste-post-title">Blockchain Teknolojisinin Geleceği</h2>
+                            <p class="blogliste-post-excerpt">Blockchain sadece kripto para değil, birçok sektörü dönüştürme potansiyeline sahip. Bu yazıda blockchain'in geleceğini inceliyoruz.</p>
+                            <a href="blog-detay.html" class="blogliste-post-link">Devamını Oku</a>
+                        </div>
+                    </article>
+    
+                    <!-- Blog post 8 (ikinci sayfa) -->
+                    <article class="blogliste-post-card blogliste-page-2" data-kategori="tasarim" data-tarih="2023-02" style="display: none;">
+                        <div class="blogliste-kategori-badge">Tasarım</div>
+                        <div class="blogliste-post-image">
+                            <img src="https://picsum.photos/600/400?random=8" alt="Blog Post">
+                        </div>
+                        <div class="blogliste-post-content">
+                            <div class="blogliste-post-meta">
+                                <span class="blogliste-post-kategori">Tasarım</span>
+                                <span class="blogliste-post-tarih">15 Şubat 2023</span>
+                            </div>
+                            <h2 class="blogliste-post-title">2023'te Web Tasarım Trendleri</h2>
+                            <p class="blogliste-post-excerpt">Bu yılın öne çıkan web tasarım trendlerini, tipografi, renk ve düzen açısından inceliyoruz. Kullanıcı deneyiminde neler değişiyor?</p>
+                            <a href="blog-detay.html" class="blogliste-post-link">Devamını Oku</a>
+                        </div>
+                    </article>
+    
+                    <!-- Blog post 9 (ikinci sayfa) -->
+                    <article class="blogliste-post-card blogliste-page-2" data-kategori="teknoloji" data-tarih="2023-01" style="display: none;">
+                        <div class="blogliste-kategori-badge">Teknoloji</div>
+                        <div class="blogliste-post-image">
+                            <img src="https://picsum.photos/600/400?random=9" alt="Blog Post">
+                        </div>
+                        <div class="blogliste-post-content">
+                            <div class="blogliste-post-meta">
+                                <span class="blogliste-post-kategori">Teknoloji</span>
+                                <span class="blogliste-post-tarih">20 Ocak 2023</span>
+                            </div>
+                            <h2 class="blogliste-post-title">Akıllı Evlerin Yükselişi ve Geleceği</h2>
+                            <p class="blogliste-post-excerpt">Akıllı ev teknolojileri günlük yaşamımızı nasıl değiştiriyor? Geleceğin evlerinde bizi neler bekliyor? Detaylı bir inceleme.</p>
+                            <a href="blog-detay.html" class="blogliste-post-link">Devamını Oku</a>
+                        </div>
+                    </article>
+                </div>
+    
+                <!-- Sayfalama -->
+                <div class="blogliste-pagination">
+                    <a href="#" class="blogliste-page-link blogliste-active" data-page="1">1</a>
+                    <a href="#" class="blogliste-page-link" data-page="2">2</a>
+                    <a href="#" class="blogliste-page-link blogliste-next" data-page="next">Sonraki</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<!-- Footer -->
+<footer class="footer-main">
+    <div class="footer-container">
+        <div class="footer-contact-button">
+
+        </div>
+        
+        <div class="footer-content">
+            <!-- About Us Bölümü (Yukarıda) -->
+            <div class="footer-about">
+                <h3 class="footer-title">Hakkımızda</h3>
+                <p class="footer-text">2009 yılından bu yana KOBİ ve Kamu Kurumlarına yönelik programlar dahilinde kurum ve kuruluşlara ihtiyaçları odaklı olarak çeşitli alanlarda proje hazırlama ve yönetimine
+                    yönelik proje sahibi ile koordineli bir çalışma ile profesyonel bir destek sağlamaktadır...</p>
+                <a href="firma-hakkinda.html" class="footer-view-more">Devamını Oku <i class="footer-icon-arrow"></i></a>
+            </div>
+            
+            <!-- Contact Bölümü (Yukarıda) -->
+            <div class="footer-contact">
+                <h3 class="footer-title">Bize Ulaşın</h3>
+                <h2 class="footer-phone">+90 (232) 445 20 55</h2>
+                <p class="footer-contact-info"><i class="footer-icon-location"></i> İsmet Kaptan Mahallesi Şair Eşref Bulvarı Montrö İş Merkezi
+                    No :35/1 Kat: 6 İç Kapı No: 71 | Konak - İzmir</p>
+                <p class="footer-contact-info"><i class="footer-icon-email"></i>info@planetyazilim.com</p>
+                
+                <div class="footer-social">
+                    <a href="#" class="footer-social-icon"><i class="footer-icon-facebook"></i></a>
+                    <a href="#" class="footer-social-icon"><i class="footer-icon-twitter"></i></a>
+                    <a href="#" class="footer-social-icon"><i class="footer-icon-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <!-- Navigation Bölümü (Altta) -->
+            <div class="footer-navigation">
+                <div class="footer-nav-column">
+                    <h3 class="footer-title">BLOG</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="#"><i class="footer-icon"></i> Blog Kaynaklar</a></li>
+                        <li><a href="#"><i class="footer-icon"></i> Blog makaleler</a></li>
+                        <li><a href="#"><i class="footer-icon"></i> Blog Videolar</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav-column">
+                    <h3 class="footer-title">HIZLI ERİŞİM</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="#"><i class="footer-icon"></i>ANASAYFA</a></li>
+                        <li><a href="#"><i class="footer-icon"></i>HİZMETLERİMİZ</a></li>
+                        <li><a href="#"><i class="footer-icon"></i>ÜRÜNLER</a></li>
+                        <li><a href="#"><i class="footer-icon"></i>REFERANSLAR</a></li>
+                        <li><a href="#"><i class="footer-icon"></i>İLETİŞİM</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav-column">
+                    <h3 class="footer-title">ŞİRKET PORTFOLYO</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="#"><i class="footer-icon"></i> HAKKINDA</a></li>
+                        <li><a href="#"><i class="footer-icon"></i> TARİHÇE</a></li>
+                        <li><a href="#"><i class="footer-icon"></i> EKİBİMİZ</a></li>
+                        <li><a href="#"><i class="footer-icon"></i> BAŞARI HİKAYESİ</a></li>
+                        <li><a href="#"><i class="footer-icon"></i> MÜŞTERİ YORUMLARI</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-nav-column">
+                    <h3 class="footer-title">EKSTRA</h3>
+                    <ul class="footer-nav-list">
+                        <li><a href="#"><i class="footer-icon"></i> SERVİSLER</a></li>
+                        <li><a href="#"><i class="footer-icon"></i> KARİYER</a></li>
+                        <li><a href="#"><i class="footer-icon"></i> S.S.S.</a></li>
+                        <li><a href="#"><i class="footer-icon"></i> GİZLİLİK SÖZLEŞMESİ</a></li>
+                        <li><a href="#"><i class="footer-icon"></i> ÇEREZ YÖNETİMİ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <div class="footer-container">
+            <div class="footer-copyright">
+                <div class="footer-logo">
+                    <img src="img/details-logo.png" alt="Orbitie">
+                </div>
+                <p class="footer-copyright-text">© Copyright 2025. Tüm hakları saklıdır..</p>
+            </div>
+            <div class="footer-logo2">
+                <a href="https://artwebtasarim.com.tr/"><img src="img/artweb_logo.svg" alt="Orbitie"></a>
+            </div>
+
+            <div class="footer-bottom-links">
+                <a href="#">Site Haritası</a>
+                <a href="#">Bize Ulaşın</a>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="assets/js/back-to-top.js"></script>
+
+    <script src="assets/js/script.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM Elementlerini seçme
+            const searchForm = document.getElementById('bloglisteSearchForm');
+            const searchInput = document.getElementById('bloglisteSearchInput');
+            const postsGrid = document.getElementById('bloglisteGrid');
+            const postCards = document.querySelectorAll('.blogliste-post-card');
+            const categoryLinks = document.querySelectorAll('.blogliste-kategori-item a');
+            const archiveLinks = document.querySelectorAll('.blogliste-arsiv-item a');
+            const pageLinks = document.querySelectorAll('.blogliste-page-link');
+            
+            let currentCategory = 'all';
+            let currentDate = 'all';
+            let currentPage = 1;
+            const postsPerPage = 6;
+            let animationsInProgress = false;
+            
+            // Sayfa geçiş animasyonu
+            function animatePageTransition() {
+                postsGrid.classList.add('blogliste-page-transition', 'active');
+                
+                setTimeout(() => {
+                    postsGrid.classList.remove('active');
+                    
+                    setTimeout(() => {
+                        postsGrid.classList.remove('blogliste-page-transition');
+                    }, 600);
+                }, 600);
+            }
+            
+            // Sayfa değiştirme işlevi
+            function changePage(pageNum) {
+                if (animationsInProgress) return;
+                
+                animationsInProgress = true;
+                animatePageTransition();
+                
+                // Önce mevcut postları gizle (fadeOut animasyonu)
+                const visiblePosts = document.querySelectorAll('.blogliste-post-card:not(.filtered)');
+                fadeOutElements(visiblePosts, () => {
+                    currentPage = pageNum;
+                    
+                    // Aktif sayfa linkini güncelle
+                    pageLinks.forEach(link => {
+                        if (link.dataset.page === pageNum.toString()) {
+                            link.classList.add('blogliste-active');
+                        } else {
+                            link.classList.remove('blogliste-active');
+                        }
+                    });
+                    
+                    // Filtreleri uygula (animasyon olmadan önce)
+                    applyFiltersWithoutAnimation();
+                    
+                    // Şimdi görünür postları fadeIn ile göster
+                    const newVisiblePosts = document.querySelectorAll('.blogliste-post-card:not(.filtered)');
+                    fadeInElements(newVisiblePosts, () => {
+                        animationsInProgress = false;
+                    });
+                });
+            }
+            
+            // Kategorileri filtreleme işlevi
+            function filterByCategory(category) {
+                if (animationsInProgress) return;
+                
+                animationsInProgress = true;
+                animatePageTransition();
+                
+                // Önce mevcut postları gizle
+                const visiblePosts = document.querySelectorAll('.blogliste-post-card:not(.filtered)');
+                fadeOutElements(visiblePosts, () => {
+                    currentCategory = category;
+                    
+                    // Aktif kategori linkini güncelle
+                    categoryLinks.forEach(link => {
+                        if (link.dataset.kategori === category) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                    
+                    // Filtreleri uygula
+                    currentPage = 1; // Filtreleme yapıldığında ilk sayfaya dön
+                    updatePageLinks();
+                    applyFiltersWithoutAnimation();
+                    
+                    // Şimdi görünür postları fadeIn ile göster
+                    const newVisiblePosts = document.querySelectorAll('.blogliste-post-card:not(.filtered)');
+                    fadeInElements(newVisiblePosts, () => {
+                        animationsInProgress = false;
+                    });
+                });
+            }
+            
+            // Arşiv filtreleme işlevi
+            function filterByDate(date) {
+                if (animationsInProgress) return;
+                
+                animationsInProgress = true;
+                animatePageTransition();
+                
+                // Önce mevcut postları gizle
+                const visiblePosts = document.querySelectorAll('.blogliste-post-card:not(.filtered)');
+                fadeOutElements(visiblePosts, () => {
+                    currentDate = date;
+                    
+                    // Aktif tarih linkini güncelle
+                    archiveLinks.forEach(link => {
+                        if (link.dataset.tarih === date) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                    
+                    // Filtreleri uygula
+                    currentPage = 1; // Filtreleme yapıldığında ilk sayfaya dön
+                    updatePageLinks();
+                    applyFiltersWithoutAnimation();
+                    
+                    // Şimdi görünür postları fadeIn ile göster
+                    const newVisiblePosts = document.querySelectorAll('.blogliste-post-card:not(.filtered)');
+                    fadeInElements(newVisiblePosts, () => {
+                        animationsInProgress = false;
+                    });
+                });
+            }
+            
+            // Arama işlevi
+            function searchPosts(searchTerm) {
+                if (animationsInProgress) return;
+                
+                animationsInProgress = true;
+                
+                // Önce mevcut postları gizle
+                const visiblePosts = document.querySelectorAll('.blogliste-post-card:not(.filtered)');
+                fadeOutElements(visiblePosts, () => {
+                    searchTerm = searchTerm.toLowerCase().trim();
+                    
+                    if (searchTerm === '') {
+                        // Arama terimi yoksa, sadece kategori ve tarih filtrelerini uygula
+                        applyFiltersWithoutAnimation();
+                        
+                        // Şimdi görünür postları fadeIn ile göster
+                        const newVisiblePosts = document.querySelectorAll('.blogliste-post-card:not(.filtered)');
+                        fadeInElements(newVisiblePosts, () => {
+                            animationsInProgress = false;
+                        });
+                        return;
+                    }
+                    
+                    // Filtreleri uygula (arama terimiyle birlikte)
+                    currentPage = 1; // Arama yapıldığında ilk sayfaya dön
+                    updatePageLinks();
+                    applyFiltersWithoutAnimation(searchTerm);
+                    
+                    // Şimdi görünür postları fadeIn ile göster
+                    const newVisiblePosts = document.querySelectorAll('.blogliste-post-card:not(.filtered)');
+                    fadeInElements(newVisiblePosts, () => {
+                        animationsInProgress = false;
+                    });
+                });
+            }
+            
+            // Animasyon olmadan filtreleri uygulama
+            function applyFiltersWithoutAnimation(searchTerm = null) {
+                let visibleCount = 0;
+                let visibleOnCurrentPage = 0;
+                let startIdx = (currentPage - 1) * postsPerPage;
+                let endIdx = startIdx + postsPerPage;
+                
+                // Sonuç yok mesajını temizle
+                const existingNoResults = document.querySelector('.blogliste-no-results');
+                if (existingNoResults) {
+                    existingNoResults.remove();
+                }
+                
+                // Postları filtreleme
+                postCards.forEach((card, index) => {
+                    const cardCategory = card.dataset.kategori;
+                    const cardDate = card.dataset.tarih;
+                    
+                    const matchesCategory = currentCategory === 'all' || cardCategory === currentCategory;
+                    const matchesDate = currentDate === 'all' || cardDate === currentDate;
+                    
+                    let matchesSearch = true;
+                    if (searchTerm) {
+                        const title = card.querySelector('.blogliste-post-title').textContent.toLowerCase();
+                        const excerpt = card.querySelector('.blogliste-post-excerpt').textContent.toLowerCase();
+                        matchesSearch = title.includes(searchTerm) || excerpt.includes(searchTerm);
+                        
+                        // Arama terimini vurgula
+                        if (matchesSearch) {
+                            highlightText(card.querySelector('.blogliste-post-title'), searchTerm);
+                            highlightText(card.querySelector('.blogliste-post-excerpt'), searchTerm);
+                        } else {
+                            // Vurguları temizle
+                            resetHighlights(card.querySelector('.blogliste-post-title'));
+                            resetHighlights(card.querySelector('.blogliste-post-excerpt'));
+                        }
+                    } else {
+                        // Arama yoksa vurguları temizle
+                        resetHighlights(card.querySelector('.blogliste-post-title'));
+                        resetHighlights(card.querySelector('.blogliste-post-excerpt'));
+                    }
+                    
+                    // Kart gösterilmeli mi?
+                    const shouldShow = matchesCategory && matchesDate && matchesSearch;
+                    
+                    if (shouldShow) {
+                        visibleCount++;
+                        // Sayfalama için görünür olanları say
+                        if (visibleCount > startIdx && visibleCount <= endIdx) {
+                            card.classList.remove('filtered');
+                            // Animasyon sınıflarını kaldır, bunlar sonradan eklenecek
+                            card.classList.remove('blogliste-anim-fadeIn', 'blogliste-anim-fadeOut');
+                        } else {
+                            card.classList.add('filtered');
+                        }
+                    } else {
+                        card.classList.add('filtered');
+                    }
+                });
+                
+                // Hiç sonuç yoksa mesaj göster
+                if (visibleCount === 0) {
+                    const noResultsMessage = document.createElement('div');
+                    noResultsMessage.className = 'blogliste-no-results';
+                    noResultsMessage.innerHTML = searchTerm 
+                        ? `<h3>Arama sonucu bulunamadı</h3><p>"${searchTerm}" için sonuç bulunamadı. Lütfen farklı kelimelerle tekrar deneyin.</p>`
+                        : `<h3>İçerik bulunamadı</h3><p>Seçilen kategori ve tarih filtresine uygun içerik bulunamadı.</p>`;
+                    postsGrid.appendChild(noResultsMessage);
+                }
+                
+                // Sayfa bağlantılarını güncelle
+                updatePagination(visibleCount);
+            }
+            
+            // Filtreleri uygula (tam fonksiyon)
+            function applyFilters(searchTerm = null) {
+                if (animationsInProgress) return;
+                
+                animationsInProgress = true;
+                
+                // Önce mevcut postları gizle
+                const visiblePosts = document.querySelectorAll('.blogliste-post-card:not(.filtered)');
+                fadeOutElements(visiblePosts, () => {
+                    // Filtreleri animasyon olmadan uygula
+                    applyFiltersWithoutAnimation(searchTerm);
+                    
+                    // Şimdi görünür postları fadeIn ile göster
+                    const newVisiblePosts = document.querySelectorAll('.blogliste-post-card:not(.filtered)');
+                    fadeInElements(newVisiblePosts, () => {
+                        animationsInProgress = false;
+                    });
+                });
+            }
+            
+            // Elementleri fadeOut animasyonu ile gizle
+            function fadeOutElements(elements, callback) {
+                if (elements.length === 0) {
+                    if (callback) callback();
+                    return;
+                }
+                
+                let completedCount = 0;
+                
+                elements.forEach(element => {
+                    element.classList.add('blogliste-anim-fadeOut');
+                    
+                    // Animasyon bitince işaretle
+                    element.addEventListener('animationend', function handler() {
+                        element.removeEventListener('animationend', handler);
+                        element.style.display = 'none';
+                        element.classList.remove('blogliste-anim-fadeOut');
+                        
+                        completedCount++;
+                        if (completedCount === elements.length && callback) {
+                            callback();
+                        }
+                    }, { once: true });
+                });
+                
+                // Olası bir hata durumunda animasyonu tamamlamak için timeout ekle
+                setTimeout(() => {
+                    if (completedCount < elements.length) {
+                        elements.forEach(element => {
+                            element.style.display = 'none';
+                            element.classList.remove('blogliste-anim-fadeOut');
+                        });
+                        if (callback) callback();
+                    }
+                }, 500); // Animasyon süresi + biraz fazlası
+            }
+            
+            // Elementleri fadeIn animasyonu ile göster
+            function fadeInElements(elements, callback) {
+                if (elements.length === 0) {
+                    if (callback) callback();
+                    return;
+                }
+                
+                let completedCount = 0;
+                
+                elements.forEach((element, index) => {
+                    element.style.display = 'block';
+                    element.classList.add('blogliste-anim-fadeIn');
+                    
+                    // Animasyon bitince işaretle
+                    element.addEventListener('animationend', function handler() {
+                        element.removeEventListener('animationend', handler);
+                        element.classList.remove('blogliste-anim-fadeIn');
+                        
+                        completedCount++;
+                        if (completedCount === elements.length && callback) {
+                            callback();
+                        }
+                    }, { once: true });
+                });
+                
+                // Olası bir hata durumunda animasyonu tamamlamak için timeout ekle
+                setTimeout(() => {
+                    if (completedCount < elements.length) {
+                        elements.forEach(element => {
+                            element.classList.remove('blogliste-anim-fadeIn');
+                        });
+                        if (callback) callback();
+                    }
+                }, 1000); // En uzun animasyon süresi + biraz fazlası
+            }
+            
+            // Metin içinde arama terimini vurgulama
+            function highlightText(element, searchTerm) {
+                const content = element.innerHTML;
+                const pattern = new RegExp(`(${escapeRegExp(searchTerm)})`, 'gi');
+                element.innerHTML = content.replace(pattern, '<span class="blogliste-highlight">$1</span>');
+            }
+            
+            // Regex için özel karakterleri escape etme
+            function escapeRegExp(string) {
+                return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            }
+            
+            // Vurgulamaları temizleme
+            function resetHighlights(element) {
+                const content = element.innerHTML;
+                element.innerHTML = content.replace(/<span class="blogliste-highlight">(.*?)<\/span>/g, '$1');
+            }
+            
+            // Sayfalama bağlantılarını güncelleme
+            function updatePagination(totalVisible) {
+                const totalPages = Math.ceil(totalVisible / postsPerPage);
+                
+                // Sayfa bağlantılarını güncelle
+                pageLinks.forEach(link => {
+                    const pageNum = parseInt(link.dataset.page);
+                    
+                    // "Sonraki" bağlantısını ayrı işle
+                    if (link.dataset.page === 'next') {
+                        if (currentPage < totalPages) {
+                            link.style.display = 'inline-block';
+                            link.dataset.target = currentPage + 1;
+                        } else {
+                            link.style.display = 'none';
+                        }
+                        return;
+                    }
+                    
+                    // Normal sayfa bağlantıları
+                    if (pageNum <= totalPages) {
+                        link.style.display = 'inline-block';
+                        if (pageNum === currentPage) {
+                            link.classList.add('blogliste-active');
+                        } else {
+                            link.classList.remove('blogliste-active');
+                        }
+                    } else {
+                        link.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Sayfa bağlantılarını sıfırla
+            function updatePageLinks() {
+                pageLinks.forEach(link => {
+                    if (link.dataset.page === '1') {
+                        link.classList.add('blogliste-active');
+                    } else {
+                        link.classList.remove('blogliste-active');
+                    }
+                    link.style.display = 'inline-block';
+                });
+            }
+            
+            // Event Listeners
+            
+            // Arama formu submit olduğunda
+            searchForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                searchPosts(searchInput.value);
+            });
+            
+            // Arama inputu değiştiğinde (otomatik arama)
+            searchInput.addEventListener('input', debounce(function() {
+                if (this.value.length >= 3 || this.value.length === 0) {
+                    searchPosts(this.value);
+                }
+            }, 300));
+            
+            // Debounce fonksiyonu - input olayı için
+            function debounce(func, wait) {
+                let timeout;
+                return function() {
+                    const context = this, args = arguments;
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => {
+                        func.apply(context, args);
+                    }, wait);
+                };
+            }
+            
+            // Kategori linklerine tıklandığında
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (!animationsInProgress) {
+                        filterByCategory(this.dataset.kategori);
+                    }
+                });
+            });
+            
+            // Arşiv linklerine tıklandığında
+            archiveLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (!animationsInProgress) {
+                        filterByDate(this.dataset.tarih);
+                    }
+                });
+            });
+            
+            // Sayfalama linklerine tıklandığında
+            pageLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (!animationsInProgress) {
+                        if (this.dataset.page === 'next') {
+                            changePage(parseInt(this.dataset.target));
+                        } else {
+                            changePage(parseInt(this.dataset.page));
+                        }
+                    }
+                });
+            });
+            
+            // Sayfa yüklendiğinde ilk blog postlarını göster (animasyonla)
+            window.addEventListener('load', function() {
+                // Sayfa yüklendiğinde ilk görünür postları animasyonla göster
+                const initialVisiblePosts = document.querySelectorAll('.blogliste-post-card:not(.filtered)');
+                fadeInElements(initialVisiblePosts);
+            });
+            
+            // Sayfa yüklendiğinde filtreleri uygula (tüm içerikleri göster)
+            applyFiltersWithoutAnimation();
+        });
+    </script>
+</body>
+</html>

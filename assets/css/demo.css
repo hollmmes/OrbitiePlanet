@@ -33,6 +33,7 @@ body {
     gap: 30px;
     margin: 0 auto;
     flex: 1;
+    margin-bottom: 100px;
 }
 .demo-header-section {
     margin-top: 100px;
@@ -59,7 +60,6 @@ body {
     margin: 0 auto;
 }
 .demo-form-section {
-    margin: 0 175px 60px 175px;
     padding: 40px;
     background: rgba(255, 255, 255, 0.03);
     border-radius: 8px;
@@ -78,8 +78,7 @@ body {
 .demo-label {
     color: var(--label-color);
     font-size: 1rem;
-    font-weight: 800;
-    text-align: center;
+    font-weight: 600;
 }
 .demo-input, .demo-textarea {
     background-color: var(--input-bg);
@@ -97,6 +96,9 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
 }
 .demo-checkbox-row {
     display: flex;
@@ -107,16 +109,24 @@ body {
     align-items: center;
     gap: 8px;
     flex: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left:10px;
 }
 .demo-checkbox {
     appearance: none;
     -webkit-appearance: none;
     width: 16px;
     height: 16px;
-    background-color: var(--input-bg);
+    background-color: #212121;
     border-radius: 3px;
     position: relative;
     cursor: pointer;
+}
+.demo-checkbox-item:hover {
+    background: rgb(52 255 177 / 26%);
+    border-radius: 10px;
+    transition: 0.7s;
 }
 .demo-checkbox:checked {
     background-color: var(--primary-color);
@@ -131,10 +141,10 @@ body {
     transform: translate(-50%, -50%);
 }
 .demo-checkbox-label {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--text-secondary);
     cursor: pointer;
-    font-weight: 800;
+    font-weight: 600;
 }
 .demo-textarea {
     resize: vertical;
@@ -248,7 +258,7 @@ body {
     }
     
     .demo-label {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     
     .demo-input, .demo-textarea {

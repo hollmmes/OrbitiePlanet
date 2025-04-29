@@ -1,0 +1,673 @@
+body {
+    position: relative;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(8, 252, 172, 0.1) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+/* Blog Sayfası Stilleri */
+.blogliste-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    color: var(--text-color);
+}
+/* Hero Bölümü */
+.tumu-hero {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 50px 0px 0px 0px;
+}
+.tumu-hero h1 {
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    font-size: 3.8rem;
+    margin-bottom: 1.5rem;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(135deg, rgb(8, 252, 172) 0%, rgb(79, 209, 197) 25%, rgb(8, 252, 172) 50%, rgb(79, 209, 197) 75%, rgb(8, 252, 172) 100%) 0% 0% / 200% text;
+    animation: 3s linear 0s infinite normal none running shine;
+}
+
+/* Arama Çubuğu Stilleri */
+.blogliste-search-wrapper {
+    margin-bottom: 30px;
+}
+
+.blogliste-search-form {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.blogliste-search-input {
+    width: 100%;
+    padding: 14px 20px;
+    border: none;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    border-radius: 50px;
+    font-size: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+}
+
+.blogliste-search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary-color), 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: bloglisteInputPulse 1s ease-in-out;
+}
+
+@keyframes bloglisteInputPulse {
+    0% { box-shadow: 0 0 0 0px rgba(8, 252, 172, 0.4), 0 4px 10px rgba(0, 0, 0, 0.1); }
+    70% { box-shadow: 0 0 0 8px rgba(8, 252, 172, 0), 0 4px 10px rgba(0, 0, 0, 0.1); }
+    100% { box-shadow: 0 0 0 0px rgba(8, 252, 172, 0), 0 4px 10px rgba(0, 0, 0, 0.1); }
+}
+
+.blogliste-search-input::placeholder {
+    color: var(--gray-text);
+}
+
+.blogliste-search-button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.blogliste-search-button:hover {
+    background-color: rgba(8, 252, 172, 0.7);
+    transform: scale(1.05);
+}
+
+.blogliste-search-button:active {
+    transform: scale(0.95);
+}
+
+.blogliste-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+/* Sidebar Stilleri */
+.blogliste-sidebar {
+    width: 25%;
+    background-color: var(--secondary-bg);
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blogliste-sidebar:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.blogliste-sidebar-title {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.blogliste-kategori-liste,
+.blogliste-arsiv-liste {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blogliste-kategori-item,
+.blogliste-arsiv-item {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: padding 0.3s;
+}
+
+.blogliste-kategori-item:hover,
+.blogliste-arsiv-item:hover {
+    padding-left: 5px;
+}
+
+.blogliste-kategori-item:last-child,
+.blogliste-arsiv-item:last-child {
+    border-bottom: none;
+}
+
+.blogliste-kategori-item a,
+.blogliste-arsiv-item a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.blogliste-kategori-item a:hover,
+.blogliste-arsiv-item a:hover,
+.blogliste-kategori-item a.active,
+.blogliste-arsiv-item a.active {
+    color: var(--primary-color);
+}
+
+.blogliste-kategori-item a.active,
+.blogliste-arsiv-item a.active {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.blogliste-kategori-item a.active::after,
+.blogliste-arsiv-item a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-color);
+    animation: bloglisteUnderline 0.3s ease forwards;
+}
+
+@keyframes bloglisteUnderline {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+.blogliste-sayac {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.blogliste-kategori-item:hover .blogliste-sayac,
+.blogliste-arsiv-item:hover .blogliste-sayac {
+    transform: scale(1.1);
+    background-color: rgba(8, 252, 172, 0.8);
+}
+
+.blogliste-arsiv {
+    margin-top: 30px;
+}
+
+/* Blog Posts Grid Stilleri */
+.blogliste-posts {
+    width: 75%;
+}
+
+.blogliste-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    position: relative;
+}
+
+/* Sayfa geçişi animasyonu */
+.blogliste-page-transition {
+    position: relative;
+}
+
+.blogliste-page-transition::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s ease-out;
+    z-index: 5;
+}
+
+.blogliste-page-transition.active::before {
+    transform: scaleX(1);
+}
+
+.blogliste-post-card {
+    background-color: var(--secondary-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.4s ease-in-out;
+    position: relative;
+}
+
+.blogliste-post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Fade In animasyonu */
+@keyframes bloglisteFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade Out animasyonu */
+@keyframes bloglisteFadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Animasyon sınıfları */
+.blogliste-anim-fadeIn {
+    animation: bloglisteFadeIn 0.5s ease forwards;
+}
+
+.blogliste-anim-fadeOut {
+    animation: bloglisteFadeOut 0.3s ease forwards;
+}
+
+/* Blog kartları için staggered efekti */
+.blogliste-post-card.blogliste-anim-fadeIn:nth-child(1) { animation-delay: 0.05s; }
+.blogliste-post-card.blogliste-anim-fadeIn:nth-child(2) { animation-delay: 0.1s; }
+.blogliste-post-card.blogliste-anim-fadeIn:nth-child(3) { animation-delay: 0.15s; }
+.blogliste-post-card.blogliste-anim-fadeIn:nth-child(4) { animation-delay: 0.2s; }
+.blogliste-post-card.blogliste-anim-fadeIn:nth-child(5) { animation-delay: 0.25s; }
+.blogliste-post-card.blogliste-anim-fadeIn:nth-child(6) { animation-delay: 0.3s; }
+
+.blogliste-kategori-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.blogliste-post-card:hover .blogliste-kategori-badge {
+    transform: translateY(-3px);
+    background-color: rgba(8, 252, 172, 0.8);
+}
+
+.blogliste-post-image {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
+
+.blogliste-post-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.4) 100%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.blogliste-post-card:hover .blogliste-post-image::after {
+    opacity: 1;
+}
+
+.blogliste-post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.blogliste-post-card:hover .blogliste-post-image img {
+    transform: scale(1.05);
+}
+
+.blogliste-post-content {
+    padding: 20px;
+}
+
+.blogliste-post-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.85rem;
+}
+
+.blogliste-post-kategori {
+    color: var(--primary-color);
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.blogliste-post-card:hover .blogliste-post-kategori {
+    color: var(--primary-color);
+}
+
+.blogliste-post-tarih {
+    color: var(--gray-text);
+}
+
+.blogliste-post-title {
+    margin: 10px 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+    color: var(--text-color);
+    transition: color 0.3s;
+}
+
+.blogliste-post-card:hover .blogliste-post-title {
+    color: var(--primary-color);
+}
+
+.blogliste-post-excerpt {
+    color: var(--gray-text);
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.blogliste-post-link {
+    display: inline-block;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s, transform 0.3s;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.blogliste-post-link:hover {
+    border-color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.blogliste-post-link::after {
+    content: '→';
+    position: absolute;
+    right: -20px;
+    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.blogliste-post-link:hover::after {
+    opacity: 1;
+    transform: translateX(5px);
+}
+
+/* Sayfalama Stilleri */
+.blogliste-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 10px;
+}
+
+.blogliste-page-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.blogliste-page-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8, 252, 172, 0.2);
+    transition: transform 0.3s;
+    z-index: 0;
+}
+
+.blogliste-page-link:hover::before {
+    transform: translateX(100%);
+}
+
+.blogliste-page-link:hover,
+.blogliste-page-link.blogliste-active {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+.blogliste-page-link.blogliste-active {
+    animation: bloglisteScaleButton 0.3s ease;
+}
+
+@keyframes bloglisteScaleButton {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.blogliste-next {
+    padding: 8px 20px;
+}
+
+.blogliste-next::after {
+    content: '→';
+    margin-left: 5px;
+    display: inline-block;
+    transition: transform 0.3s;
+}
+
+.blogliste-next:hover::after {
+    transform: translateX(5px);
+}
+
+/* Arama sonuçları için animasyon */
+.blogliste-no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    background-color: var(--secondary-bg);
+    border-radius: 10px;
+    color: var(--gray-text);
+    opacity: 0;
+    animation: bloglisteFadeIn 0.5s ease 0.2s forwards;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blogliste-no-results h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Vurgulama için yanıp sönme animasyonu */
+.blogliste-highlight {
+    background-color: rgba(8, 252, 172, 0.2);
+    color: var(--primary-color);
+    padding: 0 2px;
+    animation: bloglisteHighlightPulse 1.5s ease-in-out infinite;
+    border-radius: 3px;
+}
+
+@keyframes bloglisteHighlightPulse {
+    0% { background-color: rgba(8, 252, 172, 0.2); }
+    50% { background-color: rgba(8, 252, 172, 0.4); }
+    100% { background-color: rgba(8, 252, 172, 0.2); }
+}
+
+/* Görünmez postlar için stil */
+.blogliste-post-card.filtered {
+    display: none;
+}
+
+/* Responsive Stilleri */
+@media (max-width: 992px) {
+    .blogliste-wrapper {
+        flex-direction: column;
+    }
+    
+    .blogliste-sidebar,
+    .blogliste-posts {
+        width: 100%;
+    }
+    
+    .blogliste-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .blogliste-sidebar {
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .blogliste-post-image {
+        height: 180px;
+    }
+    
+    .blogliste-search-wrapper {
+        margin-bottom: 20px;
+    }
+    
+    .blogliste-kategori-badge {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+    
+    .blogliste-post-title {
+        font-size: 1.1rem;
+    }
+    
+    .blogliste-pagination {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .blogliste-post-content {
+        padding: 15px;
+    }
+    
+    .blogliste-post-excerpt {
+        font-size: 0.85rem;
+    }
+    
+    .blogliste-search-input {
+        font-size: 0.9rem;
+        padding: 12px 15px;
+    }
+    
+    .blogliste-search-button {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .blogliste-page-link {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Hover ve Odaklanma efektleri için ek stillemeler */
+@media (hover: hover) {
+    .blogliste-post-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 10px;
+        border: 2px solid transparent;
+        transition: border-color 0.3s;
+        pointer-events: none;
+    }
+    
+    .blogliste-post-card:hover::after {
+        border-color: var(--primary-color);
+    }
+    
+    .blogliste-post-card:focus-within::after {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px var(--primary-color);
+    }
+}
+
+/* Dokunmatik cihazlar için ek iyileştirmeler */
+@media (hover: none) {
+    .blogliste-post-card:active {
+        transform: scale(0.98);
+    }
+    
+    .blogliste-page-link:active {
+        background-color: var(--primary-color);
+        color: var(--bg-color);
+    }
+}
+
+/* Karanlık mod değişiklikleri için ek uyarlamalar */
+@media (prefers-color-scheme: dark) {
+    .blogliste-highlight {
+        background-color: rgba(8, 252, 172, 0.15);
+    }
+    
+    .blogliste-no-results {
+        background-color: rgba(26, 29, 32, 0.8);
+    }
+}
+
+/* Animasyon tercihlerini azalt */
+@media (prefers-reduced-motion: reduce) {
+    .blogliste-post-card,
+    .blogliste-anim-fadeIn,
+    .blogliste-anim-fadeOut,
+    .blogliste-highlight,
+    .blogliste-page-transition::before,
+    .blogliste-post-image img,
+    .blogliste-page-link.blogliste-active,
+    .blogliste-post-link::after,
+    .blogliste-search-input:focus {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .blogliste-post-card:hover {
+        transform: none;
+    }
+}

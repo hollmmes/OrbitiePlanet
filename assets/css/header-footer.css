@@ -1,4 +1,14 @@
 /* ----------------- HEADER STYLES ----------------- */
+::-moz-selection {
+  color: white;
+  background: #2ecc7170;
+}
+
+::selection {
+  color: white;
+  background: #2ecc7170;
+}
+
 .header {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -406,7 +416,7 @@ body.mobile-menu-open .mobile-menu-toggle span:nth-child(3) {
 }
 /* ----------------- FOOTER STYLES ----------------- */
 .footer-main {
-    background-color: #101414;
+    background-color: #000000;
     color: #777;
     font-family: Arial, sans-serif;
     position: relative;
@@ -579,7 +589,7 @@ body.mobile-menu-open .mobile-menu-toggle span:nth-child(3) {
 }
 /* Footer bottom bölümü için CSS */
 .footer-bottom {
-    background-color: #171a1d;
+    background-color: #000000;
     padding: 20px 0;
 }
 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demolar | Orbitie</title>
+    <title>Başarı Hikayeleri | Orbitie</title>
 
 
       <!-- Önce değişkenler ve fontlar yüklenir -->
@@ -12,7 +12,9 @@
   <!-- Sonra header ve footer stilleri -->
   <link rel="stylesheet" href="assets/css/header-footer.css">
   
-  <link rel="stylesheet" href="assets/css/demolar.css">
+  <link rel="stylesheet" href="assets/css/blog-detay.css">
+
+
   <!-- Diğer CSS dosyaları -->
   <link rel="stylesheet" href="assets/css/animations.css">
   <link rel="stylesheet" href="assets/css/mobile.css">
@@ -285,7 +287,7 @@
                                     </div>
                                 </a>
                             </li>
-                          
+                        
                             <li>
                                 <a href="basari-hikayeleri.html">
                                     <div class="dropdown-icon">
@@ -335,112 +337,395 @@
         </div>
     </header>
 
-<main>
-    <section class="demo-hero">
-        <h1>Ürün Demoları</h1>
-        <p>Ürünlerimizin kapsamlı demo videolarını izleyerek özelliklerini keşfedin ve işletmeniz için en uygun çözümü seçin.</p>
-    </section>
-
-    <section class="demo-search-filter">
-        <div class="demo-search-container">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Demo ara...">
-        </div>
-        <div class="demo-filters">
-            <button class="demo-filter-btn active"><i class="fas fa-filter"></i> Tümü</button>
-            <button class="demo-filter-btn">CRM</button>
-            <button class="demo-filter-btn">ERP</button>
-            <button class="demo-filter-btn">E-Ticaret</button>
-        </div>
-    </section>
-
-    <section class="demo-cards-list">
-        <div class="demo-card-item">
-            <div class="demo-card-image">
-                <img src="img/crm-demo.jpeg" alt="CRM Yazılımı Demo">
-                <div class="demo-play-button">
-                    <i class="fas fa-play"></i>
-                </div>
-                <div class="demo-card-stats">
-                    <span class="demo-duration"><i class="far fa-clock"></i> 15:20</span>
-                    <span class="demo-views"><i class="far fa-eye"></i> 2.5K</span>
-                    <span class="demo-rating"><i class="fas fa-star"></i> 4.8</span>
-                </div>
-            </div>
-            <div class="demo-card-content">
-                <h3>CRM Yazılımı Demo</h3>
-                <p>Müşteri yönetimi ve satış süreçlerinin nasıl yönetildiğini gösteren kapsamlı demo video.</p>
-                <div class="demo-card-tags">
-                    <span class="demo-tag">Müşteri Yönetimi</span>
-                    <span class="demo-tag">Satış</span>
-                    <span class="demo-tag">Raporlama</span>
-                </div>
-                <div class="demo-card-actions">
-                    <button class="demo-btn-primary"><i class="fas fa-play"></i> Demo İzle</button>
-                    <button class="demo-btn-secondary"><i class="fas fa-download"></i> İndir</button>
-                </div>
-            </div>
-        </div>
-
-
-
-        <div class="demo-card-item">
-            <div class="demo-card-image">
-                <img src="img/eticaret-demo.jpeg" alt="E-Ticaret Demo">
-                <div class="demo-play-button">
-                    <i class="fas fa-play"></i>
-                </div>
-                <div class="demo-card-stats">
-                    <span class="demo-duration"><i class="far fa-clock"></i> 18:30</span>
-                    <span class="demo-views"><i class="far fa-eye"></i> 4.2K</span>
-                    <span class="demo-rating"><i class="fas fa-star"></i> 4.7</span>
-                </div>
-            </div>
-            <div class="demo-card-content">
-                <h3>E-Ticaret Demo</h3>
-                <p>Online mağaza yönetimi ve sipariş süreçlerini gösteren kapsamlı demo ve entegrasyon örnekleri.</p>
-                <div class="demo-card-tags">
-                    <span class="demo-tag">Online Satış</span>
-                    <span class="demo-tag">Sipariş Yönetimi</span>
-                    <span class="demo-tag">Entegrasyon</span>
-                </div>
-                <div class="demo-card-actions">
-                    <button class="demo-btn-primary"><i class="fas fa-play"></i> Demo İzle</button>
-                    <button class="demo-btn-secondary"><i class="fas fa-download"></i> İndir</button>
-                </div>
-            </div>
-        </div>
+    <section class="tumu-hero" style="margin-top: 100px;">
+        <h1>Blog Detay Sayfası</h1>
+        <p>Şirketinizin gelişmesi için ihtiyacı olan yazılım çözümlerimizi keşfedin.</p>
         
-
-        <div class="demo-card-item">
-            <div class="demo-card-image">
-                <img src="img/erp-demo.jpeg" alt="ERP Sistemi Demo">
-                <div class="demo-play-button">
-                    <i class="fas fa-play"></i>
-                </div>
-                <div class="demo-card-stats">
-                    <span class="demo-duration"><i class="far fa-clock"></i> 20:45</span>
-                    <span class="demo-views"><i class="far fa-eye"></i> 3.1K</span>
-                    <span class="demo-rating"><i class="fas fa-star"></i> 4.9</span>
-                </div>
-            </div>
-            <div class="demo-card-content">
-                <h3>ERP Sistemi Demo</h3>
-                <p>Stok yönetimi, muhasebe ve üretim süreçlerinin entegre çalışmasını gösteren detaylı demo.</p>
-                <div class="demo-card-tags">
-                    <span class="demo-tag">Stok Yönetimi</span>
-                    <span class="demo-tag">Muhasebe</span>
-                    <span class="demo-tag">Üretim</span>
-                </div>
-                <div class="demo-card-actions">
-                    <button class="demo-btn-primary"><i class="fas fa-play"></i> Demo İzle</button>
-                    <button class="demo-btn-secondary"><i class="fas fa-download"></i> İndir</button>
-                </div>
-            </div>
-        </div>
+    </div>  
     </section>
-</main>
 
+
+    <main class="blogdetay-container">
+        <div class="blogdetay-wrapper">
+            <!-- Blog İçerik Bölümü (Sol Taraf) -->
+            <div class="blogdetay-content">
+                <!-- Başlık ve Meta Bilgiler -->
+                <div class="blogdetay-header">
+                    <div class="blogdetay-kategori">
+                        <span class="blogdetay-badge">Teknoloji</span>
+                        <span class="blogdetay-tarih">14 Nisan 2023</span>
+                    </div>
+                    <h1 class="blogdetay-title">Yapay Zeka Teknolojisindeki Son Gelişmeler</h1>
+                    <div class="blogdetay-author">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Yazar" class="blogdetay-author-image">
+                        <div class="blogdetay-author-info">
+                            <span class="blogdetay-author-name">Mehmet Yılmaz</span>
+                            <span class="blogdetay-reading-time">8 dakika okuma</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ana Görsel -->
+                <div class="blogdetay-featured-image">
+                    <img src="https://picsum.photos/1200/600?random=1" alt="Yapay Zeka Teknolojisi">
+                </div>
+                
+                <!-- İçerik -->
+                <div class="blogdetay-article">
+                    <p class="blogdetay-intro">
+                        Yapay zeka teknolojileri son yıllarda muazzam bir gelişme gösterdi ve günlük hayatımızda giderek daha fazla yer almaya başladı. Bu yazıda, yapay zeka alanındaki en son gelişmeleri ve bunların hayatımızı nasıl etkileyeceğini inceliyoruz.
+                    </p>
+                    
+                    <h2 class="blogdetay-section-title">Doğal Dil İşlemede Devrim: GPT-4 ve Ötesi</h2>
+                    <p>
+                        OpenAI'nin GPT-4 modeli, doğal dil işleme alanında çığır açan yenilikler sundu. Önceki versiyonlara göre daha kapsamlı bağlam anlama yeteneği, daha doğru ve tutarlı cevaplar üretebilmesi ve çoklu modalite desteği ile GPT-4, yapay zekanın insan benzeri metin üretme kabiliyetini yeni bir seviyeye taşıdı.
+                    </p>
+                    
+                    <p>
+                        GPT-4'ün en etkileyici özelliklerinden biri, metin-görsel girdi kombinasyonlarını işleyebilme kabiliyeti. Bir görseli analiz edip hakkında detaylı açıklamalar yapabilmesi, ekran görüntülerini yorumlayabilmesi ve grafikleri açıklayabilmesi, onu önceki modellerden çok daha yetenekli kılıyor.
+                    </p>
+                    
+                    <blockquote class="blogdetay-quote">
+                        "Yapay zeka, insanlığın şimdiye kadar geliştirdiği en güçlü araçlardan biri olacak. Onu sorumlu bir şekilde kullanmak ve geliştirmek, geleceğimiz için kritik önem taşıyor."
+                        <cite>— Satya Nadella, Microsoft CEO</cite>
+                    </blockquote>
+                    
+                    <h2 class="blogdetay-section-title">Görüntü Oluşturma Teknolojileri</h2>
+                    <p>
+                        DALL-E, Midjourney ve Stable Diffusion gibi yapay zeka tabanlı görüntü oluşturma teknolojileri, sanat ve tasarım dünyasını dönüştürmeye başladı. Basit metin komutlarıyla detaylı ve yaratıcı görseller oluşturabilen bu sistemler, tasarımcılar, sanatçılar ve içerik üreticileri için yeni olanaklar sunuyor.
+                    </p>
+                    
+                    <div class="blogdetay-image-grid">
+                        <div class="blogdetay-grid-item">
+                            <img src="https://picsum.photos/600/400?random=2" alt="AI Sanat Örneği 1">
+                            <span class="blogdetay-caption">DALL-E ile oluşturulmuş distopik şehir manzarası</span>
+                        </div>
+                        <div class="blogdetay-grid-item">
+                            <img src="https://picsum.photos/600/400?random=3" alt="AI Sanat Örneği 2">
+                            <span class="blogdetay-caption">Midjourney ile oluşturulmuş fütüristik taşıt konsepti</span>
+                        </div>
+                    </div>
+                    
+                    <p>
+                        Bu teknolojilerin gelişmesiyle birlikte, telif hakkı, etik kullanım ve sanatın geleceği konularında yeni tartışmalar da ortaya çıkıyor. Yapay zeka sistemlerinin sanatçıların stillerini taklit etmesi ve içerik üretiminin demokratikleşmesi, sanat dünyasında hem heyecan hem de endişe yaratıyor.
+                    </p>
+                    
+                    <h2 class="blogdetay-section-title">Sağlık Sektöründe Yapay Zeka</h2>
+                    <p>
+                        Yapay zeka teknolojileri, sağlık sektöründe tanı, tedavi ve ilaç geliştirme süreçlerinde devrim yaratıyor. Derin öğrenme modelleri, radyoloji görüntülerinde insan uzmanlardan daha yüksek doğruluk oranıyla kanser tespiti yapabiliyor. Google DeepMind'ın AlphaFold sistemi, protein yapılarını tahmin ederek ilaç geliştirme süreçlerini hızlandırıyor.
+                    </p>
+                    
+                    <div class="blogdetay-info-box">
+                        <h3 class="blogdetay-info-title"><i class="fas fa-lightbulb"></i> Bilgi Kutusu</h3>
+                        <p>Yapay zeka destekli sağlık uygulamaları, küresel sağlık maliyetlerini 2030 yılına kadar %10 oranında azaltma potansiyeline sahip. Bu da yaklaşık 360 milyar dolarlık bir tasarruf anlamına geliyor.</p>
+                    </div>
+                    
+                    <h2 class="blogdetay-section-title">Otonom Sistemler ve Robotik</h2>
+                    <p>
+                        Otonom araçlar, drone'lar ve robotik sistemlerdeki gelişmeler, lojistik, tarım ve üretim sektörlerinde önemli değişimler yaratmaya başladı. Yapay zeka destekli robotlar, tehlikeli veya tekrarlayan görevleri insanlardan devralarak iş güvenliğini ve verimliliği artırıyor.
+                    </p>
+                    
+                    <p>
+                        Boston Dynamics, Tesla Bot ve benzer robotik projeler, fiziksel dünyada karmaşık görevleri yerine getirebilen insansı robotlar geliştirme konusunda önemli adımlar atıyor. Bu gelişmeler, gelecekte iş gücü piyasasında önemli değişimlere yol açabilir.
+                    </p>
+                    
+                    <h2 class="blogdetay-section-title">Yapay Zekanın Geleceği</h2>
+                    <p>
+                        Yapay zeka teknolojilerinin gelecekteki yönü, genel yapay zeka (AGI) ve insan-yapay zeka işbirliğine doğru ilerliyor. Araştırmacılar, belirli görevlerde uzmanlaşmış sistemlerden, insan benzeri öğrenme ve karar verme yeteneklerine sahip daha genel sistemlere geçiş üzerinde çalışıyor.
+                    </p>
+                    
+                    <p>
+                        Önümüzdeki yıllarda, yapay zeka destekli kişisel asistanlar daha akıllı hale gelecek, eğitim kişiselleştirilecek ve iş yerlerinde insan-yapay zeka işbirliği daha yaygın hale gelecek. Ancak bu gelişmeler, düzenlemeler, etik kurallar ve toplumsal uyum için yeni zorluklar da getirecek.
+                    </p>
+                    
+                    <div class="blogdetay-conclusion">
+                        <h3>Sonuç</h3>
+                        <p>
+                            Yapay zeka teknolojisi hızla gelişmeye devam ediyor ve hayatımızın her alanında derin etkiler yaratıyor. Bu değişim dalgasına ayak uydurmak, hem bireyler hem de kurumlar için kritik önem taşıyor. Yapay zekanın potansiyelini sorumlu bir şekilde kullanarak, daha verimli, yaratıcı ve sürdürülebilir bir gelecek inşa edebiliriz.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Etiketler -->
+                <div class="blogdetay-tags">
+                    <span class="blogdetay-tag-title">Etiketler:</span>
+                    <a href="#" class="blogdetay-tag">Yapay Zeka</a>
+                    <a href="#" class="blogdetay-tag">Teknoloji</a>
+                    <a href="#" class="blogdetay-tag">GPT-4</a>
+                    <a href="#" class="blogdetay-tag">Derin Öğrenme</a>
+                    <a href="#" class="blogdetay-tag">Robotik</a>
+                </div>
+                
+                <!-- Paylaşım Butonları -->
+                <div class="blogdetay-share">
+                    <span class="blogdetay-share-title">Bu içeriği paylaş:</span>
+                    <div class="blogdetay-share-buttons">
+                        <a href="#" class="blogdetay-share-button blogdetay-twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="blogdetay-share-button blogdetay-facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="blogdetay-share-button blogdetay-linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="blogdetay-share-button blogdetay-whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="blogdetay-share-button blogdetay-copy" id="copyLinkButton">
+                            <i class="fas fa-link"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Yazar Hakkında -->
+                <div class="blogdetay-author-box">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mehmet Yılmaz" class="blogdetay-author-box-image">
+                    <div class="blogdetay-author-box-content">
+                        <h3 class="blogdetay-author-box-name">Mehmet Yılmaz</h3>
+                        <p class="blogdetay-author-box-bio">
+                            Mehmet Yılmaz, 10+ yıllık deneyime sahip bir yazılım mühendisi ve teknoloji yazarıdır. Yapay zeka, veri bilimi ve yazılım geliştirme konularında uzmanlığa sahiptir. Birçok teknoloji konferansında konuşmacı olarak yer almış ve çeşitli teknoloji dergilerinde makaleleri yayınlanmıştır.
+                        </p>
+                        <div class="blogdetay-author-box-social">
+                            <a href="#" class="blogdetay-author-social-link"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="blogdetay-author-social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="blogdetay-author-social-link"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Yorum Bölümü -->
+                <div class="blogdetay-comments">
+                    <h3 class="blogdetay-comments-title">Yorumlar (3)</h3>
+                    
+                    <div class="blogdetay-comment">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ayşe Demir" class="blogdetay-comment-avatar">
+                        <div class="blogdetay-comment-content">
+                            <div class="blogdetay-comment-header">
+                                <h4 class="blogdetay-comment-author">Ayşe Demir</h4>
+                                <span class="blogdetay-comment-date">15 Nisan 2023, 09:45</span>
+                            </div>
+                            <p class="blogdetay-comment-text">
+                                Harika bir yazı olmuş, özellikle yapay zekanın sağlık sektöründeki uygulamaları konusunda verdiğiniz bilgiler çok değerli. Acaba gelecekte doktorların yerini tamamen yapay zeka alabilir mi?
+                            </p>
+                            <div class="blogdetay-comment-actions">
+                                <button class="blogdetay-comment-reply-btn">Yanıtla</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blogdetay-comment">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Ali Yıldız" class="blogdetay-comment-avatar">
+                        <div class="blogdetay-comment-content">
+                            <div class="blogdetay-comment-header">
+                                <h4 class="blogdetay-comment-author">Ali Yıldız</h4>
+                                <span class="blogdetay-comment-date">16 Nisan 2023, 14:22</span>
+                            </div>
+                            <p class="blogdetay-comment-text">
+                                GPT-4'ün çoklu modalite desteği gerçekten etkileyici. Bu teknolojinin eğitim alanında nasıl kullanılabileceği konusunda da bilgi verebilir misiniz?
+                            </p>
+                            <div class="blogdetay-comment-actions">
+                                <button class="blogdetay-comment-reply-btn">Yanıtla</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="blogdetay-comment blogdetay-comment-reply">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mehmet Yılmaz" class="blogdetay-comment-avatar">
+                        <div class="blogdetay-comment-content">
+                            <div class="blogdetay-comment-header">
+                                <h4 class="blogdetay-comment-author">Mehmet Yılmaz <span class="blogdetay-author-badge">Yazar</span></h4>
+                                <span class="blogdetay-comment-date">16 Nisan 2023, 16:05</span>
+                            </div>
+                            <p class="blogdetay-comment-text">
+                                Teşekkürler Ali! Eğitim alanında GPT-4 gibi modeller, kişiselleştirilmiş öğrenme deneyimleri, anında geri bildirim ve çok dilli içerik oluşturma gibi alanlarda büyük potansiyel taşıyor. Bu konuda yakında ayrı bir yazı paylaşmayı düşünüyorum.
+                            </p>
+                            <div class="blogdetay-comment-actions">
+                                <button class="blogdetay-comment-reply-btn">Yanıtla</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Yorum Formu -->
+                    <div class="blogdetay-comment-form">
+                        <h3 class="blogdetay-comment-form-title">Yorum Yap</h3>
+                        <form>
+                            <div class="blogdetay-form-group">
+                                <label for="comment-name" class="blogdetay-form-label">İsim *</label>
+                                <input type="text" id="comment-name" class="blogdetay-form-input" required>
+                            </div>
+                            <div class="blogdetay-form-group">
+                                <label for="comment-email" class="blogdetay-form-label">E-posta * (Yayınlanmayacak)</label>
+                                <input type="email" id="comment-email" class="blogdetay-form-input" required>
+                            </div>
+                            <div class="blogdetay-form-group">
+                                <label for="comment-content" class="blogdetay-form-label">Yorumunuz *</label>
+                                <textarea id="comment-content" class="blogdetay-form-textarea" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="blogdetay-form-submit">Yorum Gönder</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Sidebar (Sağ Taraf) -->
+            <aside class="blogdetay-sidebar">
+                <!-- Yazar Bilgisi (Mobil için) -->
+                <div class="blogdetay-sidebar-author-mobile">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Yazar" class="blogdetay-sidebar-author-image">
+                    <div class="blogdetay-sidebar-author-info">
+                        <span class="blogdetay-sidebar-author-name">Mehmet Yılmaz</span>
+                        <span class="blogdetay-sidebar-reading-time">8 dakika okuma</span>
+                    </div>
+                </div>
+                
+                <!-- İçindekiler -->
+                <div class="blogdetay-sidebar-section blogdetay-toc">
+                    <h3 class="blogdetay-sidebar-title">İçindekiler</h3>
+                    <ul class="blogdetay-toc-list">
+                        <li><a href="#" class="blogdetay-toc-link">Doğal Dil İşlemede Devrim: GPT-4 ve Ötesi</a></li>
+                        <li><a href="#" class="blogdetay-toc-link">Görüntü Oluşturma Teknolojileri</a></li>
+                        <li><a href="#" class="blogdetay-toc-link">Sağlık Sektöründe Yapay Zeka</a></li>
+                        <li><a href="#" class="blogdetay-toc-link">Otonom Sistemler ve Robotik</a></li>
+                        <li><a href="#" class="blogdetay-toc-link">Yapay Zekanın Geleceği</a></li>
+                    </ul>
+                </div>
+                
+                <!-- İlgili Makaleler -->
+                <div class="blogdetay-sidebar-section">
+                    <h3 class="blogdetay-sidebar-title">İlgili Makaleler</h3>
+                    <div class="blogdetay-related-posts">
+                        <a href="#" class="blogdetay-related-post">
+                            <div class="blogdetay-related-image">
+                                <img src="https://picsum.photos/300/200?random=10" alt="İlgili Makale">
+                            </div>
+                            <div class="blogdetay-related-content">
+                                <span class="blogdetay-related-category">Teknoloji</span>
+                                <h4 class="blogdetay-related-title">Büyük Dil Modellerinin İş Dünyasına Etkileri</h4>
+                                <span class="blogdetay-related-date">5 Nisan 2023</span>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="blogdetay-related-post">
+                            <div class="blogdetay-related-image">
+                                <img src="https://picsum.photos/300/200?random=11" alt="İlgili Makale">
+                            </div>
+                            <div class="blogdetay-related-content">
+                                <span class="blogdetay-related-category">Yazılım</span>
+                                <h4 class="blogdetay-related-title">Python ile Yapay Zeka Uygulamaları Geliştirme</h4>
+                                <span class="blogdetay-related-date">22 Mart 2023</span>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="blogdetay-related-post">
+                            <div class="blogdetay-related-image">
+                                <img src="https://picsum.photos/300/200?random=12" alt="İlgili Makale">
+                            </div>
+                            <div class="blogdetay-related-content">
+                                <span class="blogdetay-related-category">Yapay Zeka</span>
+                                <h4 class="blogdetay-related-title">Yapay Zeka Etiği: Dikkat Edilmesi Gereken Konular</h4>
+                                <span class="blogdetay-related-date">10 Şubat 2023</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Kategoriler -->
+                <div class="blogdetay-sidebar-section">
+                    <h3 class="blogdetay-sidebar-title">Kategoriler</h3>
+                    <ul class="blogdetay-categories">
+                        <li class="blogdetay-category-item">
+                            <a href="#" class="blogdetay-category-link">
+                                <span class="blogdetay-category-name">Teknoloji</span>
+                                <span class="blogdetay-category-count">15</span>
+                            </a>
+                        </li>
+                        <li class="blogdetay-category-item">
+                            <a href="#" class="blogdetay-category-link">
+                                <span class="blogdetay-category-name">Yazılım</span>
+                                <span class="blogdetay-category-count">22</span>
+                            </a>
+                        </li>
+                        <li class="blogdetay-category-item">
+                            <a href="#" class="blogdetay-category-link">
+                                <span class="blogdetay-category-name">Yapay Zeka</span>
+                                <span class="blogdetay-category-count">8</span>
+                            </a>
+                        </li>
+                        <li class="blogdetay-category-item">
+                            <a href="#" class="blogdetay-category-link">
+                                <span class="blogdetay-category-name">Tasarım</span>
+                                <span class="blogdetay-category-count">12</span>
+                            </a>
+                        </li>
+                        <li class="blogdetay-category-item">
+                            <a href="#" class="blogdetay-category-link">
+                                <span class="blogdetay-category-name">Kariyer</span>
+                                <span class="blogdetay-category-count">6</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Etiket Bulutu -->
+                <div class="blogdetay-sidebar-section">
+                    <h3 class="blogdetay-sidebar-title">Popüler Etiketler</h3>
+                    <div class="blogdetay-tag-cloud">
+                        <a href="#" class="blogdetay-cloud-tag">Yapay Zeka</a>
+                        <a href="#" class="blogdetay-cloud-tag">Web Geliştirme</a>
+                        <a href="#" class="blogdetay-cloud-tag">Python</a>
+                        <a href="#" class="blogdetay-cloud-tag">JavaScript</a>
+                        <a href="#" class="blogdetay-cloud-tag">UX/UI</a>
+                        <a href="#" class="blogdetay-cloud-tag">React</a>
+                        <a href="#" class="blogdetay-cloud-tag">Veri Bilimi</a>
+                        <a href="#" class="blogdetay-cloud-tag">Makine Öğrenmesi</a>
+                        <a href="#" class="blogdetay-cloud-tag">Blockchain</a>
+                        <a href="#" class="blogdetay-cloud-tag">Mobil</a>
+                    </div>
+                </div>
+                
+                <!-- Abone Ol -->
+                <div class="blogdetay-sidebar-section blogdetay-subscribe">
+                    <h3 class="blogdetay-sidebar-title">Abone Ol</h3>
+                    <p class="blogdetay-subscribe-text">En yeni makalelerimizden haberdar olmak için e-posta listemize kaydolun.</p>
+                    <form class="blogdetay-subscribe-form">
+                        <input type="email" placeholder="E-posta adresiniz" class="blogdetay-subscribe-input" required>
+                        <button type="submit" class="blogdetay-subscribe-button">Abone Ol</button>
+                    </form>
+                </div>
+                
+                <!-- Sosyal Medya -->
+                <div class="blogdetay-sidebar-section">
+                    <h3 class="blogdetay-sidebar-title">Bizi Takip Edin</h3>
+                    <div class="blogdetay-social-links">
+                        <a href="#" class="blogdetay-social-link blogdetay-twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="blogdetay-social-link blogdetay-facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="blogdetay-social-link blogdetay-instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#" class="blogdetay-social-link blogdetay-linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="blogdetay-social-link blogdetay-youtube">
+                            <i class="fab fa-youtube"></i>
+                            <span>YouTube</span>
+                        </a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+
+    
 <!-- Footer -->
 <footer class="footer-main">
     <div class="footer-container">
@@ -540,104 +825,42 @@
 </footer>
     <script src="assets/js/back-to-top.js"></script>
 
-
     <script src="assets/js/script.js"></script>
-
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Filtre butonları işlevselliği
-            const filterButtons = document.querySelectorAll('.demo-filter-btn');
-            const demoCards = document.querySelectorAll('.demo-card-item');
+            // Paragraf animasyonları için IntersectionObserver
+            const paragraphs = document.querySelectorAll('.blogdetay-article p');
             
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    // Aktif sınıfını değiştir
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
-                    
-                    const filterValue = this.textContent.trim();
-                    
-                    // Kartları filtrele
-                    if (filterValue === 'Tümü') {
-                        demoCards.forEach(card => {
-                            card.style.display = 'block';
-                        });
-                    } else {
-                        demoCards.forEach(card => {
-                            // Kart başlığı filtreye uyuyor mu kontrol et
-                            const cardTitle = card.querySelector('h3').textContent;
-                            if (cardTitle.includes(filterValue)) {
-                                card.style.display = 'block';
-                            } else {
-                                card.style.display = 'none';
-                            }
-                        });
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
                     }
                 });
+            }, { threshold: 0.2 });
+            
+            paragraphs.forEach(paragraph => {
+                observer.observe(paragraph);
             });
             
-            // Arama işlevselliği
-            const searchInput = document.querySelector('.demo-search-container input');
-            
-            searchInput.addEventListener('keyup', function() {
-                const searchValue = this.value.toLowerCase();
-                
-                demoCards.forEach(card => {
-                    const cardTitle = card.querySelector('h3').textContent.toLowerCase();
-                    const cardDesc = card.querySelector('p').textContent.toLowerCase();
-                    const cardTags = card.querySelectorAll('.demo-tag');
+            // Bağlantı kopyalama işlevi
+            const copyButton = document.getElementById('copyLinkButton');
+            if (copyButton) {
+                copyButton.addEventListener('click', function(e) {
+                    e.preventDefault();
                     
-                    let tagMatch = false;
-                    cardTags.forEach(tag => {
-                        if (tag.textContent.toLowerCase().includes(searchValue)) {
-                            tagMatch = true;
-                        }
+                    const url = window.location.href;
+                    navigator.clipboard.writeText(url).then(() => {
+                        copyButton.classList.add('copied');
+                        setTimeout(() => {
+                            copyButton.classList.remove('copied');
+                        }, 2000);
                     });
-                    
-                    if (cardTitle.includes(searchValue) || cardDesc.includes(searchValue) || tagMatch) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
                 });
-            });
-            
-            // Demo İzle butonları
-            const watchButtons = document.querySelectorAll('.demo-btn-primary');
-            const playButtons = document.querySelectorAll('.demo-play-button');
-            
-            function playDemo(cardElement) {
-                const cardTitle = cardElement.querySelector('h3').textContent;
-                alert(`"${cardTitle}" demosu oynatılıyor...`);
-                // Burada gerçek projenizde bir video oynatıcı açılabilir veya başka bir sayfa açılabilir
             }
-            
-            watchButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const card = this.closest('.demo-card-item');
-                    playDemo(card);
-                });
-            });
-            
-            playButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const card = this.closest('.demo-card-item');
-                    playDemo(card);
-                });
-            });
-            
-            // İndir butonları
-            const downloadButtons = document.querySelectorAll('.demo-btn-secondary');
-            
-            downloadButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const card = this.closest('.demo-card-item');
-                    const cardTitle = card.querySelector('h3').textContent;
-                    alert(`"${cardTitle}" indirme işlemi başlatılıyor...`);
-                    // Burada gerçek projenizde bir indirme işlemi başlatılabilir
-                });
-            });
         });
     </script>
+
 </body>
 </html>

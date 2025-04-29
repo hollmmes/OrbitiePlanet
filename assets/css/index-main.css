@@ -1748,3 +1748,5 @@ a.sector-item:hover span {
         font-size: 14px;
     }
 }
+
+.corporate-performance .cp-image:hover{-webkit-transform: scale(1.1); -moz-transform: scale(1.1); -ms-transform: scale(1.1); -o-transform: scale(1.1); transform: scale(1.1); -webkit-transition: -webkit-transform 0.5s ease; -moz-transition: -moz-transform 0.5s ease; -o-transition: -o-transform 0.5s ease; transition: transform 0.5s ease;}

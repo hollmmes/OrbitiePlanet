@@ -1,0 +1,1349 @@
+:root {
+    --primary-color: rgba(8, 252, 172, 0.9);
+    --text-color: #ffffff;
+    --bg-color: #000000;
+    --secondary-bg: #1A1D20;
+    --gray-text: #a0a0a0;
+    
+    /* Blog detay özel renkler */
+    --light-bg: #252830;
+    --lighter-bg: #2D303A;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --heading-color: #f0f0f0;
+    --link-hover: rgba(8, 252, 172, 0.7);
+    --code-bg: #191c24;
+    --quote-bg: rgba(8, 252, 172, 0.1);
+    --info-bg: rgba(65, 105, 225, 0.1);
+}
+/* Hero Bölümü */
+.tumu-hero {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 50px 0px 0px 0px;
+}
+.tumu-hero h1 {
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    font-size: 3.8rem;
+    margin-bottom: 1.5rem;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(135deg, rgb(8, 252, 172) 0%, rgb(79, 209, 197) 25%, rgb(8, 252, 172) 50%, rgb(79, 209, 197) 75%, rgb(8, 252, 172) 100%) 0% 0% / 200% text;
+    animation: 3s linear 0s infinite normal none running shine;
+}
+/* Genel Stil */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(8, 252, 172, 0.1) 0%, transparent 70%);
+    z-index: -1;
+    pointer-events: none;
+}
+/* Ana Container */
+.blogdetay-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.blogdetay-wrapper {
+    display: flex;
+    gap: 40px;
+}
+
+/* Ana İçerik Bölümü (Sol Taraf) */
+.blogdetay-content {
+    flex: 2;
+    background-color: var(--secondary-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Blog Başlık ve Meta Bilgiler */
+.blogdetay-header {
+    padding: 30px 30px 20px;
+}
+
+.blogdetay-kategori {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.blogdetay-badge {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.blogdetay-tarih {
+    color: var(--gray-text);
+    font-size: 0.9rem;
+    margin-left: 15px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.blogdetay-tarih::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--gray-text);
+}
+
+.blogdetay-title {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin: 10px 0 20px;
+    color: var(--heading-color);
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    position: relative;
+    animation: blogdetayTitleIn 0.8s ease-out;
+}
+
+@keyframes blogdetayTitleIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blogdetay-author {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.blogdetay-author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.blogdetay-author-info {
+    margin-left: 12px;
+}
+
+.blogdetay-author-name {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.blogdetay-reading-time {
+    font-size: 0.8rem;
+    color: var(--gray-text);
+}
+
+/* Ana Görsel */
+.blogdetay-featured-image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.blogdetay-featured-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blogdetay-featured-image::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--secondary-bg), transparent);
+}
+
+.blogdetay-featured-image:hover img {
+    transform: scale(1.03);
+}
+
+/* Makale İçeriği */
+.blogdetay-article {
+    padding: 40px 30px;
+    position: relative;
+}
+
+.blogdetay-intro {
+    font-size: 1.1rem;
+    color: var(--heading-color);
+    line-height: 1.7;
+    margin-bottom: 30px;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 20px;
+    font-weight: 500;
+}
+
+.blogdetay-section-title {
+    font-size: 1.6rem;
+    color: var(--heading-color);
+    margin: 40px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.blogdetay-section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.blogdetay-article p {
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.blogdetay-quote {
+    background: var(--quote-bg);
+    border-left: 4px solid var(--primary-color);
+    padding: 25px 25px 25px 35px;
+    margin: 30px 0;
+    font-size: 1.1rem;
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+    position: relative;
+}
+
+.blogdetay-quote::before {
+    content: '"';
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    opacity: 0.4;
+    font-family: Georgia, serif;
+}
+
+.blogdetay-quote cite {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--gray-text);
+    font-style: normal;
+}
+
+.blogdetay-image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.blogdetay-grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blogdetay-grid-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.blogdetay-grid-item:hover img {
+    transform: scale(1.05);
+}
+
+.blogdetay-caption {
+    display: block;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    color: var(--text-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: transform 0.3s ease;
+}
+
+.blogdetay-grid-item:hover .blogdetay-caption {
+    transform: translateY(-5px);
+}
+
+.blogdetay-info-box {
+    background: var(--info-bg);
+    border-radius: 8px;
+    padding: 25px;
+    margin: 30px 0;
+    position: relative;
+    border-left: 4px solid royalblue;
+}
+
+.blogdetay-info-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: royalblue;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.blogdetay-info-title i {
+    margin-right: 10px;
+}
+
+.blogdetay-info-box p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+.blogdetay-conclusion {
+    background-color: var(--light-bg);
+    padding: 25px;
+    border-radius: 8px;
+    margin: 40px 0 20px;
+    border-top: 3px solid var(--primary-color);
+}
+
+.blogdetay-conclusion h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.blogdetay-conclusion p {
+    margin-bottom: 0;
+}
+
+/* Etiketler */
+.blogdetay-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0 30px 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.blogdetay-tag-title {
+    font-weight: 600;
+    margin-right: 10px;
+    color: var(--gray-text);
+}
+
+.blogdetay-tag {
+    display: inline-block;
+    background-color: var(--light-bg);
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    margin: 5px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.blogdetay-tag:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+}
+
+/* Paylaşım Butonları */
+.blogdetay-share {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.blogdetay-share-title {
+    font-weight: 600;
+    margin-right: 15px;
+    color: var(--gray-text);
+    margin-bottom: 10px;
+}
+
+.blogdetay-share-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.blogdetay-share-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.blogdetay-twitter {
+    background-color: #1DA1F2;
+}
+
+.blogdetay-facebook {
+    background-color: #4267B2;
+}
+
+.blogdetay-linkedin {
+    background-color: #0077B5;
+}
+
+.blogdetay-whatsapp {
+    background-color: #25D366;
+}
+
+.blogdetay-copy {
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+.blogdetay-share-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Yazar Kutusu */
+.blogdetay-author-box {
+    display: flex;
+    padding: 30px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    margin: 30px;
+}
+
+.blogdetay-author-box-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+.blogdetay-author-box-content {
+    margin-left: 20px;
+}
+
+.blogdetay-author-box-name {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: var(--heading-color);
+}
+
+.blogdetay-author-box-bio {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: var(--gray-text);
+}
+
+.blogdetay-author-box-social {
+    display: flex;
+    gap: 10px;
+}
+
+.blogdetay-author-social-link {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--lighter-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.blogdetay-author-social-link:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+}
+
+/* Yorumlar */
+.blogdetay-comments {
+    padding: 30px;
+}
+
+.blogdetay-comments-title {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--heading-color);
+}
+
+.blogdetay-comment {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.blogdetay-comment-reply {
+    margin-left: 50px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.blogdetay-comment-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.blogdetay-comment-content {
+    margin-left: 15px;
+    flex: 1;
+}
+
+.blogdetay-comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.blogdetay-comment-author {
+    margin: 0;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.blogdetay-author-badge {
+    font-size: 0.7rem;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 2px 8px;
+    border-radius: 50px;
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+.blogdetay-comment-date {
+    font-size: 0.8rem;
+    color: var(--gray-text);
+}
+
+.blogdetay-comment-text {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.blogdetay-comment-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.blogdetay-comment-reply-btn {
+    font-size: 0.85rem;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.3s;
+}
+
+.blogdetay-comment-reply-btn:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+/* Yorum Formu */
+.blogdetay-comment-form {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid var(--border-color);
+}
+
+.blogdetay-comment-form-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: var(--heading-color);
+}
+
+.blogdetay-form-group {
+    margin-bottom: 20px;
+}
+
+.blogdetay-form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    color: var(--gray-text);
+}
+
+.blogdetay-form-input,
+.blogdetay-form-textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.blogdetay-form-input:focus,
+.blogdetay-form-textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(8, 252, 172, 0.2);
+}
+
+.blogdetay-form-submit {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.blogdetay-form-submit:hover {
+    background-color: var(--link-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar (Sağ Taraf) */
+.blogdetay-sidebar {
+    flex: 1;
+}
+
+.blogdetay-sidebar-section {
+    background-color: var(--secondary-bg);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.blogdetay-sidebar-title {
+    margin-top: 0;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--heading-color);
+    position: relative;
+}
+
+.blogdetay-sidebar-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.blogdetay-sidebar-author-mobile {
+    display: none;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--secondary-bg);
+    border-radius: 12px;
+}
+
+.blogdetay-sidebar-author-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.blogdetay-sidebar-author-info {
+    margin-left: 15px;
+}
+
+.blogdetay-sidebar-author-name {
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.blogdetay-sidebar-reading-time {
+    font-size: 0.85rem;
+    color: var(--gray-text);
+}
+
+/* İçindekiler */
+.blogdetay-toc {
+    position: sticky;
+    top: 20px;
+    z-index: 10; /* z-index değeri ekledik */
+}
+
+.blogdetay-toc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blogdetay-toc-link {
+    display: block;
+    padding: 10px 0;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    position: relative;
+    padding-left: 15px;
+}
+
+.blogdetay-toc-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.blogdetay-toc-link:hover {
+    color: var(--primary-color);
+    padding-left: 20px;
+}
+
+.blogdetay-toc-link:hover::before {
+    opacity: 1;
+}
+
+.blogdetay-toc-link:last-child {
+    border-bottom: none;
+}
+
+/* İlgili Makaleler */
+.blogdetay-related-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.blogdetay-related-post {
+    display: flex;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.blogdetay-related-post:hover {
+    transform: translateY(-3px);
+}
+
+.blogdetay-related-image {
+    width: 100px;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+.blogdetay-related-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blogdetay-related-content {
+    padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blogdetay-related-category {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 5px;
+}
+
+.blogdetay-related-title {
+    font-size: 0.9rem;
+    margin: 0 0 5px;
+    line-height: 1.4;
+}
+
+.blogdetay-related-date {
+    font-size: 0.7rem;
+    color: var(--gray-text);
+}
+
+/* Kategoriler */
+.blogdetay-categories {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blogdetay-category-item {
+    margin-bottom: 10px;
+}
+
+.blogdetay-category-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: var(--light-bg);
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.blogdetay-category-link:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    transform: translateX(5px);
+}
+
+.blogdetay-category-count {
+    background-color: var(--lighter-bg);
+    color: var(--gray-text);
+    padding: 3px 10px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.blogdetay-category-link:hover .blogdetay-category-count {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: var(--bg-color);
+}
+
+/* Etiket Bulutu */
+.blogdetay-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.blogdetay-cloud-tag {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: var(--light-bg);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.blogdetay-cloud-tag:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    transform: translateY(-2px);
+}
+
+/* Abone Ol Bölümü */
+.blogdetay-subscribe {
+    background: linear-gradient(135deg, var(--light-bg), var(--secondary-bg));
+    border-left: 3px solid var(--primary-color);
+}
+
+.blogdetay-subscribe-text {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.blogdetay-subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blogdetay-subscribe-input {
+    padding: 12px 15px;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.blogdetay-subscribe-input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(8, 252, 172, 0.2);
+}
+
+.blogdetay-subscribe-button {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.blogdetay-subscribe-button:hover {
+    background-color: var(--link-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sosyal Medya Bağlantıları */
+.blogdetay-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.blogdetay-social-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.blogdetay-social-link i {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+.blogdetay-twitter {
+    background-color: rgba(29, 161, 242, 0.1);
+}
+
+.blogdetay-twitter:hover {
+    background-color: #1DA1F2;
+    color: white;
+}
+
+.blogdetay-facebook {
+    background-color: rgba(66, 103, 178, 0.1);
+}
+
+.blogdetay-facebook:hover {
+    background-color: #4267B2;
+    color: white;
+}
+
+.blogdetay-instagram {
+    background-color: rgba(193, 53, 132, 0.1);
+}
+
+.blogdetay-instagram:hover {
+    background-color: #C13584;
+    color: white;
+}
+
+.blogdetay-linkedin {
+    background-color: rgba(0, 119, 181, 0.1);
+}
+
+.blogdetay-linkedin:hover {
+    background-color: #0077B5;
+    color: white;
+}
+
+.blogdetay-youtube {
+    background-color: rgba(255, 0, 0, 0.1);
+}
+
+.blogdetay-youtube:hover {
+    background-color: #FF0000;
+    color: white;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+    .blogdetay-wrapper {
+        flex-direction: column;
+    }
+    
+    .blogdetay-content {
+        flex: none;
+    }
+    
+    .blogdetay-sidebar {
+        flex: none;
+        order: -1;
+        margin-bottom: 30px;
+    }
+    
+    .blogdetay-sidebar-author-mobile {
+        display: flex;
+    }
+    
+    .blogdetay-author {
+        display: none;
+    }
+    
+    .blogdetay-toc {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .blogdetay-title {
+        font-size: 1.8rem;
+    }
+    
+    .blogdetay-featured-image {
+        height: 300px;
+    }
+    
+    .blogdetay-header,
+    .blogdetay-article,
+    .blogdetay-tags,
+    .blogdetay-share,
+    .blogdetay-comments {
+        padding: 20px;
+    }
+    
+    .blogdetay-author-box {
+        margin: 20px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .blogdetay-author-box-content {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+    
+    .blogdetay-author-box-social {
+        justify-content: center;
+    }
+    
+    .blogdetay-image-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .blogdetay-related-post {
+        flex-direction: column;
+    }
+    
+    .blogdetay-related-image {
+        width: 100%;
+        height: 120px;
+    }
+    
+    .blogdetay-subscribe-form {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .blogdetay-container {
+        padding: 0 15px;
+        margin: 20px auto;
+    }
+    
+    .blogdetay-title {
+        font-size: 1.5rem;
+    }
+    
+    .blogdetay-featured-image {
+        height: 200px;
+    }
+    
+    .blogdetay-comment {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .blogdetay-comment-avatar {
+        margin-bottom: 10px;
+    }
+    
+    .blogdetay-comment-content {
+        margin-left: 0;
+    }
+    
+    .blogdetay-comment-reply {
+        margin-left: 20px;
+    }
+    
+    .blogdetay-comment-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .blogdetay-comment-date {
+        margin-top: 5px;
+    }
+    
+    .blogdetay-sidebar-section {
+        padding: 20px;
+    }
+}
+
+/* Animasyonlar ve Geçişler */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.blogdetay-section-title,
+.blogdetay-quote,
+.blogdetay-info-box,
+.blogdetay-image-grid,
+.blogdetay-conclusion,
+.blogdetay-tags,
+.blogdetay-share,
+.blogdetay-author-box,
+.blogdetay-comments-title {
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.1s;
+    opacity: 0;
+}
+
+.blogdetay-quote {
+    animation-delay: 0.2s;
+}
+
+.blogdetay-info-box {
+    animation-delay: 0.3s;
+}
+
+.blogdetay-image-grid {
+    animation-delay: 0.4s;
+}
+
+.blogdetay-conclusion {
+    animation-delay: 0.5s;
+}
+
+/* Scroll Efektleri */
+.blogdetay-article p {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.blogdetay-article p.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Görünmez elementler için tarayıcı desteği */
+.blogdetay-article p {
+    will-change: opacity, transform;
+}
+
+/* Seçim Stilleri */
+::selection {
+    background-color: rgba(8, 252, 172, 0.2);
+    color: var(--primary-color);
+}
+
+/* Kopyala Butonu Stilleri */
+.blogdetay-copy.copied {
+    background-color: #4CAF50;
+}
+
+.blogdetay-copy.copied i {
+    animation: pop 0.3s ease-out;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+/* Odaklanma Stilleri */
+a:focus, button:focus, input:focus, textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--primary-color);
+}
+
+/* Düşük Hareket Tercihi */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Yazı Boyutu Ayarlama Kontrolleri */
+.blogdetay-font-controls {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.blogdetay-font-control {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-bg);
+    border: none;
+    border-radius: 4px;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.blogdetay-font-control:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+/* Özel Scroll Bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--link-hover);
+}
+
+/* Karanlık Mod Optimizasyonu */
+@media (prefers-color-scheme: dark) {
+    .blogdetay-info-box {
+        background-color: rgba(65, 105, 225, 0.15);
+    }
+    
+    .blogdetay-quote {
+        background-color: rgba(8, 252, 172, 0.15);
+    }
+}
+
+/* Dokunmatik Cihaz Optimizasyonları */
+@media (hover: none) {
+    .blogdetay-category-link:active,
+    .blogdetay-cloud-tag:active,
+    .blogdetay-social-link:active,
+    .blogdetay-toc-link:active {
+        transform: scale(0.98);
+    }
+}
+
+/* İşlevsel JavaScript için Yüklenme Durumu */
+.blogdetay-loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color);
+    z-index: 9999;
+    animation: loading 1.5s ease-in-out infinite;
+}
+
+@keyframes loading {
+    0% { width: 0; left: 0; }
+    50% { width: 100%; left: 0; }
+    100% { width: 0; left: 100%; }
+}
+
+/* Taşınabilir Cihazlar İçin Ek Optimizasyonlar */
+@media print {
+    .blogdetay-sidebar,
+    .blogdetay-share,
+    .blogdetay-comments,
+    .blogdetay-tags {
+        display: none;
+    }
+    
+    .blogdetay-wrapper {
+        display: block;
+    }
+    
+    .blogdetay-content {
+        background: none;
+        box-shadow: none;
+        color: #000;
+    }
+    
+    .blogdetay-article {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+}
