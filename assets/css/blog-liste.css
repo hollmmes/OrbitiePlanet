@@ -1,7 +1,6 @@
 body {
     position: relative;
 }
-
 body::after {
     content: '';
     position: fixed;
@@ -9,7 +8,7 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 50% 50%, rgba(8, 252, 172, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 50%, rgba(34, 156, 10, 0.1) 0%, transparent 70%);
     z-index: -1;
     pointer-events: none;
 }
@@ -32,22 +31,19 @@ body::after {
     font-size: 3.8rem;
     margin-bottom: 1.5rem;
     -webkit-text-fill-color: transparent;
-    background: linear-gradient(135deg, rgb(8, 252, 172) 0%, rgb(79, 209, 197) 25%, rgb(8, 252, 172) 50%, rgb(79, 209, 197) 75%, rgb(8, 252, 172) 100%) 0% 0% / 200% text;
+    background: linear-gradient(135deg, rgb(34, 156, 10) 0%, rgb(79, 209, 197) 25%, rgb(34, 156, 10) 50%, rgb(79, 209, 197) 75%, rgb(34, 156, 10) 100%) 0% 0% / 200% text;
     animation: 3s linear 0s infinite normal none running shine;
 }
-
 /* Arama Çubuğu Stilleri */
 .blogliste-search-wrapper {
     margin-bottom: 30px;
 }
-
 .blogliste-search-form {
     display: flex;
     max-width: 600px;
     margin: 0 auto;
     position: relative;
 }
-
 .blogliste-search-input {
     width: 100%;
     padding: 14px 20px;
@@ -59,23 +55,19 @@ body::after {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s;
 }
-
 .blogliste-search-input:focus {
     outline: none;
     box-shadow: 0 0 0 2px var(--primary-color), 0 4px 10px rgba(0, 0, 0, 0.1);
     animation: bloglisteInputPulse 1s ease-in-out;
 }
-
 @keyframes bloglisteInputPulse {
-    0% { box-shadow: 0 0 0 0px rgba(8, 252, 172, 0.4), 0 4px 10px rgba(0, 0, 0, 0.1); }
-    70% { box-shadow: 0 0 0 8px rgba(8, 252, 172, 0), 0 4px 10px rgba(0, 0, 0, 0.1); }
-    100% { box-shadow: 0 0 0 0px rgba(8, 252, 172, 0), 0 4px 10px rgba(0, 0, 0, 0.1); }
+    0% { box-shadow: 0 0 0 0px rgba(34, 156, 10, 0.4), 0 4px 10px rgba(0, 0, 0, 0.1); }
+    70% { box-shadow: 0 0 0 8px rgba(34, 156, 10, 0), 0 4px 10px rgba(0, 0, 0, 0.1); }
+    100% { box-shadow: 0 0 0 0px rgba(34, 156, 10, 0), 0 4px 10px rgba(0, 0, 0, 0.1); }
 }
-
 .blogliste-search-input::placeholder {
     color: var(--gray-text);
 }
-
 .blogliste-search-button {
     position: absolute;
     right: 5px;
@@ -92,21 +84,17 @@ body::after {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
 }
-
 .blogliste-search-button:hover {
-    background-color: rgba(8, 252, 172, 0.7);
+    background-color: rgba(34, 156, 10, 0.7);
     transform: scale(1.05);
 }
-
 .blogliste-search-button:active {
     transform: scale(0.95);
 }
-
 .blogliste-wrapper {
     display: flex;
     gap: 30px;
 }
-
 /* Sidebar Stilleri */
 .blogliste-sidebar {
     width: 25%;
@@ -115,11 +103,9 @@ body::after {
     padding: 20px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .blogliste-sidebar:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-
 .blogliste-sidebar-title {
     color: var(--primary-color);
     border-bottom: 2px solid var(--primary-color);
@@ -127,14 +113,12 @@ body::after {
     margin-bottom: 15px;
     font-size: 1.3rem;
 }
-
 .blogliste-kategori-liste,
 .blogliste-arsiv-liste {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
 .blogliste-kategori-item,
 .blogliste-arsiv-item {
     margin-bottom: 12px;
@@ -145,17 +129,14 @@ body::after {
     align-items: center;
     transition: padding 0.3s;
 }
-
 .blogliste-kategori-item:hover,
 .blogliste-arsiv-item:hover {
     padding-left: 5px;
 }
-
 .blogliste-kategori-item:last-child,
 .blogliste-arsiv-item:last-child {
     border-bottom: none;
 }
-
 .blogliste-kategori-item a,
 .blogliste-arsiv-item a {
     color: var(--text-color);
@@ -163,20 +144,17 @@ body::after {
     transition: color 0.3s;
     position: relative;
 }
-
 .blogliste-kategori-item a:hover,
 .blogliste-arsiv-item a:hover,
 .blogliste-kategori-item a.active,
 .blogliste-arsiv-item a.active {
     color: var(--primary-color);
 }
-
 .blogliste-kategori-item a.active,
 .blogliste-arsiv-item a.active {
     position: relative;
     transition: color 0.3s ease;
 }
-
 .blogliste-kategori-item a.active::after,
 .blogliste-arsiv-item a.active::after {
     content: '';
@@ -188,12 +166,10 @@ body::after {
     background-color: var(--primary-color);
     animation: bloglisteUnderline 0.3s ease forwards;
 }
-
 @keyframes bloglisteUnderline {
     from { transform: scaleX(0); }
     to { transform: scaleX(1); }
 }
-
 .blogliste-sayac {
     background-color: var(--primary-color);
     color: var(--bg-color);
@@ -203,34 +179,28 @@ body::after {
     font-weight: bold;
     transition: transform 0.2s, background-color 0.3s;
 }
-
 .blogliste-kategori-item:hover .blogliste-sayac,
 .blogliste-arsiv-item:hover .blogliste-sayac {
     transform: scale(1.1);
-    background-color: rgba(8, 252, 172, 0.8);
+    background-color: rgba(34, 156, 10, 0.8);
 }
-
 .blogliste-arsiv {
     margin-top: 30px;
 }
-
 /* Blog Posts Grid Stilleri */
 .blogliste-posts {
     width: 75%;
 }
-
 .blogliste-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
     position: relative;
 }
-
 /* Sayfa geçişi animasyonu */
 .blogliste-page-transition {
     position: relative;
 }
-
 .blogliste-page-transition::before {
     content: '';
     position: absolute;
@@ -244,11 +214,9 @@ body::after {
     transition: transform 0.6s ease-out;
     z-index: 5;
 }
-
 .blogliste-page-transition.active::before {
     transform: scaleX(1);
 }
-
 .blogliste-post-card {
     background-color: var(--secondary-bg);
     border-radius: 10px;
@@ -256,12 +224,10 @@ body::after {
     transition: transform 0.3s, box-shadow 0.3s, opacity 0.4s ease-in-out;
     position: relative;
 }
-
 .blogliste-post-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
-
 /* Fade In animasyonu */
 @keyframes bloglisteFadeIn {
     from {
@@ -273,7 +239,6 @@ body::after {
         transform: translateY(0);
     }
 }
-
 /* Fade Out animasyonu */
 @keyframes bloglisteFadeOut {
     from {
@@ -285,16 +250,13 @@ body::after {
         transform: translateY(20px);
     }
 }
-
 /* Animasyon sınıfları */
 .blogliste-anim-fadeIn {
     animation: bloglisteFadeIn 0.5s ease forwards;
 }
-
 .blogliste-anim-fadeOut {
     animation: bloglisteFadeOut 0.3s ease forwards;
 }
-
 /* Blog kartları için staggered efekti */
 .blogliste-post-card.blogliste-anim-fadeIn:nth-child(1) { animation-delay: 0.05s; }
 .blogliste-post-card.blogliste-anim-fadeIn:nth-child(2) { animation-delay: 0.1s; }
@@ -302,7 +264,6 @@ body::after {
 .blogliste-post-card.blogliste-anim-fadeIn:nth-child(4) { animation-delay: 0.2s; }
 .blogliste-post-card.blogliste-anim-fadeIn:nth-child(5) { animation-delay: 0.25s; }
 .blogliste-post-card.blogliste-anim-fadeIn:nth-child(6) { animation-delay: 0.3s; }
-
 .blogliste-kategori-badge {
     position: absolute;
     top: 15px;
@@ -318,18 +279,15 @@ body::after {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s, background-color 0.3s;
 }
-
 .blogliste-post-card:hover .blogliste-kategori-badge {
     transform: translateY(-3px);
-    background-color: rgba(8, 252, 172, 0.8);
+    background-color: rgba(34, 156, 10, 0.8);
 }
-
 .blogliste-post-image {
     height: 200px;
     overflow: hidden;
     position: relative;
 }
-
 .blogliste-post-image::after {
     content: '';
     position: absolute;
@@ -341,47 +299,38 @@ body::after {
     opacity: 0;
     transition: opacity 0.3s;
 }
-
 .blogliste-post-card:hover .blogliste-post-image::after {
     opacity: 1;
 }
-
 .blogliste-post-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s;
 }
-
 .blogliste-post-card:hover .blogliste-post-image img {
     transform: scale(1.05);
 }
-
 .blogliste-post-content {
     padding: 20px;
 }
-
 .blogliste-post-meta {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
     font-size: 0.85rem;
 }
-
 .blogliste-post-kategori {
     color: var(--primary-color);
     font-weight: bold;
     transition: color 0.3s;
 }
-
 .blogliste-post-card:hover .blogliste-post-kategori {
     color: var(--primary-color);
 }
-
 .blogliste-post-tarih {
     color: var(--gray-text);
 }
-
 .blogliste-post-title {
     margin: 10px 0;
     font-size: 1.2rem;
@@ -389,18 +338,15 @@ body::after {
     color: var(--text-color);
     transition: color 0.3s;
 }
-
 .blogliste-post-card:hover .blogliste-post-title {
     color: var(--primary-color);
 }
-
 .blogliste-post-excerpt {
     color: var(--gray-text);
     margin-bottom: 15px;
     font-size: 0.9rem;
     line-height: 1.6;
 }
-
 .blogliste-post-link {
     display: inline-block;
     color: var(--primary-color);
@@ -411,12 +357,10 @@ body::after {
     position: relative;
     padding-bottom: 2px;
 }
-
 .blogliste-post-link:hover {
     border-color: var(--primary-color);
     transform: translateX(5px);
 }
-
 .blogliste-post-link::after {
     content: '→';
     position: absolute;
@@ -425,12 +369,10 @@ body::after {
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
 }
-
 .blogliste-post-link:hover::after {
     opacity: 1;
     transform: translateX(5px);
 }
-
 /* Sayfalama Stilleri */
 .blogliste-pagination {
     display: flex;
@@ -438,7 +380,6 @@ body::after {
     margin-top: 40px;
     gap: 10px;
 }
-
 .blogliste-page-link {
     display: inline-block;
     padding: 8px 15px;
@@ -450,7 +391,6 @@ body::after {
     position: relative;
     overflow: hidden;
 }
-
 .blogliste-page-link::before {
     content: '';
     position: absolute;
@@ -458,46 +398,38 @@ body::after {
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: rgba(8, 252, 172, 0.2);
+    background-color: rgba(34, 156, 10, 0.2);
     transition: transform 0.3s;
     z-index: 0;
 }
-
 .blogliste-page-link:hover::before {
     transform: translateX(100%);
 }
-
 .blogliste-page-link:hover,
 .blogliste-page-link.blogliste-active {
     background-color: var(--primary-color);
     color: var(--bg-color);
 }
-
 .blogliste-page-link.blogliste-active {
     animation: bloglisteScaleButton 0.3s ease;
 }
-
 @keyframes bloglisteScaleButton {
     0% { transform: scale(1); }
     50% { transform: scale(1.1); }
     100% { transform: scale(1); }
 }
-
 .blogliste-next {
     padding: 8px 20px;
 }
-
 .blogliste-next::after {
     content: '→';
     margin-left: 5px;
     display: inline-block;
     transition: transform 0.3s;
 }
-
 .blogliste-next:hover::after {
     transform: translateX(5px);
 }
-
 /* Arama sonuçları için animasyon */
 .blogliste-no-results {
     grid-column: 1 / -1;
@@ -510,32 +442,27 @@ body::after {
     animation: bloglisteFadeIn 0.5s ease 0.2s forwards;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
-
 .blogliste-no-results h3 {
     color: var(--primary-color);
     margin-bottom: 15px;
 }
-
 /* Vurgulama için yanıp sönme animasyonu */
 .blogliste-highlight {
-    background-color: rgba(8, 252, 172, 0.2);
+    background-color: rgba(34, 156, 10, 0.2);
     color: var(--primary-color);
     padding: 0 2px;
     animation: bloglisteHighlightPulse 1.5s ease-in-out infinite;
     border-radius: 3px;
 }
-
 @keyframes bloglisteHighlightPulse {
-    0% { background-color: rgba(8, 252, 172, 0.2); }
-    50% { background-color: rgba(8, 252, 172, 0.4); }
-    100% { background-color: rgba(8, 252, 172, 0.2); }
+    0% { background-color: rgba(34, 156, 10, 0.2); }
+    50% { background-color: rgba(34, 156, 10, 0.4); }
+    100% { background-color: rgba(34, 156, 10, 0.2); }
 }
-
 /* Görünmez postlar için stil */
 .blogliste-post-card.filtered {
     display: none;
 }
-
 /* Responsive Stilleri */
 @media (max-width: 992px) {
     .blogliste-wrapper {
@@ -555,7 +482,6 @@ body::after {
         margin-bottom: 30px;
     }
 }
-
 @media (max-width: 768px) {
     .blogliste-post-image {
         height: 180px;
@@ -578,7 +504,6 @@ body::after {
         flex-wrap: wrap;
     }
 }
-
 @media (max-width: 480px) {
     .blogliste-post-content {
         padding: 15px;
@@ -603,7 +528,6 @@ body::after {
         font-size: 0.9rem;
     }
 }
-
 /* Hover ve Odaklanma efektleri için ek stillemeler */
 @media (hover: hover) {
     .blogliste-post-card::after {
@@ -628,7 +552,6 @@ body::after {
         box-shadow: 0 0 0 2px var(--primary-color);
     }
 }
-
 /* Dokunmatik cihazlar için ek iyileştirmeler */
 @media (hover: none) {
     .blogliste-post-card:active {
@@ -640,18 +563,16 @@ body::after {
         color: var(--bg-color);
     }
 }
-
 /* Karanlık mod değişiklikleri için ek uyarlamalar */
 @media (prefers-color-scheme: dark) {
     .blogliste-highlight {
-        background-color: rgba(8, 252, 172, 0.15);
+        background-color: rgba(34, 156, 10, 0.15);
     }
     
     .blogliste-no-results {
         background-color: rgba(26, 29, 32, 0.8);
     }
 }
-
 /* Animasyon tercihlerini azalt */
 @media (prefers-reduced-motion: reduce) {
     .blogliste-post-card,

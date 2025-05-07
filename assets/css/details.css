@@ -1,12 +1,12 @@
 /* CPQ Detayları CSS */
 :root {
-    --cpqd-primary: #08fcac;
+    --cpqd-primary: #229c0a;
     --cpqd-primary-dark: #06c285;
     --cpqd-dark-bg: #000000;
     --cpqd-card-bg: rgba(15, 25, 35, 0.7);
     --cpqd-text-color: #ffffff;
     --cpqd-text-light: rgba(255, 255, 255, 0.8);
-    --cpqd-border-color: rgba(8, 252, 172, 0.2);
+    --cpqd-border-color: rgba(34, 156, 10, 0.2);
 }
 
 .cpqd-body {
@@ -32,9 +32,7 @@
 /* Hero Bölümü */
 .cpqd-hero {
     background-color: rgba(0, 0, 0, 0.6);
-    border: 2px solid rgba(46, 204, 113, 0.8);
     border-radius: 20px;
-    padding: 90px;
 
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
@@ -63,7 +61,7 @@
 
 .cpqd-title {
     color: var(--cpqd-primary);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 20px;
     font-weight: 600;
     margin-top: 60px;
@@ -72,7 +70,7 @@
 .cpqd-description {
     margin-bottom: 25px;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.7;
 }
 
@@ -149,25 +147,23 @@
 
 .cpqd-feature-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(8, 252, 172, 0.1);
+    box-shadow: 0 10px 20px rgba(34, 156, 10, 0.1);
     border-color: var(--cpqd-primary);
 }
 
 .cpqd-feature-icon {
     width: 60px;
     height: 60px;
-    background: rgba(46, 204, 113, 0.1);
+    background: rgba(34, 156, 10, 0.1);
     border-radius: 50%;
-    display: flex
-;
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto 25px;
     transition: all 0.3s ease;
-font-size: 24px;
-
-
+    font-size: 24px;
 }
+
 .cpqd-feature-icon::before{
     color: white;
     font-size: 1.8rem;
@@ -220,7 +216,7 @@ font-size: 24px;
 .cpqd-cta-button:hover {
     background-color: var(--cpqd-primary-dark);
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(8, 252, 172, 0.3);
+    box-shadow: 0 5px 15px rgba(34, 156, 10, 0.3);
 }
 
 /* Responsive Tasarım */
@@ -269,6 +265,6 @@ font-size: 24px;
     }
 }
 .btn-contact{text-align: center;}
-.btn-contact a{background-color: var(--primary-color);border: none;box-shadow: 0 5px 15px rgba(8, 252, 172, 0.3);margin-top: 10px;margin-bottom: 10px;padding: 12px 28px;font-weight: 600;letter-spacing: 0.5px;display: inline-flex
-;border-radius: 20px;align-items: center;justify-content: center;gap: 0.5rem;font-weight: 800;transition: all 0.3s ease;cursor: pointer;background: #08fcac;color: #000000;padding: 1rem 2rem;font-size: 1.125rem;}
-.btn-contact:hover a{background-color: #00e8b3;transform: translateY(-3px);box-shadow: 0 8px 20px rgba(8, 252, 172, 0.4);}
+.btn-contact a{background-color: var(--primary-color);border: none;box-shadow: 0 5px 15px rgba(34, 156, 10, 0.3);margin-top: 10px;margin-bottom: 10px;padding: 12px 28px;font-weight: 600;letter-spacing: 0.5px;display: inline-flex
+;border-radius: 20px;align-items: center;justify-content: center;gap: 0.5rem;font-weight: 800;transition: all 0.3s ease;cursor: pointer;background: #229c0a;color: #000000;padding: 1rem 2rem;font-size: 1.125rem;}
+.btn-contact:hover a{background-color: #229c0a;transform: translateY(-3px);box-shadow: 0 8px 20px rgba(34, 156, 10, 0.4);}

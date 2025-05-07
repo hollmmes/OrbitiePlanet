@@ -1,9 +1,9 @@
 :root {
-    --iletisim-primary: rgb(8, 252, 172);
+    --iletisim-primary: #229c0a;
     --iletisim-primary-dark: rgb(6, 194, 133);
     --iletisim-dark-bg: #000000;
     --iletisim-card-bg: rgba(15, 25, 35, 0.7);
-    --iletisim-card-border: rgba(8, 252, 172, 0.2);
+    --iletisim-card-border: rgba(34, 156, 10, 0.2);
     --iletisim-text: #ffffff;
     --iletisim-text-light: rgba(255, 255, 255, 0.7);
     --iletisim-input-bg: rgba(15, 25, 35, 0.8);
@@ -14,9 +14,9 @@
 /* Ana Container */
 .iletisim-main {
     background-color: var(--iletisim-dark-bg);
-    background-image: radial-gradient(circle at 20% 30%, rgba(8, 252, 172, 0.03) 0%, transparent 70%), 
-                      radial-gradient(circle at 80% 70%, rgba(8, 252, 172, 0.02) 0%, transparent 70%),
-                      radial-gradient(circle, rgba(8, 252, 172, 0.063) 0%, transparent 50%);
+    background-image: radial-gradient(circle at 20% 30%, rgba(34, 156, 10, 0.03) 0%, transparent 70%), 
+                      radial-gradient(circle at 80% 70%, rgba(34, 156, 10, 0.02) 0%, transparent 70%),
+                      radial-gradient(circle, rgba(34, 156, 10, 0.063) 0%, transparent 50%);
     animation: 30s linear 0s infinite normal none running rotate;
     color: var(--iletisim-text);
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -52,10 +52,10 @@
     font-size: 3.5rem; /* Başlık boyutunu arttırdım */
     font-weight: 800;
     margin-bottom: 20px; /* Altındaki boşluğu arttırdım */
-    background: linear-gradient(to right, rgb(255, 255, 255), rgb(8, 252, 172));
+    background: linear-gradient(to right, rgb(255, 255, 255), #229c0a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 30px rgba(8, 252, 172, 0.5);
+    text-shadow: 0 0 30px rgba(34, 156, 10, 0.5);
 }
 
 .iletisim-subtitle {
@@ -117,14 +117,14 @@
     width: 80px; /* Boyutu arttırdım */
     height: 80px; /* Boyutu arttırdım */
     border-radius: 50%;
-    background-color: rgba(8, 252, 172, 0.1);
+    background-color: rgba(34, 156, 10, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 20px; /* Alt boşluğu arttırdım */
     font-size: 2rem; /* İkon boyutunu arttırdım */
     color: var(--iletisim-primary);
-    box-shadow: 0 0 20px rgba(8, 252, 172, 0.2);
+    box-shadow: 0 0 20px rgba(34, 156, 10, 0.2);
 }
 
 .iletisim-info-title {
@@ -224,7 +224,7 @@ background: rgba(255, 255, 255, 0.05);
 .iletisim-form-group textarea:focus {
     outline: none;
     border-color: var(--iletisim-primary);
-    box-shadow: 0 0 0 3px rgba(8, 252, 172, 0.2);
+    box-shadow: 0 0 0 3px rgba(34, 156, 10, 0.2);
 }
 
 .iletisim-form-group input::placeholder,
@@ -308,14 +308,14 @@ background: rgba(255, 255, 255, 0.05);
     width: 55px; /* Boyutu arttırdım */
     height: 55px; /* Boyutu arttırdım */
     border-radius: 50%;
-    background-color: rgba(8, 252, 172, 0.1);
+    background-color: rgba(34, 156, 10, 0.1);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--iletisim-primary);
     font-size: 1.4rem; /* Boyutu arttırdım */
     transition: all 0.3s ease;
-    border: 1px solid rgba(8, 252, 172, 0.2);
+    border: 1px solid rgba(34, 156, 10, 0.2);
 }
 
 .iletisim-social-icon:hover {

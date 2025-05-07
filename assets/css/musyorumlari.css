@@ -1,13 +1,13 @@
 /* Temel Değişkenler ve Reset */
 :root {
-    --musyorum-primary: rgb(8, 252, 172);
+    --musyorum-primary: #229c0a;
     --musyorum-primary-dark: rgb(6, 194, 133);
     --musyorum-dark-bg: #0c1219;
     --musyorum-card-bg: rgba(16, 28, 40, 0.8);
     --musyorum-text: #ffffff;
     --musyorum-text-light: rgba(255, 255, 255, 0.8);
-    --musyorum-accent: rgb(7, 224, 152);
-    --musyorum-border: rgba(8, 252, 172, 0.2);
+    --musyorum-accent: #229c0a;
+    --musyorum-border: rgba(34, 156, 10, 0.2);
     --musyorum-max-width: 1000px;
     --musyorum-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
@@ -41,7 +41,7 @@ body {
 
 .musyorum-particle {
     position: absolute;
-    background: radial-gradient(circle, rgba(8, 252, 172, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(34, 156, 10, 0.15) 0%, transparent 70%);
     border-radius: 50%;
     animation: float 8s infinite ease-in-out; /* 15s yerine 8s olarak değiştirildi */
 }
@@ -154,26 +154,26 @@ body {
 .musyorum-crown-icon {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 800;
-    background: linear-gradient(to right, rgb(255, 255, 255), rgb(8, 252, 172)) text;
+    background: linear-gradient(to right, rgb(255, 255, 255), #229c0a) text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
     text-align: center;
-    text-shadow: rgba(8, 252, 172, 0.25) 0px 0px 30px;
+    text-shadow: rgba(34, 156, 10, 0.25) 0px 0px 30px;
 }
 
 .musyorum-hero h1 {
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 800;
-    background: linear-gradient(to right, rgb(255, 255, 255), rgb(8, 252, 172)) text;
+    background: linear-gradient(to right, rgb(255, 255, 255), #229c0a) text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 1rem;
     text-align: center;
-    text-shadow: rgba(8, 252, 172, 0.25) 0px 0px 30px;
+    text-shadow: rgba(34, 156, 10, 0.25) 0px 0px 30px;
 }
 
 .musyorum-hero-description {
     font-size: clamp(1.2rem, 2vw, 1.5rem);
-    color: rgb(8, 252, 172);
+    color: #229c0a;
     text-align: center;
     font-weight: 400;
 }
@@ -244,8 +244,8 @@ body {
 }
 
 .musyorum-rating i {
-    color: #08fcac;
-    filter: drop-shadow(0 0 5px #08fcac40);
+    color: #229c0a;
+    filter: drop-shadow(0 0 5px rgba(34, 156, 10, 0.25));
 }
 
 /* Author Info */

@@ -1,18 +1,17 @@
 /* Tarihçe Sayfası CSS - t- prefix ile sınıf isimleri */
 :root {
-    --t-primary-color: #00d166;
+    --t-primary-color: #229c0a;
     --t-dark-bg: #0a0a0a;
     --t-text-light: #ffffff;
     --t-text-secondary: #ababab;
     --t-card-bg: #141414;
     --t-card-hover: #1d1d1d;
-    --t-dot-color: #00d166;
-    --t-line-color: rgba(0, 209, 102, 0.3);
+    --t-dot-color: #229c0a;
+    --t-line-color: rgba(34, 156, 10, 0.3);
     --t-spacing-sm: 15px;
     --t-spacing-md: 30px;
     --t-spacing-lg: 60px;
 }
-
 /* Genel Stiller */
 .t-main {
     background-color: black;
@@ -20,18 +19,16 @@
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     padding-bottom: var(--t-spacing-lg);
 }
-
 .t-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--t-spacing-md);
 }
-
 /* Başlık ve Açıklama */
 .t-section-title {
-    background: linear-gradient(to right, rgb(255, 255, 255), rgb(8, 252, 172)) text;
+    background: linear-gradient(to right, rgb(255, 255, 255), #229c0a) text;
     -webkit-text-fill-color: transparent;
-    text-shadow: rgba(8, 252, 172, 0.50) 0px 0px 30px;
+    text-shadow: rgba(34, 156, 10, 0.50) 0px 0px 30px;
     font-size: 4rem;
     font-weight: 800;
     text-align: center;
@@ -39,100 +36,87 @@
     margin-bottom: var(--t-spacing-sm);
     color: var(--t-text-light);
 }
-
 .t-section-description {
-    color: rgb(8, 252, 172);
+    color: #229c0a;
     font-size: 18px;
     line-height: 1.5;
     text-align: center;
     max-width: 800px;
     margin: 0 auto var(--t-spacing-lg);
 }
-
 /* Timeline Yapısı */
 .t-timeline {
     position: relative;
     padding: 40px 0;
 }
-
 .t-timeline-line {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 50%;
     width: 2px;
-    background: linear-gradient(to top, rgb(255, 255, 255), rgb(8, 252, 172));
+    background: linear-gradient(to top, rgb(255, 255, 255), #229c0a);
     background-color: var(--t-line-color);
     transform: translateX(-50%);
 }
-
 .t-timeline-item {
     position: relative;
     margin-bottom: 80px;
     display: flex;
     justify-content: center;
 }
-
 /* Tek ve çift sıraları farklı konumlandırma */
 .t-timeline-item:nth-child(odd) {
     justify-content: flex-start;
 }
-
 .t-timeline-item:nth-child(even) {
     justify-content: flex-end;
 }
-
 .t-timeline-dot {
     position: absolute;
     left: 50%;
     width: 20px;
     height: 20px;
-    background: linear-gradient(to bottom, rgba(8, 252, 171, 0.644), rgb(8, 252, 172));;
+    background: linear-gradient(to bottom, rgba(34, 156, 10, 0.644), #229c0a);;
     background-color: var(--t-dot-color);
     border-radius: 50%;
     transform: translateX(-50%);
     z-index: 2;
 }
-
 .t-timeline-date {
     font-size: 24px;
     font-weight: 700;
     color: white;
-    background: linear-gradient(to right, rgb(255, 255, 255), rgb(8, 252, 172)) text;
+    background: linear-gradient(to right, rgb(255, 255, 255), #229c0a) text;
     -webkit-text-fill-color: transparent;
-    text-shadow: rgba(8, 252, 172, 0.50) 0px 0px 30px;
+    text-shadow: rgba(34, 156, 10, 0.50) 0px 0px 30px;
     
     position: absolute;
     top: 0;
 }
-
 /* Tek ve çift sıralarda tarihlerin konumları */
 .t-timeline-item:nth-child(odd) .t-timeline-date {
     right: calc(50% + 30px);
     text-align: right;
 }
-
 .t-timeline-item:nth-child(even) .t-timeline-date {
     left: calc(50% + 30px);
     text-align: left;
 }
-
 .t-timeline-content {
     width: 40%;
-    border: 1px solid rgba(8, 252, 172, 0.082);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px, rgba(8, 252, 172, 0.063) 0px 0px 30px;
+    border: 1px solid rgba(34, 156, 10, 0.082);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 30px, rgba(34, 156, 10, 0.063) 0px 0px 30px;
     background-color: var(--t-card-bg);
     border-radius: 8px;
     padding: 25px;
     position: relative;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
 .t-timeline-content:hover {
     transform: translateY(-5px);
     background-color: var(--t-card-hover);
 }
-
 /* Kutular için ok işaretlerini ekleme */
 .t-timeline-item:nth-child(odd) .t-timeline-content::after {
     content: '';
@@ -145,7 +129,6 @@
     border-bottom: 10px solid transparent;
     border-left: 10px solid var(--t-card-bg);
 }
-
 .t-timeline-item:nth-child(even) .t-timeline-content::after {
     content: '';
     position: absolute;
@@ -157,15 +140,12 @@
     border-bottom: 10px solid transparent;
     border-right: 10px solid var(--t-card-bg);
 }
-
 .t-timeline-item:nth-child(odd) .t-timeline-content:hover::after {
     border-left-color: var(--t-card-hover);
 }
-
 .t-timeline-item:nth-child(even) .t-timeline-content:hover::after {
     border-right-color: var(--t-card-hover);
 }
-
 .t-timeline-title {
     font-size: 1.5rem;
     font-weight: 800;
@@ -173,14 +153,12 @@
     margin-bottom: 15px;
     color: var(--t-text-light);
 }
-
 .t-timeline-text {
     font-size: 16px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.815);
     margin-bottom: 15px;
 }
-
 .t-timeline-quote {
     font-style: italic;
     border-left: 3px solid var(--t-primary-color);
@@ -193,14 +171,12 @@
     border-bottom-right-radius: 25px;
     padding: 10px;
 }
-
 /* Responsive Tasarım */
 @media screen and (max-width: 992px) {
     .t-timeline-content {
         width: 45%;
     }
 }
-
 @media screen and (max-width: 768px) {
     .t-section-title {
         font-size: 3.5rem;
@@ -256,7 +232,6 @@
         border-right-color: var(--t-card-hover);
     }
 }
-
 @media screen and (max-width: 576px) {
     .t-timeline-content {
         width: calc(100% - 60px);

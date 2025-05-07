@@ -1,6 +1,6 @@
 /* demo.css */
 :root {
-    --primary-color: #27c269;
+    --primary-color: #229c0a;
     --dark-bg: #171717;
     --header-bg: #121812;
     --form-bg: #1b2b22;
@@ -39,7 +39,7 @@ body {
     margin-top: 100px;
     text-align: center;
     padding: 45px 20px;
-    background: rgba(46, 204, 113, 0.05);
+    background: rgba(34, 156, 10, 0.05);
     border-radius: 8px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
 }
@@ -49,7 +49,7 @@ body {
     font-size: 3rem;
     margin-bottom: 1.5rem;
     -webkit-text-fill-color: transparent;
-    background: linear-gradient(135deg, rgb(8, 252, 172) 0%, rgb(79, 209, 197) 25%, rgb(8, 252, 172) 50%, rgb(79, 209, 197) 75%, rgb(8, 252, 172) 100%) 0% 0% / 200% text;
+    background: linear-gradient(135deg, #229c0a 0%, rgb(79, 209, 197) 25%, #229c0a 50%, rgb(79, 209, 197) 75%, #229c0a 100%) 0% 0% / 200% text;
     animation: 3s linear 0s infinite normal none running shine;
 }
 .demo-description {
@@ -90,7 +90,7 @@ body {
 }
 .demo-input:focus, .demo-textarea:focus {
     outline: none;
-    box-shadow: 0 0 0 2px rgba(39, 194, 105, 0.3);
+    box-shadow: 0 0 0 2px rgba(34, 156, 10, 0.3);
 }
 .demo-checkbox-grid {
     display: flex;
@@ -124,7 +124,7 @@ body {
     cursor: pointer;
 }
 .demo-checkbox-item:hover {
-    background: rgb(52 255 177 / 26%);
+    background: rgba(34, 156, 10, 0.26);
     border-radius: 10px;
     transition: 0.7s;
 }
@@ -159,7 +159,7 @@ body {
     font-weight: 800;
     transition: all 0.3s ease;
     cursor: pointer;
-    background: #08fcac;
+    background: #229c0a;
     color: #000000;
     padding: 1rem 2rem;
     font-size: 1.125rem;
@@ -167,7 +167,7 @@ body {
     width: 100%;
 }
 .demo-submit-btn:hover {
-    background-color: #08fcac;
+    background-color: #229c0a;
     transform: translateY(-5px);
 }
 

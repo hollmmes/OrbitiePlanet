@@ -7,16 +7,16 @@
 }
 
 :root {
-    --primary-color: rgb(8, 252, 172);
+    --primary-color: #229c0a;
     --secondary-color: #0f1923;
     --text-color: #ffffff;
     --card-bg: #1a2730;
-    --btn-hover: rgb(7, 224, 152);
+    --btn-hover: #229c0a;
     --max-width: 1200px; /* Maksimum genişlik tanımı */
 }
 
 body {
-    background: radial-gradient(circle at 20% 50%, rgba(8, 252, 172, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(6, 194, 133, 0.03) 0%, transparent 50%);;
+    background: radial-gradient(circle at 20% 50%, rgba(34, 156, 10, 0.03) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(6, 194, 133, 0.03) 0%, transparent 50%);;
     background-color: #000000;
     color: var(--text-color);
     line-height: 1.6;
@@ -108,7 +108,7 @@ header {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     -webkit-text-fill-color: transparent;
-    background: linear-gradient(135deg, rgb(8, 252, 172) 0%, rgb(79, 209, 197) 25%, rgb(8, 252, 172) 50%, rgb(79, 209, 197) 75%, rgb(8, 252, 172) 100%) 0% 0% / 200% text;
+    background: linear-gradient(135deg, #229c0a 0%, rgb(79, 209, 197) 25%, #229c0a 50%, rgb(79, 209, 197) 75%, #229c0a 100%) 0% 0% / 200% text;
     animation: 3s linear 0s infinite normal none running shine;
 }
 
@@ -162,7 +162,7 @@ header {
     width: 100%;
     padding: 1rem 1.5rem 1rem 3rem;
     border-radius: 50px;
-    border: 1px solid rgba(8, 252, 172, 0.19);
+    border: 1px solid rgba(34, 156, 10, 0.19);
     background: rgba(0, 0, 0, 0.2);
     color: rgb(255, 255, 255);
     font-size: 1rem;
@@ -175,8 +175,8 @@ header {
 
 .demo-search-container input:focus{
     outline: none;
-    border-color: rgb(8, 252, 172);
-    box-shadow: rgba(8, 252, 172, 0.19) 0px 0px 0px 3px;
+    border-color: #229c0a;
+    box-shadow: rgba(34, 156, 10, 0.19) 0px 0px 0px 3px;
 }
 
 .demo-filters {
@@ -186,7 +186,7 @@ header {
 
 .demo-filter-btn {
     background-color: transparent;
-    border: 1px solid rgba(8, 252, 172, 0.19);
+    border: 1px solid rgba(34, 156, 10, 0.19);
     color: var(--text-color);
     padding: 8px 20px;
     border-radius: 20px;
@@ -195,7 +195,7 @@ header {
 }
 
 .demo-filter-btn.active, .demo-filter-btn:hover {
-    background: rgb(8, 252, 172);
+    background: #229c0a;
     color: var(--secondary-color);
 }
 
@@ -213,7 +213,7 @@ header {
     background:rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(8, 252, 172, 0.125);
+    border: 1px solid rgba(34, 156, 10, 0.125);
     overflow: hidden;
     transition: transform 0.3s;
 }
