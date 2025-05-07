@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tüm Ürünler | Orbitie</title>
+
+
+      <!-- Önce değişkenler ve fontlar yüklenir -->
+  <link rel="stylesheet" href="assets/css/variables.css">
+    
+  <!-- Sonra header ve footer stilleri -->
+  <link rel="stylesheet" href="assets/css/header-footer.css">
+  <link rel="stylesheet" href="assets/css/tumurunler.css">
+  
+  <!-- Diğer CSS dosyaları -->
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Decorative Line Stili */
+    .decorative-line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right, transparent, rgba(8, 252, 172, 0.5), rgba(8, 252, 172, 1), rgba(8, 252, 172, 0.5), transparent);
+        box-shadow: 
+            0 0 10px rgba(8, 252, 172, 0.7),
+            0 0 20px rgba(8, 252, 172, 0.5),
+            0 0 30px rgba(8, 252, 172, 0.3);
+        z-index: 5;
+        opacity: 0.9;
+        animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+        from {
+            box-shadow: 
+                0 0 10px rgba(8, 252, 172, 0.7),
+                0 0 20px rgba(8, 252, 172, 0.5),
+                0 0 30px rgba(8, 252, 172, 0.3);
+        }
+        to {
+            box-shadow: 
+                0 0 15px rgba(8, 252, 172, 0.8),
+                0 0 25px rgba(8, 252, 172, 0.6),
+                0 0 35px rgba(8, 252, 172, 0.4);
+        }
+    }
+</style>
+</head>
+
+<body>  
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="Orbita Logo"></a>
+            </div>
+            <!-- Mobil için hamburger menü düğmesi -->
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        <nav class="main-nav">
+            <ul>
+                <li>
+                    <div class="header-item">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                        </div>
+                        <a href="index.html">ANASAYFA</a>
+                    </div>
+                </li>
+                <li class="has-dropdown">
+                    <div class="header-item">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <a href="#">HAKKIMIZDA</a>
+                        <div class="dropdown-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="firma-hakkinda.html">
+                                <div class="dropdown-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <polyline points="10 9 9 9 8 9"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-content">
+                                    <span><p>Firma Hakkında</p></span>
+                                    <span class="menu-description">Misyon, vizyon ve değerlerimiz</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ekibimiz.html">
+                                <div class="dropdown-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-content">
+                                    <span><p>Ekibimiz</p></span>
+                                    <span class="menu-description">Profesyonel kadromuz</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tarihce.html">
+                                <div class="dropdown-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-content">
+                                    <span><p>Tarihçe</p></span>
+                                    <span class="menu-description">Firmamızın gelişim<br> süreci</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog-liste.html">
+                                <div class="dropdown-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <polyline points="12 6 12 12 16 14"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-content">
+                                    <span><p>Blog liste</p></span>
+                                    <span class="menu-description">Firmamızın gelişim<br> süreci</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <div class="header-item">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <a href="#">HİZMETLERİMİZ</a>
+                        <div class="dropdown-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="projelendirme.html">
+                                <div class="dropdown-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                        <polyline points="2 17 12 22 22 17"></polyline>
+                                        <polyline points="2 12 12 17 22 12"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-content">
+                                    <span><p>Projelendirme</p></span>
+                                    <span class="menu-description">Yazılım geliştirme çözümlerimiz</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="uyarlama-sureci.html">
+                                <div class="dropdown-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-content">
+                                    <span><p>Uyarlama Süreci</p></span>
+                                    <span class="menu-description">İhtiyaca özel sistem entegrasyonu</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="entegrasyon-hizmetleri.html">
+                                <div class="dropdown-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                                        <line x1="8" y1="2" x2="8" y2="18"></line>
+                                        <line x1="16" y1="6" x2="16" y2="22"></line>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-content">
+                                    <span><p>Entegrasyon Hizmetleri</p></span>
+                                    <span class="menu-description">Sorunsuz sistem entegrasyonları</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="destek-hizmetleri.html">
+                                <div class="dropdown-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-content">
+                                    <span><p>Destek Hizmetleri</p></span>
+                                    <span class="menu-description">7/24 teknik destek ve bakım</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="header-item">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <a href="kpe.html">KPE</a>
+                    </div>
+                </li>
+                <li class="has-dropdown">
+                    <div class="header-item">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                        </div>
+                        <a href="#">ÜRÜNLER</a>
+                        <div class="dropdown-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="tum-urunler.html">
+                                <div class="dropdown-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-content">
+                                    <span><p>Tüm Ürünler</p></span>
+                                    <span class="menu-description">Yazılım çözümlerimizin tamamı</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="demolar.html">
+                                <div class="dropdown-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
+                                        <polygon points="12 15 17 21 7 21 12 15"></polygon>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-content">
+                                    <span><p>Demolar</p></span>
+                                    <span class="menu-description">Ürünlerimizin demo sürümleri</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="yeni-cikan-urunler.html">
+                                <div class="dropdown-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="12" y1="2" x2="12" y2="6"></line>
+                                        <line x1="12" y1="18" x2="12" y2="22"></line>
+                                        <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+                                        <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+                                        <line x1="2" y1="12" x2="6" y2="12"></line>
+                                        <line x1="18" y1="12" x2="22" y2="12"></line>
+                                        <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+                                        <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-content">
+                                    <span><p>Yeni Çıkan Ürünler</p></span>
+                                    <span class="menu-description">En yeni teknoloji çözümlerimiz</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="has-dropdown">
+                    <div class="header-item">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
+                            </svg>
+                        </div>
+                        <a href="#">REFERANSLAR</a>
+                        <div class="dropdown-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="musteri-yorumlari.html">
+                                <div class="dropdown-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-content">
+                                    <span><p>Müşteri Yorumları</p></span>
+                                    <span class="menu-description">Müşterilerimizin değerlendirmeleri</span>
+                                </div>
+                            </a>
+                        </li>
+                      
+                        <li>
+                            <a href="basari-hikayeleri.html">
+                                <div class="dropdown-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="dropdown-content">
+                                    <span><p>Başarı Hikayeleri</p></span>
+                                    <span class="menu-description">Müşterilerimizle elde ettiğimiz sonuçlar</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="header-item">
+                        <div class="icon-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <a href="iletisim.html">İLETİŞİM</a>
+                    </div>
+                </li>
+            </ul>
+            <!-- Mobil menünün alt kısmında dil seçeneği -->
+            <div class="mobile-lang-switch">
+                <a href="demo.html" class="demo-button">
+                    <span>DEMO</span>
+                </a>
+            </div>
+        </nav>
+            <!-- Desktop için demo butonu -->
+            <div class="demo-button-container">
+                <a href="demo.html" class="demo-button">
+                    <div class="icon-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
+                            <polygon points="12 15 17 21 7 21 12 15"></polygon>
+                        </svg>
+                    </div>
+                    <span>DEMO</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="tumu-main">
+        <section class="tumu-hero">
+            <h1>Kurumsal Çözümler</h1>
+            <p>Şirketinizin gelişmesi için ihtiyacı olan yazılım çözümlerimizi keşfedin.</p>
+            
+            <div class="tumu-search-container">
+                <div class="tumu-search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="tumuSearchInput" placeholder="Ürün veya çözüm arayın...">
+                </div>
+            </div>
+            <div class="tumu-filter-buttons">
+            <button class="tumu-filter-btn active" data-filter="all"><i class="fas fa-th"></i> Tüm Kategoriler</button>
+        </div>  
+        
+            <div class="tumu-filter-buttons">
+                <button class="tumu-filter-btn" data-filter="cpq"><i class="fas fa-calculator"></i> CPQ</button>
+                <button class="tumu-filter-btn" data-filter="crm"><i class="fas fa-users"></i> CRM</button>
+                <button class="tumu-filter-btn" data-filter="satin-alma"><i class="fas fa-shopping-cart"></i> SATIN ALMA</button>
+                <button class="tumu-filter-btn" data-filter="proje"><i class="fas fa-tasks"></i> PROJE YÖNETİMİ</button>
+                <button class="tumu-filter-btn" data-filter="dokuman"><i class="fas fa-file-alt"></i> DOKÜMAN ARŞİVİ</button>
+                <button class="tumu-filter-btn" data-filter="nexus"><i class="fas fa-link"></i> NEXUS PDKS</button>
+                <button class="tumu-filter-btn" data-filter="epazar"><i class="fas fa-shopping-cart"></i> E-PAZAR</button>
+                <button class="tumu-filter-btn" data-filter="servis"><i class="fas fa-cogs"></i> SERVİS(SSH)</button>
+            </div>
+
+        </section>
+
+   <!-- CPQ Kategorisi -->
+<section class="tumu-category-section" id="cpq">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="cpq">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="CPQ Logo">
+        <div class="cpqd-logo-subtitle">CPQ</div>
+    </div>
+        <div class="tumu-product-content">
+            <h3><i class="fas fa-calculator rotate-icon"></i> CPQ Nedir?</h3>
+            <p>
+                CPQ (Configure, Price, Quote), yani <strong>Yapılandırma, Fiyatlandırma ve Tekliflendirme</strong>, 
+                şirketlerin satış süreçlerini hızlandıran ve otomatikleştiren bir yazılım çözümüdür. 
+                CPQ modülleri, müşteriye özel ürün ve hizmetlerin yapılandırılmasını, doğru fiyatlandırılmasını 
+                ve profesyonel tekliflerin oluşturulmasını sağlar.
+            </p>
+            <p>
+                CPQ, özellikle karmaşık ürün veya hizmet sunan firmalar için vazgeçilmez bir araçtır ve satış süreçlerini modernleştirerek rekabet avantajı sağlar.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">Hızlı ve Doğru Teklifler</span>
+                <span class="tumu-tag">Hata Azaltma</span>
+                <span class="tumu-tag">Zamandan Tasarruf</span>
+                <span class="tumu-tag">Müşteri Memnnuniyeti</span>
+            </div>
+            <a class="info-button" data-category="cpq" href="cpq.html" target="_blank">
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi Görüntüle
+            </a>
+        </div>
+        
+    </div>
+
+</div>
+</section>
+
+<!-- CRM Kategorisi -->
+<section class="tumu-category-section" id="crm">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="crm">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="CRM Logo">
+        <div class="cpqd-logo-subtitle">CRM</div>
+    </div>
+        <div class="tumu-product-content">
+            <!--<h3><i class="fas fa-users rotate-icon"></i> CRM Nedir?</h3>-->
+            <h3><img src="img/ico/crm-icon.png" alt="CRM Nedir?" class="rotate-icon"> CRM Nedir?</h3>
+            <p>
+                CRM (Customer Relationship Management), yani <strong>Müşteri İlişkileri Yönetimi</strong>, 
+                şirketlerin müşterileriyle olan tüm etkileşimlerini yönetmelerini sağlayan bir yazılım çözümüdür.
+                CRM sistemleri, müşteri verilerinin toplanması, analiz edilmesi ve bu verilere dayanarak stratejiler 
+                geliştirilmesine olanak tanır.
+            </p>
+            <p>
+                CRM, işletmelerin müşteri memnuniyetini artırmasına, satış performansını iyileştirmesine ve uzun vadeli müşteri ilişkileri kurmasına yardımcı olur.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">Sevkiyat Yönetimi</span>
+                <span class="tumu-tag">Satış Operasyonu</span>
+                <span class="tumu-tag">Satış Aktivitesi Takibi</span>
+            </div>
+            <a class="info-button" data-category="crm" href="crm.html" target="_blank">
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi Görüntüle
+            </a>
+        </div>
+        
+    </div>
+
+</div>
+</section>
+
+
+<!-- SATIN ALMA Kategorisi -->
+<section class="tumu-category-section" id="satin-alma">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="satin-alma">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="SATIN ALMA Logo">
+        <div class="cpqd-logo-subtitle">SATIN ALMA</div>
+    </div>
+        <div class="tumu-product-content">
+            <!--<h3><i class="fas fa-shopping-cart rotate-icon"></i>Satın Alma Nedir?</h3>-->
+            <h3><img src="img/ico/satinalma-icon.png" alt="Satın Alma Modülü" class="rotate-icon"> Satın Alma Nedir?</h3>
+            <p>
+                Orbitie'nin güçlü <strong>Satın Alma Modülü</strong> ile tedarik süreçlerinizi uçtan uca yönetin! Talep oluşturma, teklif toplama, sipariş yönetimi ve sözleşme süreçlerini merkezi bir sistemden yöneterek operasyonel verimliliği artırın.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">Mal Kabul Takibi</span>
+                <span class="tumu-tag">Online/Offline Teklif Toplama</span>
+                <span class="tumu-tag">Satın Alma Sözleşmeleri Takibi</span>
+            </div>
+            <a class="info-button" data-category="satin-alma" href="satin-alma.html" target="_blank">
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi Görüntüle
+            </a>
+        </div>
+        
+    </div>
+
+</div>
+</section>
+
+
+<!-- PROJE YÖNETİMİ Kategorisi -->
+<section class="tumu-category-section" id="proje">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="proje">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="PROJE YÖNETİMİ Logo">
+        <div class="cpqd-logo-subtitle">PROJE YÖNETİMİ</div>
+    </div>
+        <div class="tumu-product-content">
+            <!--<h3><i class="fas fa-tasks rotate-icon"></i> Proje Yönetimi Nedir?</h3>-->
+            <h3><img src="img/ico/proje-icon.png" alt="Satın Alma Modülü" class="rotate-icon"> Proje Yönetimi Nedir?</h3>
+            <p>
+                Proje Yönetimi, organizasyonlarda <strong>iş süreçlerinin ve projelerin etkin yönetimini</strong>
+                sağlayan yazılım çözümleridir. Bu sistemler, proje planlamasından kaynak yönetimine, 
+                iş akışı otomasyonundan performans analizine kadar tüm süreçleri kapsar.
+            </p>
+            <p>
+                İş Süreçleri Yönetimi (BPM) çözümleri ile işletmeler, projelerini daha verimli yönetebilir, süreçlerini optimize edebilir ve iş sonuçlarını iyileştirebilir.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">Departmanlar Arası İletişim</span>
+                <span class="tumu-tag">Entegre Proje Yönetimi</span>
+                <span class="tumu-tag">İş Takibi ve Yönetimi</span>
+            </div>
+            <a class="info-button" data-category="proje" href="proje-yonetimi.html" target="_blank">
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi Görüntüle
+            </a>
+        </div>
+        
+    </div>
+
+</div>
+</section>
+
+
+<!-- DOKÜMAN ARŞİVİ Kategorisi -->
+<section class="tumu-category-section" id="dokuman">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="dokuman">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="DOKÜMAN ARŞİVİ Logo">
+        <div class="cpqd-logo-subtitle">DOKÜMAN ARŞİVİ</div>
+    </div>
+        <div class="tumu-product-content">
+            <!--<h3><i class="fas fa-file-alt rotate-icon"></i> Doküman Arşivi Nedir?</h3>-->
+            <h3><img src="img/ico/dokuman-icon.png" alt="Satın Alma Modülü" class="rotate-icon">  Doküman Arşivi Nedir?</h3>
+            <p>
+                Doküman Arşivi, işletmelerin <strong>belge ve dokümanlarını dijital ortamda saklama ve yönetmelerini</strong> 
+                sağlayan yazılım çözümleridir. Bu sistemler, fiziksel belgelerin dijitalleştirilmesinden güvenli depolamaya, 
+                hızlı erişimden etkin belge yönetimine kadar birçok fonksiyon sunar.
+            </p>
+            <p>
+                Depo Yönetim Sistemleri (WMS) ile işletmeler, belgelerini ve stoklarını daha etkili şekilde yönetebilir, operasyonel verimliliklerini artırabilir.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">Güvenli ve Etkin Arşivleme</span>
+                <span class="tumu-tag">Sürüm Geçmişi Takibi</span>
+                <span class="tumu-tag">Arşiv Yetkilendirme</span>
+            </div>
+            <a class="info-button" data-category="dokuman" href="arsiv-ve-dokuman-yonetimi.html" target="_blank">
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi Görüntüle
+            </a>
+        </div>
+        
+    </div>
+
+</div>
+</section>
+
+
+<!-- NEXUS Kategorisi -->
+<section class="tumu-category-section" id="nexus">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="nexus">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="NEXUS Logo">
+        <div class="cpqd-logo-subtitle">NEXUS PDKS</div>
+    </div>
+        <div class="tumu-product-content">
+            <!--<h3><i class="fas fa-link rotate-icon"></i> Nexus PDKS Nedir?</h3>-->
+            <h3><img src="img/ico/pdks-icon.png" alt="Satın Alma Modülü" class="rotate-icon">  Nexus PDKS Nedir?</h3>
+            <p>
+                NEXUS, işletmelerin <strong>özelleştirilmiş mobil iş uygulamaları geliştirmelerini</strong> 
+                sağlayan bir platform çözümüdür. Bu platform, işletmelerin dijital dönüşüm süreçlerinde 
+                ihtiyaç duydukları mobil uygulamaları hızlı ve esnek bir şekilde oluşturmalarına olanak tanır.
+            </p>
+            <p>
+                Özelleştirilebilir mobil iş uygulamaları platformu, işletmelere rekabet avantajı sağlar ve dijital çağa ayak uydurmalarına yardımcı olur.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">E-Bordro Entegrasyonu</span>
+                <span class="tumu-tag">Avans Talep ve Hesaplama</span>
+                <span class="tumu-tag">Dinamik Lokasyon Uyumu</span>
+            </div>
+            <a class="info-button" data-category="nexus" href="nexus.html" target="_blank">
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi Görüntüle
+            </a>
+        </div>
+        
+    </div>
+
+</div>
+</section>
+
+
+<!-- E-PAZAR Kategorisi -->
+<section class="tumu-category-section" id="epazar">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="epazar">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="E-PAZAR Logo">
+        <div class="cpqd-logo-subtitle">E-PAZAR</div>
+    </div>
+        <div class="tumu-product-content">
+            <!--<h3><i class="fas fa-shopping-cart rotate-icon"></i> E-PAZAR Nedir?</h3>-->
+            <h3><img src="img/ico/eticaret-icon.png" alt="Satın Alma Modülü" class="rotate-icon"> E-PAZAR Nedir?</h3>
+            <p>
+                E-PAZAR, işletmelerin elektronik ticaret platformlarında satış yapmalarını sağlayan 
+                <strong>dijital pazaryeri çözümleridir</strong>. Bu çözümler, işletmelere çeşitli online 
+                satış kanallarında varlık gösterme ve ürünlerini geniş kitlelere ulaştırma imkanı sunar.
+            </p>
+            <p>
+                E-PAZAR çözümleri, entegre e-dönüşüm platformları ile işletmelerin dijital dönüşümlerini tamamlamalarına yardımcı olur ve rekabet güçlerini artırır.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">B2B & B2C Yönetimi</span>
+                <span class="tumu-tag">Online Pazaryeri Entegrasyonları</span>
+                <span class="tumu-tag">Sipariş Takibi & Envanter Yönetimi</span>
+            </div>
+            <a class="info-button" data-category="epazar" href="epazar.html" target="_blank">
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi Görüntüle
+            </a>
+        </div>
+        
+    </div>
+
+</div>
+</section>
+
+
+
+
+
+<!-- SERVİS(SSH) Kategorisi -->
+<section class="tumu-category-section" id="servis">
+</div>
+<div class="tumu-products-grid">
+    <div class="tumu-product-card" data-category="servis">
+        <div class="cpqd-logo">
+            <img src="img/details-logo.png" alt="SERVİS Logo">
+        <div class="cpqd-logo-subtitle">SERVİS(SSH)</div>
+    </div>
+        <div class="tumu-product-content">
+            <!--<h3><i class="fas fa-cogs rotate-icon"></i> SERVİS(SSH) Nedir?</h3>-->
+            <h3><img src="img/ico/servis-icon.png" alt="Satın Alma Modülü" class="rotate-icon"> SERVİS(SSH) Nedir?</h3>
+            <p>
+                SERVİS(SSH), şirketlere <strong>bulut tabanlı veri yönetimi çözümleri</strong> sunan 
+                bir hizmet paketidir. Bu çözümler, işletmelerin verilerini güvenli bir şekilde saklamalarını,
+                yönetmelerini ve bu verilere her yerden erişebilmelerini sağlar.
+            </p>
+            <p>
+                Bulut tabanlı veri yönetimi çözümleri, işletmelerin IT altyapı maliyetlerini azaltmalarına ve operasyonel esnekliklerini artırmalarına yardımcı olur.
+            </p>
+            <div class="tumu-product-tags">
+                <span class="tumu-tag">Servis Analizi</span>
+                <span class="tumu-tag">Satış Operasyonu</span>
+                <span class="tumu-tag">Aktivite Takibi
+</span>
+            </div>
+            <a class="info-button" data-category="servis" href="servis-ssh.html" target="_blank">
+                <i class="fas fa-info-circle"></i> Detaylı Bilgi Görüntüle
+            </a>
+        </div>
+        
+    </div>
+
+</div>
+</section>
+    </main>
+
+
+    <footer class="footer-main">
+        <div class="footer-container">
+            <div class="footer-contact-button">
+    
+            </div>
+            
+            <div class="footer-content">
+                <!-- About Us Bölümü (Yukarıda) -->
+                <div class="footer-about">
+                    <h3 class="footer-title">Hakkımızda</h3>
+                    <p class="footer-text">2009 yılından bu yana KOBİ ve Kamu Kurumlarına yönelik programlar dahilinde kurum ve kuruluşlara ihtiyaçları odaklı olarak çeşitli alanlarda proje hazırlama ve yönetimine
+                        yönelik proje sahibi ile koordineli bir çalışma ile profesyonel bir destek sağlamaktadır...</p>
+                    <a href="firma-hakkinda.html" class="footer-view-more">Devamını Oku <i class="footer-icon-arrow"></i></a>
+                </div>
+                
+                <!-- Contact Bölümü (Yukarıda) -->
+                <div class="footer-contact">
+                    <h3 class="footer-title">Bize Ulaşın</h3>
+                    <h2 class="footer-phone">+90 (232) 445 20 55</h2>
+                    <p class="footer-contact-info"><i class="footer-icon-location"></i> İsmet Kaptan Mahallesi Şair Eşref Bulvarı Montrö İş Merkezi
+                        No :35/1 Kat: 6 İç Kapı No: 71 | Konak - İzmir</p>
+                    <p class="footer-contact-info"><i class="footer-icon-email"></i>info@planetyazilim.com</p>
+                    
+                    <div class="footer-social">
+                        <a href="#" class="footer-social-icon"><i class="footer-icon-facebook"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="footer-icon-twitter"></i></a>
+                        <a href="#" class="footer-social-icon"><i class="footer-icon-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Navigation Bölümü (Altta) -->
+                <div class="footer-navigation">
+                    <div class="footer-nav-column">
+                        <h3 class="footer-title">BLOG</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#"><i class="footer-icon"></i> Blog Kaynaklar</a></li>
+                            <li><a href="#"><i class="footer-icon"></i> Blog makaleler</a></li>
+                            <li><a href="#"><i class="footer-icon"></i> Blog Videolar</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h3 class="footer-title">HIZLI ERİŞİM</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#"><i class="footer-icon"></i>ANASAYFA</a></li>
+                            <li><a href="#"><i class="footer-icon"></i>HİZMETLERİMİZ</a></li>
+                            <li><a href="#"><i class="footer-icon"></i>ÜRÜNLER</a></li>
+                            <li><a href="#"><i class="footer-icon"></i>REFERANSLAR</a></li>
+                            <li><a href="#"><i class="footer-icon"></i>İLETİŞİM</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h3 class="footer-title">ŞİRKET PORTFOLYO</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#"><i class="footer-icon"></i> HAKKINDA</a></li>
+                            <li><a href="#"><i class="footer-icon"></i> TARİHÇE</a></li>
+                            <li><a href="#"><i class="footer-icon"></i> EKİBİMİZ</a></li>
+                            <li><a href="#"><i class="footer-icon"></i> BAŞARI HİKAYESİ</a></li>
+                            <li><a href="#"><i class="footer-icon"></i> MÜŞTERİ YORUMLARI</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-nav-column">
+                        <h3 class="footer-title">EKSTRA</h3>
+                        <ul class="footer-nav-list">
+                            <li><a href="#"><i class="footer-icon"></i> SERVİSLER</a></li>
+                            <li><a href="#"><i class="footer-icon"></i> KARİYER</a></li>
+                            <li><a href="#"><i class="footer-icon"></i> S.S.S.</a></li>
+                            <li><a href="#"><i class="footer-icon"></i> GİZLİLİK SÖZLEŞMESİ</a></li>
+                            <li><a href="#"><i class="footer-icon"></i> ÇEREZ YÖNETİMİ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="footer-container">
+                <div class="footer-copyright">
+                    <div class="footer-logo">
+                        <img src="img/details-logo.png" alt="Orbitie">
+                    </div>
+                    <p class="footer-copyright-text">© Copyright 2025. Tüm hakları saklıdır..</p>
+                </div>
+                <div class="footer-logo2">
+                    <a href="https://artwebtasarim.com.tr/"><img src="img/artweb_logo.svg" alt="Orbitie"></a>
+                </div>
+    
+                <div class="footer-bottom-links">
+                    <a href="#">Site Haritası</a>
+                    <a href="#">Bize Ulaşın</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <script src="assets/js/back-to-top.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+// DOM içeriği yüklendikten sonra çalışır
+document.addEventListener('DOMContentLoaded', function() {
+    // Arama işlevi
+    const searchInput = document.getElementById('tumuSearchInput');
+    const productCards = document.querySelectorAll('.tumu-product-card');
+    const categorySections = document.querySelectorAll('.tumu-category-section');
+    
+    searchInput.addEventListener('keyup', function() {
+        const searchTerm = this.value.toLowerCase();
+        
+        // Önce tüm ürünleri gizle/göster
+        productCards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            const description = card.querySelector('p').textContent.toLowerCase();
+            const tags = Array.from(card.querySelectorAll('.tumu-tag')).map(tag => tag.textContent.toLowerCase());
+            
+            // Arama terimini başlık, açıklama veya etiketlerde ara
+            const matches = title.includes(searchTerm) || 
+                           description.includes(searchTerm) || 
+                           tags.some(tag => tag.includes(searchTerm));
+            
+            // Sonuca göre kartı göster veya gizle
+            if (matches) {
+                card.classList.remove('hidden');
+            } else {
+                card.classList.add('hidden');
+            }
+        });
+        
+        // Sonra kategorilerin görünürlüğünü güncelle
+        updateCategoryVisibility();
+    });
+    
+    // Kategori filtreleri
+    const filterButtons = document.querySelectorAll('.tumu-filter-btn');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Aktif butonu güncelle
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filterValue = this.getAttribute('data-filter');
+            
+            if (filterValue === 'all') {
+                // Tüm ürünleri ve kategorileri göster
+                productCards.forEach(card => card.classList.remove('hidden'));
+                categorySections.forEach(section => section.classList.remove('hidden'));
+            } else {
+                // Önce tüm ürünleri gizle/göster
+                productCards.forEach(card => {
+                    if (card.getAttribute('data-category') === filterValue) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+                
+                // Sonra kategorilerin görünürlüğünü güncelle
+                categorySections.forEach(section => {
+                    if (section.id === filterValue) {
+                        section.classList.remove('hidden');
+                    } else {
+                        section.classList.add('hidden');
+                    }
+                });
+            }
+        });
+    });
+    
+    // Kategori bölümlerinin görünürlüğünü günceller
+    function updateCategoryVisibility() {
+        categorySections.forEach(section => {
+            const sectionId = section.id;
+            const visibleProducts = section.querySelectorAll('.tumu-product-card:not(.hidden)');
+            
+            // Eğer kategoride görünür ürün yoksa, kategori bölümünü gizle
+            if (visibleProducts.length === 0) {
+                section.classList.add('hidden');
+            } else {
+                section.classList.remove('hidden');
+            }
+        });
+    }
+});
+/*
+document.addEventListener('DOMContentLoaded', function() {
+    // Popup HTML yapısını oluştur
+    const popupHTML = `
+        <div class="popup-overlay">
+            <div class="popup-content">
+                <button class="popup-close">&times;</button>
+                <iframe class="popup-iframe" src="" frameborder="0"></iframe>
+            </div>
+        </div>
+    `;
+    
+    // Popup HTML'ini sayfaya ekle
+    document.body.insertAdjacentHTML('beforeend', popupHTML);
+    
+    // Popup elemanlarını seç
+    const popup = document.querySelector('.popup-overlay');
+    const iframe = document.querySelector('.popup-iframe');
+    const closeButton = document.querySelector('.popup-close');
+    
+    // Detaylı bilgi butonlarına tıklama olayını ekle
+    const infoButtons = document.querySelectorAll('.info-button');
+    infoButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const url = this.getAttribute('data-url');
+            
+            if (url) {
+                // iframe src değerini ayarla
+                iframe.src = url;
+                
+                // Popup'ı göster
+                popup.classList.add('active');
+                document.body.style.overflow = 'hidden'; // Scroll'u devre dışı bırak
+            }
+        });
+    });
+    
+    // Popup kapatma butonuna tıklama olayını ekle
+    closeButton.addEventListener('click', function() {
+        popup.classList.remove('active');
+        document.body.style.overflow = ''; // Scroll'u tekrar aktif et
+        
+        // iframe içeriğini temizle (isteğe bağlı)
+        setTimeout(() => {
+            iframe.src = '';
+        }, 300);
+    });
+    
+    // Popup dışına tıklandığında kapatma
+    popup.addEventListener('click', function(e) {
+        if (e.target === popup) {
+            popup.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            // iframe içeriğini temizle (isteğe bağlı)
+            setTimeout(() => {
+                iframe.src = '';
+            }, 300);
+        }
+    });
+    
+    // ESC tuşuna basıldığında popup'ı kapat
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && popup.classList.contains('active')) {
+            popup.classList.remove('active');
+            document.body.style.overflow = '';
+            
+            // iframe içeriğini temizle (isteğe bağlı)
+            setTimeout(() => {
+                iframe.src = '';
+            }, 300);
+        }
+    });
+});
+*/
+    </script>
+</body>
+</html>
